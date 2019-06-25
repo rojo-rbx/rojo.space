@@ -1,0 +1,18 @@
+.NavItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.Nav {
+  display: flex;
+  align-content: stretch;
+  flex: 1 0;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0;
+  margin-right: 4rem;
+}

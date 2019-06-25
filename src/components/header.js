@@ -1,42 +1,55 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
+
+import logo from "../images/rojo-logo.png";
+import styles from "./header.module.css";
+
+const NavItem = ({ name, url }) => (
+  <Link to={ url } className={ styles.NavItem }>
+    { name }
+  </Link>
+);
+
+const Nav = () => (
+  <nav className={ styles.Nav }>
+    <NavItem name="Docs" url="/docs" />
+    <NavItem name="Blog" url="/blog" />
+  </nav>
+);
+
+const Logo = () => (
+  <Link className={ styles.Logo } to="/">
+    <img src={ logo } alt="Rojo" />
+  </Link>
+);
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `#ccc`,
     }}
   >
     <div
       style={{
+        display: `flex`,
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: `60rem`,
+        padding: `0rem 1rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <Logo />
+      <Nav />
     </div>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;
