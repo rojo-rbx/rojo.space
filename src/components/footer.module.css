@@ -1,5 +1,27 @@
+.Footer {
+  color: white;
+  background-color: #444;
+  line-height: 1.5;
+  padding: 3rem 0;
+}
+
 .FooterMain {
+  display: flex;
   margin: 0 auto;
-  max-width: 60rem;
   padding: 0 1rem;
+  max-width: 60rem;
+}
+
+.FooterNav {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.NavItem {
+  margin-bottom: 0.5rem;
+}
+
+.FooterAbout {
+  flex: 1 0 auto;
 }
