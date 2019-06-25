@@ -16,3 +16,18 @@
   flex: 0 0;
   margin-right: 4rem;
 }
+
+.Logo img {
+  height: 2rem;
+}
+
+.Header {
+  background: #ccc;
+}
+
+.HeaderMain {
+  display: flex;
+  margin: 0 auto;
+  max-width: 60rem;
+  padding: 0 1rem;
+}

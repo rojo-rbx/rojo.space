@@ -1,14 +1,10 @@
 import React from "react";
 
+import styles from "./footer.module.css";
+
 const Footer = () => (
   <footer>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: `60rem`,
-        padding: `0px 1rem`,
-      }}
-    >
+    <div className={ styles.FooterMain }>
       © {new Date().getFullYear()}, Built with
       {` `}
       <a href="https://www.gatsbyjs.org">Gatsby</a>

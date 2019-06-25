@@ -25,19 +25,8 @@ const Logo = () => (
 );
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#ccc`,
-    }}
-  >
-    <div
-      style={{
-        display: `flex`,
-        margin: `0 auto`,
-        maxWidth: `60rem`,
-        padding: `0rem 1rem`,
-      }}
-    >
+  <header className={ styles.Header }>
+    <div className={ styles.HeaderMain }>
       <Logo />
       <Nav />
     </div>
