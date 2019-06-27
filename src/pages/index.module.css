@@ -1,6 +1,5 @@
 .Splash {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 4rem 1rem;
   text-align: center;
   background-color: #444;
   color: white;
@@ -11,7 +10,8 @@
 }
 
 .SplashTitle > img {
-  height: 8rem;
+  width: 16rem;
+  max-width: 100%;
 }
 
 .SplashSubtitle {
@@ -35,14 +35,27 @@
 
 .FeaturesMain {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .Feature {
   position: relative;
-  flex: 1 0 30%;
+  flex: 1 1 18rem;
   text-align: center;
   padding: 2rem 2rem;
+}
+
+@media (max-width: 56rem) {
+  .FeaturesMain {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .Feature {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
 }
 
 .Feature > h1 {
@@ -51,20 +64,24 @@
   margin-bottom: 2rem;
 }
 
-.Feature:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 1rem;
-  width: 1px;
-  height: calc(100% - 2rem);
-  background-color: #ccc;
+@media (min-width: 56rem) {
+  .Feature:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    width: 1px;
+    height: calc(100% - 2rem);
+    background-color: #ccc;
+  }
 }
 
 .Details {
   font-size: 1.2rem;
   text-align: center;
-  padding: 4rem 8rem;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
 }
 
 .Details b {

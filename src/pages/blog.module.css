@@ -1,5 +1,7 @@
 .BlogTitle {
   font-size: 3rem;
   text-align: center;
-  padding: 8rem;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 8rem 1rem;
 }
