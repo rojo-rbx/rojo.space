@@ -22,7 +22,8 @@
 }
 
 .Header {
-  background: #ccc;
+  background-color: #333;
+  color: white;
 }
 
 .HeaderMain {

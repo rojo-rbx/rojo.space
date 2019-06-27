@@ -1,0 +1,29 @@
+.Splash {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  background-color: #444;
+  color: white;
+}
+
+.SplashTitle {
+  padding-bottom: 1rem;
+}
+
+.SplashTitle > img {
+  height: 8rem;
+}
+
+.SplashSubtitle {
+  font-size: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.SplashButton {
+  display: inline-block;
+  background-color: #e13835;
+  color: white;
+  font-weight: normal;
+  font-size: 1.3rem;
+  padding: 0.5rem 1.6rem;
+}

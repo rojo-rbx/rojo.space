@@ -1,16 +1,29 @@
 import React from "react";
-import { Link } from "gatsby";
+ import { Link } from "gatsby";
 
-import Layout from "../components/layout";
+import { FullWidthPage } from "../components/layout";
 import SEO from "../components/seo";
 
+import logo from "../images/logo-512.png";
+import style from "./index.module.css";
+
+const Splash = () => (
+  <div className={ style.Splash }>
+    <h1 className={ style.SplashTitle }>
+      <img src={ logo } alt="Rojo" />
+    </h1>
+    <h2 className={ style.SplashSubtitle }>Some Splashy Marketing Phrase</h2>
+    <div>
+      <Link className={ style.SplashButton } to="/docs">Get Started</Link>
+    </div>
+  </div>
+);
+
 const IndexPage = () => (
-  <Layout>
+  <FullWidthPage>
     <SEO title="Home" />
-    <h1>Hello, world!</h1>
-    <p>Welcome to your new site.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+    <Splash />
+  </FullWidthPage>
 );
 
 export default IndexPage;

@@ -1,31 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
 import Footer from "./footer";
 import "./layout.css";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
+export const NormalPage = ({ children }) => {
   return (
     <>
-      <Header siteTitle={ data.site.siteMetadata.title } />
+      <Header siteTitle="Rojo" />
       <main style={{ flex: `1 0 auto` }}>
         <div
           style={{
             margin: `0 auto`,
             maxWidth: `60rem`,
-            padding: `0px 1rem 1.45rem`,
+            padding: `0 1rem`,
           }}
         >
           {children}
@@ -36,8 +24,14 @@ const Layout = ({ children }) => {
   );
 };
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+export const FullWidthPage = ({ children }) => {
+  return (
+    <>
+      <Header siteTitle="Rojo" />
+      <main style={{ flex: `1 0 auto` }}>
+        <div>{children}</div>
+      </main>
+      <Footer />
+    </>
+  );
 };
-
-export default Layout;

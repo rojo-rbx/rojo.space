@@ -5,6 +5,10 @@
   padding: 3rem 0;
 }
 
+.Footer a {
+  color: #e13835;
+}
+
 .FooterMain {
   display: flex;
   margin: 0 auto;

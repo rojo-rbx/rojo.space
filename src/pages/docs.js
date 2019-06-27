@@ -1,14 +1,14 @@
 import React from "react";
 
-import Layout from "../components/layout";
+import { NormalPage } from "../components/layout";
 import SEO from "../components/seo";
 
 const DocsPage = () => (
-  <Layout>
+  <NormalPage>
     <SEO title="Docs" />
     <h1>Docs</h1>
     <p>Docs page</p>
-  </Layout>
+  </NormalPage>
 );
 
 export default DocsPage;
