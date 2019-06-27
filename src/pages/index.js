@@ -1,7 +1,7 @@
 import React from "react";
- import { Link } from "gatsby";
+import { Link } from "gatsby";
 
-import { FullWidthPage } from "../components/layout";
+import { FullWidthPage, PageBlock } from "../components/layout";
 import SEO from "../components/seo";
 
 import logo from "../images/logo-512.png";
@@ -12,17 +12,46 @@ const Splash = () => (
     <h1 className={ style.SplashTitle }>
       <img src={ logo } alt="Rojo" />
     </h1>
-    <h2 className={ style.SplashSubtitle }>Some Splashy Marketing Phrase</h2>
+    <h2 className={ style.SplashSubtitle }>Professional Development Tools in Roblox</h2>
     <div>
       <Link className={ style.SplashButton } to="/docs">Get Started</Link>
     </div>
   </div>
 );
 
+const Features = () => (
+  <PageBlock className={ style.Features }>
+    <div className={ style.FeaturesMain }>
+      <article className={ style.Feature }>
+        <h1>Text Editors</h1>
+        <p>Visual Studio Code, Sublime Text, Vim. Use your favorite text editor with any of their plugins.</p>
+      </article>
+      <article className={ style.Feature }>
+        <h1>Version Control</h1>
+        <p>Use Git, the most popular professional version control system in the world, or any other VCS.</p>
+      </article>
+      <article className={ style.Feature }>
+        <h1>Other Tools</h1>
+        <p>Take advantage of decades of tools built by engineers around the world.</p>
+      </article>
+    </div>
+  </PageBlock>
+);
+
+const Details = () => (
+  <PageBlock>
+    <div className={ style.Details }>
+      Rojo enables <b>modularizing</b> your Roblox project into multiple pieces that can be reasoned about <b>independently</b>.
+    </div>
+  </PageBlock>
+);
+
 const IndexPage = () => (
   <FullWidthPage>
     <SEO title="Home" />
     <Splash />
+    <Features />
+    <Details />
   </FullWidthPage>
 );
 

@@ -6,7 +6,9 @@
 }
 
 .Footer a {
-  color: #e13835;
+  /*color: #e13835;*/
+  color: #ff9291;
+  font-weight: 400;
 }
 
 .FooterMain {
@@ -19,11 +21,10 @@
 .FooterNav {
   flex: 0 0 auto;
   display: flex;
-  flex-direction: column;
 }
 
 .NavItem {
-  margin-bottom: 0.5rem;
+  padding: 1rem;
 }
 
 .FooterAbout {

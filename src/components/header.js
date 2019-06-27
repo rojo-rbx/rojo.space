@@ -13,7 +13,7 @@ const NavItem = ({ name, url }) => (
 
 const Nav = () => (
   <nav className={ styles.Nav }>
-    <NavItem name="Docs" url="/docs" />
+    <a href="/docs" className={ styles.NavItem }>Docs</a>
     <NavItem name="Blog" url="/blog" />
   </nav>
 );

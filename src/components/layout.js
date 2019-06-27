@@ -4,6 +4,19 @@ import Header from "./header";
 import Footer from "./footer";
 import "./layout.css";
 
+export const PageBlock = ({ className, children }) => (
+  <div
+    className={ className }
+    style={{
+      margin: `0 auto`,
+      maxWidth: `60rem`,
+      padding: `0 1rem`,
+    }}
+  >
+    { children }
+  </div>
+);
+
 export const NormalPage = ({ children }) => {
   return (
     <>
@@ -16,7 +29,7 @@ export const NormalPage = ({ children }) => {
             padding: `0 1rem`,
           }}
         >
-          {children}
+          { children }
         </div>
       </main>
       <Footer />
@@ -29,7 +42,7 @@ export const FullWidthPage = ({ children }) => {
     <>
       <Header siteTitle="Rojo" />
       <main style={{ flex: `1 0 auto` }}>
-        <div>{children}</div>
+        { children }
       </main>
       <Footer />
     </>

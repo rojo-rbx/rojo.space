@@ -3,16 +3,10 @@ import { Link } from "gatsby";
 
 import styles from "./footer.module.css";
 
-const NavItem = ({ name, url }) => (
-  <Link to={ url } className={ styles.NavItem }>
-    { name }
-  </Link>
-);
-
 const FooterNav = () => (
   <nav className={ styles.FooterNav }>
-    <NavItem name="Docs" url="/docs" />
-    <NavItem name="Blog" url="/blog" />
+    <a className={ styles.NavItem }href="/docs">Docs</a>
+    <Link className={ styles.NavItem } to="/blog">Blog</Link>
   </nav>
 );
 
