@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Kludged documentation generator to support multiple versions.
+
+set -e
+
+REMOTE=
+CHECKOUT="$(mktemp -d)"
+OUTPUT="$(pwd)/public/docs"
+
+npm run-script build
+
+cd public
+
+rm -rf docs
+mkdir docs
+cp ../bin/docs-index.html docs/index.html
+
+git clone https://github.com/rojo-rbx/rojo.git "$CHECKOUT"
+cd "$CHECKOUT"
+
+echo "Building master"
+git checkout master
+mkdocs build --site-dir "$OUTPUT/latest"
+
+echo "Building 0.5.x"
+mkdocs build --site-dir "$OUTPUT/0.5.x"
+
+echo "Building 0.4.x"
+git checkout v0.4.x
+mkdocs build --site-dir "$OUTPUT/0.4.x"
