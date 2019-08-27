@@ -555,32 +555,45 @@
 </ul>
 </div>
 <h2 id="project-file">Project File<a class="headerlink" href="#project-file" title="Permanent link">&para;</a></h2>
-<p>Rojo projects are JSON files that have the <code>.project.json</code> extension. They have these fields:</p>
+<p>Rojo projects are JSON files that have the <code>.project.json</code> extension. They have the following fields:</p>
 <ul>
-<li><code>name</code>: A string indicating the name of the project.<ul>
-<li>This is only used for diagnostics.</li>
+<li><code>name</code>: A string indicating the name of the project. This name is used when building the project into a model or place file.<ul>
+<li><strong>Required</strong></li>
 </ul>
 </li>
-<li><code>tree</code>: An <a href="#instance-description">Instance Description</a> describing the root instance of the project.</li>
+<li><code>tree</code>: An <a href="#instance-description">Instance Description</a> describing the root instance of the project.<ul>
+<li><strong>Required</strong></li>
+</ul>
+</li>
+<li><code>servePort</code>: The port that <code>rojo serve</code> should listen on. Passing <code>--port</code> will override this setting.<ul>
+<li><strong>Optional</strong></li>
+<li>Default is <code>34872</code></li>
+</ul>
+</li>
+<li><code>servePlaceIds</code>: A list of place IDs that this project may be live-synced to. This feature can help prevent overwriting the wrong game with source from Rojo.<ul>
+<li><strong>Optional</strong></li>
+<li>Default is <code>null</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="instance-description">Instance Description<a class="headerlink" href="#instance-description" title="Permanent link">&para;</a></h2>
-<p>Instance Descriptions correspond one-to-one with the actual Roblox Instances in the project. They can be specified directly in the project file or be pulled from the filesystem.</p>
+<p>Instance Descriptions correspond one-to-one with the actual Roblox Instances in the project.</p>
 <ul>
 <li><code>$className</code>: The ClassName of the Instance being described.<ul>
-<li>Optional if <code>$path</code> is specified.</li>
+<li><strong>Optional if <code>$path</code> is specified.</strong></li>
 </ul>
 </li>
 <li><code>$path</code>: The path on the filesystem to pull files from into the project.<ul>
-<li>Optional if <code>$className</code> is specified.</li>
+<li><strong>Optional if <code>$className</code> is specified.</strong></li>
 <li>Paths are relative to the folder containing the project file.</li>
 </ul>
 </li>
 <li><code>$properties</code>: Properties to apply to the instance. Values should be <a href="#instance-property-value">Instance Property Values</a>.<ul>
-<li>Optional</li>
+<li><strong>Optional</strong></li>
 </ul>
 </li>
 <li><code>$ignoreUnknownInstances</code>: Whether instances that Rojo doesn't know about should be deleted.<ul>
-<li>Optional</li>
+<li><strong>Optional</strong></li>
 <li>Default is <code>false</code> if <code>$path</code> is specified, otherwise <code>true</code>.</li>
 </ul>
 </li>
