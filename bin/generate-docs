@@ -25,6 +25,7 @@ git checkout master
 mkdocs build --site-dir "$OUTPUT/latest"
 
 echo "Building 0.5.x"
+git checkout 0.5.x
 mkdocs build --site-dir "$OUTPUT/0.5.x"
 
 echo "Building 0.4.x"
