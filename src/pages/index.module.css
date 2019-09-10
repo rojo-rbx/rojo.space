@@ -87,6 +87,10 @@
   }
 }
 
+.DetailsContainer {
+  border-bottom: 1px solid #ccc;
+}
+
 .Details {
   font-size: 1.2rem;
   text-align: center;
@@ -97,4 +101,48 @@
 
 .Details b {
   font-weight: 400;
+}
+
+.Users {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.UsersTitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.UsersTitle > b {
+  font-weight: 700;
+}
+
+.UserWall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.User {
+  display: flex;
+  margin: 1rem;
+  max-width: 100%;
+  flex: 0 0 15rem;
+  align-items: center;
+}
+
+.User img {
+  display: flex;
+  max-width: 100%;
+}
+
+.UsersCta {
+  text-align: center;
+}
+
+.UsersCta a {
+  font-weight: 400;
+  color: #e13835;
 }

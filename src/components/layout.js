@@ -10,7 +10,8 @@ export const PageBlock = ({ className, children }) => (
     style={{
       margin: `0 auto`,
       maxWidth: `60rem`,
-      padding: `0 1rem`,
+      paddingLeft: `1rem`,
+      paddingRight: `1rem`,
     }}
   >
     { children }

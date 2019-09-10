@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 
 import { FullWidthPage, PageBlock } from "../components/layout";
 import SEO from "../components/seo";
+import users from "../users";
 
 import logo from "../images/logo-512.png";
 import style from "./index.module.css";
@@ -40,12 +41,48 @@ const Features = () => (
 );
 
 const Details = () => (
-  <PageBlock>
+  <PageBlock className={ style.DetailsContainer }>
     <div className={ style.Details }>
       Rojo enables <b>modularizing</b> your Roblox project into multiple pieces that can be reasoned about <b>independently</b>.
     </div>
   </PageBlock>
 );
+
+const User = ({ href, src, alt }) => (
+  <a href={ href } className={ style.User }>
+    <img src={ src } alt={ alt } />
+  </a>
+);
+
+const Users = () => {
+  const [playCount, setPlayCount] = useState(
+    users.reduce((total, user) => total + user.plays, 0)
+  );
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPlayCount(count => count + 1);
+    }, 800);
+
+    return () => clearInterval(timer);
+  });
+
+  const userList = users.map((user, index) => (
+    <User key={ index } src={ user.image } alt={ user.title } href={ user.url } />
+  ));
+
+  return (
+    <PageBlock className={ style.Users }>
+      <h1 className={ style.UsersTitle }>Powering <b>{ playCount.toLocaleString() }</b> plays and counting.</h1>
+      <div className={ style.UserWall }>
+        { userList }
+      </div>
+      <p className={ style.UsersCta }>
+        Use Rojo? Want your game here? <a href="https://github.com/rojo-rbx/rojo.space/issues">Open an issue!</a>
+      </p>
+    </PageBlock>
+  );
+};
 
 const IndexPage = () => (
   <FullWidthPage>
@@ -53,6 +90,7 @@ const IndexPage = () => (
     <Splash />
     <Features />
     <Details />
+    <Users />
   </FullWidthPage>
 );
 
