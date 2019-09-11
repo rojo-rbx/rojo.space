@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
 
 import { FullWidthPage, PageBlock } from "../components/layout";
 import SEO from "../components/seo";
@@ -61,15 +60,17 @@ const Users = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setPlayCount(count => count + 1);
-    }, 800);
+      setPlayCount(count => count + 3);
+    }, 100);
 
     return () => clearInterval(timer);
   });
 
-  const userList = users.map((user, index) => (
-    <User key={ index } src={ user.image } alt={ user.title } href={ user.url } />
-  ));
+  const userList = users
+    .filter(user => user.image != null)
+    .map((user, index) => (
+      <User key={ index } src={ user.image } alt={ user.title } href={ user.url } />
+    ));
 
   return (
     <PageBlock className={ style.Users }>
