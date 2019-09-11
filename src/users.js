@@ -4,6 +4,7 @@ import heroes from "./images/users/heroes.png";
 import wfyb from "./images/users/wfyb.png";
 import qclash from "./images/users/q-clash.png";
 import tribe from "./images/users/tribe.png";
+import everest from "./images/users/everest.png";
 
 export default [
   {
@@ -41,6 +42,12 @@ export default [
     url: "https://www.roblox.com/games/1891457100",
     image: tribe,
     plays: 4192154, // 2019-09-10
+  },
+  {
+    name: "Mount Everest Climbing Roleplay",
+    url: "https://www.roblox.com/games/3145447020",
+    image: everest,
+    plays: 1852472, // 2019-09-11
   },
   {
     name: "Heroes' Legacy",
