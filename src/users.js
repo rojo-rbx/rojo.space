@@ -5,6 +5,7 @@ import wfyb from "./images/users/wfyb.png";
 import qclash from "./images/users/q-clash.png";
 import tribe from "./images/users/tribe.png";
 import everest from "./images/users/everest.png";
+import rolantis from "./images/users/rolantis.png";
 
 export default [
   {
@@ -34,7 +35,7 @@ export default [
   {
     name: "City of Rolantis",
     url: "https://www.roblox.com/games/2056459358",
-    image: null, // Waiting on image
+    image: rolantis,
     plays: 8665181, // 2019-09-10
   },
   {

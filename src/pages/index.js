@@ -47,9 +47,12 @@ const Details = () => (
   </PageBlock>
 );
 
-const User = ({ href, src, alt }) => (
-  <a href={ href } className={ style.User }>
-    <img src={ src } alt={ alt } />
+const User = ({ user: { url, image, name, plays } }) => (
+  <a href={ url } className={ style.User }>
+    <img
+      src={ image }
+      alt={ name }
+      title={ name + ": " + plays.toLocaleString() + " plays" } />
   </a>
 );
 
@@ -69,7 +72,7 @@ const Users = () => {
   const userList = users
     .filter(user => user.image != null)
     .map((user, index) => (
-      <User key={ index } src={ user.image } alt={ user.title } href={ user.url } />
+      <User key={ index } user={ user } />
     ));
 
   return (
