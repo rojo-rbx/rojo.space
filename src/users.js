@@ -6,13 +6,20 @@ import qclash from "./images/users/q-clash.png";
 import tribe from "./images/users/tribe.png";
 import everest from "./images/users/everest.png";
 import rolantis from "./images/users/rolantis.png";
+import jailbreak from "./images/users/jailbreak.png";
 
 export default [
+  {
+    name: "Jailbreak",
+    url: "https://www.roblox.com/games/606849621",
+    image: jailbreak,
+    plays: 2963527687, // 2019-09-16
+  },
   {
     name: "Adopt Me",
     url: "https://www.roblox.com/games/920587237",
     image: adopt,
-    plays: 2106201013, // 2019-09-10
+    plays: 2165555444, // 2019-09-16
   },
   {
     name: "Whatever Floats Your Boat",

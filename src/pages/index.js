@@ -64,7 +64,7 @@ const Users = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setPlayCount(count => count + 3);
-    }, 100);
+    }, 80);
 
     return () => clearInterval(timer);
   });
