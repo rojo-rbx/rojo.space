@@ -14,23 +14,23 @@ export default [
     name: "Jailbreak",
     url: "https://www.roblox.com/games/606849621",
     image: jailbreak,
-    plays: 2963527687, // 2019-09-16
+    plays: 3064772462, // 2019-11-12
   },
   {
     name: "Adopt Me",
     url: "https://www.roblox.com/games/920587237",
     image: adopt,
-    plays: 2165555444, // 2019-09-16
+    plays: 2720785380, // 2019-11-12
   },
   {
     name: "Whatever Floats Your Boat",
     url: "https://www.roblox.com/games/156220906",
     image: wfyb,
-    plays: 45635979, // 2019-09-09
+    plays: 46460440, // 2019-11-12
   },
   {
     name: "Giant Simulator",
-    url: "https://www.roblox.com/games/2986677229/Giant-Simulator",
+    url: "https://www.roblox.com/games/2986677229",
     image: giant,
     plays: 23635709, // 2019-11-12
   },
@@ -38,36 +38,36 @@ export default [
     name: "eg - testing",
     url: "https://www.roblox.com/games/2747834912",
     image: eg,
-    plays: 15657981, // 2019-09-09
+    plays: 18716927, // 2019-11-12
   },
   {
     name: "Q-CLASH!",
     url: "https://www.roblox.com/games/2029250188",
     image: qclash,
-    plays: 12663041, // 2019-09-10
+    plays: 14427705, // 2019-11-12
   },
   {
     name: "City of Rolantis",
     url: "https://www.roblox.com/games/2056459358",
     image: rolantis,
-    plays: 8665181, // 2019-09-10
+    plays: 8706777, // 2019-11-12
   },
   {
     name: "Tribe Simulator",
     url: "https://www.roblox.com/games/1891457100",
     image: tribe,
-    plays: 4192154, // 2019-09-10
+    plays: 4308987, // 2019-11-12
   },
   {
     name: "Mount Everest Climbing Roleplay",
     url: "https://www.roblox.com/games/3145447020",
     image: everest,
-    plays: 1852472, // 2019-09-11
+    plays: 2444256, // 2019-11-12
   },
   {
     name: "Heroes' Legacy",
     url: "https://www.roblox.com/games/297639921",
     image: heroes,
-    plays: 122121, // 2019-09-09
+    plays: 122916, // 2019-11-12
   },
 ];
