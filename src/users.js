@@ -1,12 +1,13 @@
 import adopt from "./images/users/adopt.png";
 import eg from "./images/users/eg.png";
-import heroes from "./images/users/heroes.png";
-import wfyb from "./images/users/wfyb.png";
-import qclash from "./images/users/q-clash.png";
-import tribe from "./images/users/tribe.png";
 import everest from "./images/users/everest.png";
-import rolantis from "./images/users/rolantis.png";
+import giant from "./images/users/giant-simulator.png";
+import heroes from "./images/users/heroes.png";
 import jailbreak from "./images/users/jailbreak.png";
+import qclash from "./images/users/q-clash.png";
+import rolantis from "./images/users/rolantis.png";
+import tribe from "./images/users/tribe.png";
+import wfyb from "./images/users/wfyb.png";
 
 export default [
   {
@@ -26,6 +27,12 @@ export default [
     url: "https://www.roblox.com/games/156220906",
     image: wfyb,
     plays: 45635979, // 2019-09-09
+  },
+  {
+    name: "Giant Simulator",
+    url: "https://www.roblox.com/games/2986677229/Giant-Simulator",
+    image: giant,
+    plays: 23635709, // 2019-11-12
   },
   {
     name: "eg - testing",
