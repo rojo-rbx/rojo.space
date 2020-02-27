@@ -1,0 +1,65 @@
+site_name: Rojo Documentation
+site_description: Documentation home Rojo, a tool for enabling professional development tools on Roblox.
+repo_name: rojo-rbx/rojo.space
+repo_url: https://github.com/rojo-rbx/rojo.space
+
+theme:
+  name: material
+  palette:
+    primary: 'Red'
+    accent: 'Red'
+
+nav:
+  - Home: index.md
+  - Why Rojo?: why-rojo.md
+  - Get Help with Rojo: help.md
+  - Rojo Alternatives: rojo-alternatives.md
+  - Installing Rojo: installation.md
+  - Rojo v0.6.x:
+    - Guide:
+      - Creating a Game with Rojo: v0.6.x/guide/new-game.md
+      - Porting an Existing Game to Rojo: v0.6.x/guide/existing-game.md
+    - Reference:
+      - Fully vs Partially Managed Rojo: v0.6.x/reference/full-vs-partial.md
+      - Project Format: v0.6.x/reference/project-format.md
+      - Sync Details: v0.6.x/reference/sync-details.md
+  - Rojo v0.5.x:
+    - Guide:
+      - Creating a Game with Rojo: v0.5.x/guide/new-game.md
+      - Porting an Existing Game to Rojo: v0.5.x/guide/existing-game.md
+      - Migrating from 0.4.x to 0.5.x: v0.5.x/guide/migrating-to-epiphany.md
+    - Reference:
+      - Fully vs Partially Managed Rojo: v0.5.x/reference/full-vs-partial.md
+      - Project Format: v0.5.x/reference/project-format.md
+      - Sync Details: v0.5.x/reference/sync-details.md
+    - Rojo Internals:
+      - Internals Overview: v0.5.x/internals/overview.md
+  - Rojo v0.4.x:
+    - Getting Started:
+      - Creating a Project: v0.4.x/getting-started/creating-a-project.md
+    - Sync Details: v0.4.x/sync-details.md
+
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        'latest/index.md': 'index.md'
+        'v0.5.x/index.md': 'index.md'
+        'v0.4.x/index.md': 'index.md'
+        'v0.5.x/why-rojo.md': 'why-rojo.md'
+        'v0.4.x/why-rojo.md': 'why-rojo.md'
+        'v0.5.x/help.md': 'help.md'
+        'v0.5.x/rojo-alternatives.md': 'rojo-alternatives.md'
+        'v0.5.x/guide/installation.md': 'installation.md'
+        'v0.4.x/getting-started/installation.md': 'installation.md'
+
+extra_css:
+  - extra.css
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
