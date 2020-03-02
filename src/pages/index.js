@@ -14,7 +14,7 @@ const Splash = () => (
     </h1>
     <h2 className={ style.SplashSubtitle }>Professional Development Tools in Roblox</h2>
     <div>
-      <a className={ style.SplashButton } href="/docs/0.5.x/guide/installation/">Get Started</a>
+      <a className={ style.SplashButton } href="/docs/installation/">Get Started</a>
       <a className={ style.SecondaryButton } href="https://github.com/rojo-rbx/rojo/releases">Releases</a>
     </div>
   </div>
