@@ -15,43 +15,35 @@ nav:
   - Get Help with Rojo: help.md
   - Rojo Alternatives: rojo-alternatives.md
   - Installing Rojo: installation.md
-  - Rojo v0.6.x:
+  - Rojo 0.5.x:
     - Guide:
-      - Creating a Game with Rojo: v0.6.x/guide/new-game.md
-      - Porting an Existing Game to Rojo: v0.6.x/guide/existing-game.md
+      - Creating a Game with Rojo: 0.5.x/guide/new-game.md
+      - Porting an Existing Game to Rojo: 0.5.x/guide/existing-game.md
+      - Migrating from 0.4.x to 0.5.x: 0.5.x/guide/migrating-to-epiphany.md
     - Reference:
-      - Fully vs Partially Managed Rojo: v0.6.x/reference/full-vs-partial.md
-      - Project Format: v0.6.x/reference/project-format.md
-      - Sync Details: v0.6.x/reference/sync-details.md
-  - Rojo v0.5.x:
-    - Guide:
-      - Creating a Game with Rojo: v0.5.x/guide/new-game.md
-      - Porting an Existing Game to Rojo: v0.5.x/guide/existing-game.md
-      - Migrating from 0.4.x to 0.5.x: v0.5.x/guide/migrating-to-epiphany.md
-    - Reference:
-      - Fully vs Partially Managed Rojo: v0.5.x/reference/full-vs-partial.md
-      - Project Format: v0.5.x/reference/project-format.md
-      - Sync Details: v0.5.x/reference/sync-details.md
+      - Fully vs Partially Managed Rojo: 0.5.x/reference/full-vs-partial.md
+      - Project Format: 0.5.x/reference/project-format.md
+      - Sync Details: 0.5.x/reference/sync-details.md
     - Rojo Internals:
-      - Internals Overview: v0.5.x/internals/overview.md
-  - Rojo v0.4.x:
+      - Internals Overview: 0.5.x/internals/overview.md
+  - Rojo 0.4.x:
     - Getting Started:
-      - Creating a Project: v0.4.x/getting-started/creating-a-project.md
-    - Sync Details: v0.4.x/sync-details.md
+      - Creating a Project: 0.4.x/getting-started/creating-a-project.md
+    - Sync Details: 0.4.x/sync-details.md
 
 plugins:
   - search
   - redirects:
       redirect_maps:
         'latest/index.md': 'index.md'
-        'v0.5.x/index.md': 'index.md'
-        'v0.4.x/index.md': 'index.md'
-        'v0.5.x/why-rojo.md': 'why-rojo.md'
-        'v0.4.x/why-rojo.md': 'why-rojo.md'
-        'v0.5.x/help.md': 'help.md'
-        'v0.5.x/rojo-alternatives.md': 'rojo-alternatives.md'
-        'v0.5.x/guide/installation.md': 'installation.md'
-        'v0.4.x/getting-started/installation.md': 'installation.md'
+        '0.5.x/index.md': 'index.md'
+        '0.4.x/index.md': 'index.md'
+        '0.5.x/why-rojo.md': 'why-rojo.md'
+        '0.4.x/why-rojo.md': 'why-rojo.md'
+        '0.5.x/help.md': 'help.md'
+        '0.5.x/rojo-alternatives.md': 'rojo-alternatives.md'
+        '0.5.x/guide/installation.md': 'installation.md'
+        '0.4.x/getting-started/installation.md': 'installation.md'
 
 extra_css:
   - extra.css
