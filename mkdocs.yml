@@ -36,15 +36,15 @@ plugins:
   - search
   - redirects:
       redirect_maps:
-        'latest/index.md': 'index.md'
-        '0.5.x/index.md': 'index.md'
-        '0.4.x/index.md': 'index.md'
-        '0.5.x/why-rojo.md': 'why-rojo.md'
-        '0.4.x/why-rojo.md': 'why-rojo.md'
-        '0.5.x/help.md': 'help.md'
-        '0.5.x/rojo-alternatives.md': 'rojo-alternatives.md'
-        '0.5.x/guide/installation.md': 'installation.md'
-        '0.4.x/getting-started/installation.md': 'installation.md'
+        'latest/index.md': https://rojo.space/docs/
+        '0.5.x/index.md': https://rojo.space/docs/
+        '0.4.x/index.md': https://rojo.space/docs/
+        '0.5.x/why-rojo.md': https://rojo.space/docs/why-rojo/
+        '0.4.x/why-rojo.md': https://rojo.space/docs/why-rojo/
+        '0.5.x/help.md': https://rojo.space/docs/help/
+        '0.5.x/rojo-alternatives.md': https://rojo.space/docs/rojo-alternatives/
+        '0.5.x/guide/installation.md': https://rojo.space/docs/installation/
+        '0.4.x/getting-started/installation.md': https://rojo.space/docs/installation/
 
 extra_css:
   - extra.css
