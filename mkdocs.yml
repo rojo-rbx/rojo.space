@@ -1,5 +1,6 @@
 site_name: Rojo Documentation
 site_description: Documentation home Rojo, a tool for enabling professional development tools on Roblox.
+site_url: https://rojo.space/docs
 repo_name: rojo-rbx/rojo.space
 repo_url: https://github.com/rojo-rbx/rojo.space
 
