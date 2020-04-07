@@ -35,7 +35,7 @@ export default [
     plays: 37317030, // 2020-03-11
   },
   {
-    name: "eg - testing",
+    name: "Eg!",
     url: "https://www.roblox.com/games/2747834912",
     image: eg,
     plays: 23326904, // 2020-03-11
