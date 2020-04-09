@@ -8,6 +8,7 @@ import qclash from "./images/users/q-clash.png";
 import rolantis from "./images/users/rolantis.png";
 import tribe from "./images/users/tribe.png";
 import wfyb from "./images/users/wfyb.png";
+import tds from "./images/users/tower-defense-simulator.png";
 
 export default [
   {
@@ -21,6 +22,12 @@ export default [
     url: "https://www.roblox.com/games/920587237",
     image: adopt,
     plays: 4613613838, // 2020-03-11
+  },
+  {
+    name: "Tower Defense Simulator",
+    url: "https://www.roblox.com/games/3260590327",
+    image: tds,
+    plays: 322107107, // 2020-04-08
   },
   {
     name: "Whatever Floats Your Boat",
