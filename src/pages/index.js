@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { FullWidthPage, PageBlock } from "../components/layout";
 import SEO from "../components/seo";
@@ -47,28 +47,16 @@ const Details = () => (
   </PageBlock>
 );
 
-const User = ({ user: { url, image, name, plays } }) => (
+const User = ({ user: { url, image, name } }) => (
   <a href={ url } className={ style.User }>
     <img
       src={ image }
       alt={ name }
-      title={ name + ": " + plays.toLocaleString() + " plays" } />
+      title={ name } />
   </a>
 );
 
 const Users = () => {
-  const [playCount, setPlayCount] = useState(
-    users.reduce((total, user) => total + user.plays, 0)
-  );
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setPlayCount(count => count + 3);
-    }, 80);
-
-    return () => clearInterval(timer);
-  });
-
   const userList = users
     .filter(user => user.image != null)
     .map((user, index) => (
@@ -77,7 +65,7 @@ const Users = () => {
 
   return (
     <PageBlock className={ style.Users }>
-      <h1 className={ style.UsersTitle }>Powering <b>{ playCount.toLocaleString() }</b> plays and counting.</h1>
+      <h1 className={ style.UsersTitle }>Powering the <b>Top Games</b> on Roblox</h1>
       <div className={ style.UserWall }>
         { userList }
       </div>
