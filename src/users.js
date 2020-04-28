@@ -12,16 +12,16 @@ import tds from "./images/users/tower-defense-simulator.png";
 
 export default [
   {
-    name: "Jailbreak",
-    url: "https://www.roblox.com/games/606849621",
-    image: jailbreak,
-    plays: 3433164377, // 2020-03-11
-  },
-  {
     name: "Adopt Me",
     url: "https://www.roblox.com/games/920587237",
     image: adopt,
     plays: 4613613838, // 2020-03-11
+  },
+  {
+    name: "Jailbreak",
+    url: "https://www.roblox.com/games/606849621",
+    image: jailbreak,
+    plays: 3433164377, // 2020-03-11
   },
   {
     name: "Tower Defense Simulator",
