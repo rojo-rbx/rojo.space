@@ -16,6 +16,12 @@ nav:
   - Get Help with Rojo: help.md
   - Rojo Alternatives: rojo-alternatives.md
   - Installing Rojo: installation.md
+  - Rojo 6:
+    - Creating a Game with Rojo: 6.x/new-game.md
+    - Porting an Existing Game to Rojo: 6.x/existing-game.md
+    - Rojo Workflows: 6.x/workflows.md
+    - Project Format: 6.x/project-format.md
+    - Sync Details: 6.x/sync-details.md
   - Rojo 0.5.x:
     - Guide:
       - Creating a Game with Rojo: 0.5.x/guide/new-game.md
