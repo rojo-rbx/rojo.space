@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Build all GraphViz diagrams for use on the Rojo website.
+
+set -e
+shopt -s nullglob
+
+for input in diagrams/*.gv
+do
+	image_name=$(basename "$input" .gv)
+	output="docs/images/$image_name.svg"
+
+	echo "Building $input to $output"
+	dot -Tsvg "$input" -o "$output"
+done

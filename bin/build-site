@@ -7,7 +7,9 @@ set -e
 OUTPUT="$(pwd)/public"
 DOCS="$OUTPUT/docs"
 
-npm run-script build
+$(dirname "$0")/build-diagrams
+
+npx gatsby build
 
 echo "rojo.space" > "$OUTPUT/CNAME"
 

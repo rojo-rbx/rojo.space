@@ -1,0 +1,32 @@
+name: Site Deployment
+
+on:
+  push:
+    branches:
+      - master
+      - auto-deploy
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install Node.js dependencies
+        run: npm install
+
+      - name: Build Site
+        run: ./bin/build-site
+
+      - name: Deploy
+        run: npx gh-pages -d public
