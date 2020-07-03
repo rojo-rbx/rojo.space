@@ -14,6 +14,11 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@v2
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "example@example.com"
+          git config --global user.name "GitHub Actions Deployment"
+
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
 
