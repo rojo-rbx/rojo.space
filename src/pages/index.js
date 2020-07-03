@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { FullWidthPage, PageBlock } from "../components/layout";
 import SEO from "../components/seo";
@@ -15,7 +15,7 @@ const Splash = () => (
     <h2 className={ style.SplashSubtitle }>Professional Development Tools in Roblox</h2>
     <div>
       <a className={ style.SplashButton } href="/docs/installation/">Get Started</a>
-      <a className={ style.SecondaryButton } href="https://github.com/rojo-rbx/rojo/releases">Releases</a>
+      <a className={ style.SecondaryButton } href="https://github.com/Roblox/rojo/releases">Releases</a>
     </div>
   </div>
 );
@@ -47,28 +47,16 @@ const Details = () => (
   </PageBlock>
 );
 
-const User = ({ user: { url, image, name, plays } }) => (
+const User = ({ user: { url, image, name } }) => (
   <a href={ url } className={ style.User }>
     <img
       src={ image }
       alt={ name }
-      title={ name + ": " + plays.toLocaleString() + " plays" } />
+      title={ name } />
   </a>
 );
 
 const Users = () => {
-  const [playCount, setPlayCount] = useState(
-    users.reduce((total, user) => total + user.plays, 0)
-  );
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setPlayCount(count => count + 3);
-    }, 80);
-
-    return () => clearInterval(timer);
-  });
-
   const userList = users
     .filter(user => user.image != null)
     .map((user, index) => (
@@ -77,12 +65,12 @@ const Users = () => {
 
   return (
     <PageBlock className={ style.Users }>
-      <h1 className={ style.UsersTitle }>Powering <b>{ playCount.toLocaleString() }</b> plays and counting.</h1>
+      <h1 className={ style.UsersTitle }>Powering the <b>Top Games</b> on Roblox</h1>
       <div className={ style.UserWall }>
         { userList }
       </div>
       <p className={ style.UsersCta }>
-        Use Rojo? Want your game here? <a href="https://github.com/rojo-rbx/rojo.space/issues">Open an issue!</a>
+        Use Rojo? Want your game here? <a href="https://github.com/Roblox/rojo.space/issues">Open an issue!</a>
       </p>
     </PageBlock>
   );

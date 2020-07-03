@@ -8,8 +8,15 @@ import qclash from "./images/users/q-clash.png";
 import rolantis from "./images/users/rolantis.png";
 import tribe from "./images/users/tribe.png";
 import wfyb from "./images/users/wfyb.png";
+import tds from "./images/users/tower-defense-simulator.png";
 
 export default [
+  {
+    name: "Adopt Me",
+    url: "https://www.roblox.com/games/920587237",
+    image: adopt,
+    plays: 4613613838, // 2020-03-11
+  },
   {
     name: "Jailbreak",
     url: "https://www.roblox.com/games/606849621",
@@ -17,10 +24,10 @@ export default [
     plays: 3433164377, // 2020-03-11
   },
   {
-    name: "Adopt Me",
-    url: "https://www.roblox.com/games/920587237",
-    image: adopt,
-    plays: 4613613838, // 2020-03-11
+    name: "Tower Defense Simulator",
+    url: "https://www.roblox.com/games/3260590327",
+    image: tds,
+    plays: 322107107, // 2020-04-08
   },
   {
     name: "Whatever Floats Your Boat",
@@ -35,7 +42,7 @@ export default [
     plays: 37317030, // 2020-03-11
   },
   {
-    name: "eg - testing",
+    name: "Eg!",
     url: "https://www.roblox.com/games/2747834912",
     image: eg,
     plays: 23326904, // 2020-03-11
