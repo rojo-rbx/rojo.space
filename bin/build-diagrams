@@ -3,7 +3,6 @@
 # Build all GraphViz diagrams for use on the Rojo website.
 
 set -e
-shopt -s nullglob
 
 for input in diagrams/*.gv
 do
