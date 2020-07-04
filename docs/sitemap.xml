@@ -2,72 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://rojo.space/docs/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/why-rojo/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/help/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/rojo-alternatives/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/installation/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://rojo.space/docs/6.x/new-game/</loc>
+     <lastmod>2020-07-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://rojo.space/docs/6.x/existing-game/</loc>
+     <lastmod>2020-07-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://rojo.space/docs/6.x/workflows/</loc>
+     <lastmod>2020-07-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://rojo.space/docs/6.x/project-format/</loc>
+     <lastmod>2020-07-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://rojo.space/docs/6.x/sync-details/</loc>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/0.5.x/guide/new-game/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/0.5.x/guide/existing-game/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/0.5.x/guide/migrating-to-epiphany/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/0.5.x/reference/full-vs-partial/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/0.5.x/reference/project-format/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/0.5.x/reference/sync-details/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/0.5.x/internals/overview/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/0.4.x/getting-started/creating-a-project/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rojo.space/docs/0.4.x/sync-details/</loc>
-     <lastmod>2020-04-28</lastmod>
+     <lastmod>2020-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
