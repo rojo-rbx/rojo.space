@@ -58,7 +58,7 @@ Download the attached `rbxm` file and put it into your Roblox Studio plugins fol
 ### Installing from Roblox.com
 Rojo has a separate Roblox.com plugin for each release channel. Make sure you install the correct one!
 
-* [**v0.6.x** plugin](https://www.roblox.com/library/4048317704/)
+* [**v6.x** plugin](https://www.roblox.com/library/4048317704/)
 * [**v0.5.x** plugin](https://www.roblox.com/library/1997686364/)
 * [**v0.4.x** plugin](https://www.roblox.com/library/1211549683/)
 

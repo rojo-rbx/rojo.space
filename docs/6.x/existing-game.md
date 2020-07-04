@@ -14,8 +14,11 @@ Most software projects ouside Roblox have a single location, like a folder named
 
 Rewriting this code to use modern Roblox features like [CollectionService](https://developer.roblox.com/en-us/api-reference/class/CollectionService) can make it easier to understand, easier to work on, and more friendly to Rojo.
 
-## rbxlx-to-rojo
+## [rbxlx-to-rojo](https://github.com/rojo-rbx/rbxlx-to-rojo)
 There are ongoing efforts to make porting an existing game to Rojo more automatic. Currently, the most developed tool for this is [rbxlx-to-rojo](https://github.com/rojo-rbx/rbxlx-to-rojo).
+
+## [Remodel](https://github.com/Roblox/remodel)
+Another option for porting an existing game is to use [Remodel](https://github.com/Roblox/remodel), which allows deep customization and would be suitable for porting a large, complex game.
 
 ## Migrating Away from Rojo
 Migrating away from Rojo is very simple: start editing your Roblox place directly instead of the files on the filesystem!

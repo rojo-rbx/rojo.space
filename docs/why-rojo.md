@@ -39,6 +39,7 @@ There are decades of excellent tools available that operate on files. With Rojo,
 
 Popular tools include:
 
-* [luacheck](https://github.com/mpeterv/luacheck), a static analysis tool to help you write better Lua
+* [Selene](https://github.com/Kampfkarren/selene), a static analysis tool to help you write better Lua
+* [luacheck](https://github.com/mpeterv/luacheck), another static analyzer, popular outside the Roblox community
 * [ripgrep](https://github.com/BurntSushi/ripgrep), an extremely fast code search tool
 * [Tokei](https://github.com/XAMPPRocky/tokei), a tool for statistics like lines of code

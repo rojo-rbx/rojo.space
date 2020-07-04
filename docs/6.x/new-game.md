@@ -14,7 +14,7 @@ Rojo will create a folder named `my-new-game` if it doesn't already exist and cr
 ## Building Your Place
 Now that we have a project, one thing we can do is build a Roblox place file for our project. This is a great way to get started with a project quickly with no fuss.
 
-All we have to do is call `rojo build`:
+All we have to do is run `rojo build` from inside the project's folder:
 
 ```sh
 rojo build -o MyNewGame.rbxlx
@@ -49,12 +49,14 @@ Visit http://localhost:34872/ in your browser for more information
 
 Switch into Roblox Studio and press the **Rojo** plugin toolbar button. A dialog should appear:
 
-![Rojo plugin connection dialog](images/connection-dialog.png)
+![Rojo plugin connection dialog](../images/connection-dialog-6.0.0-rc.1.png)
 {: class="feature-image" align="center" }
 
 If the port number doesn't match the output from the command line, change it, and then press **Connect**.
 
 If all went well, you should now be able to change files in your project directory and watch them sync into Roblox Studio in real time!
+
+You can also visit the URL printed by Rojo to access extra information about the running session.
 
 ## Uploading Your Place
 Aimed at teams that want serious levels of automation, Rojo can upload places to Roblox.com automatically.
@@ -70,4 +72,4 @@ Generating and publishing your game is as simple as:
 rojo upload --asset_id [PLACE ID] --cookie "[SECURITY COOKIE]"
 ```
 
-An example project is available on GitHub that deploys to Roblox.com from GitHub and Travis-CI automatically: [https://github.com/rojo-rbx/desert-bus-2077](https://github.com/rojo-rbx/desert-bus-2077)
+An example project is available on GitHub that deploys to Roblox.com via GitHub Actions automatically: [Desert Bus 2077](https://github.com/Roblox/desert-bus-2077)

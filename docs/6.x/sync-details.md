@@ -1,20 +1,20 @@
 This page aims to describe how Rojo turns files on the filesystem into Roblox objects.
 
-[TOC]
-
 ## Overview
-| File Name      | Instance Type             |
-| -------------- | ------------------------- |
-| any directory  | `Folder`                  |
-| `*.server.lua` | `Script`                  |
-| `*.client.lua` | `LocalScript`             |
-| `*.lua`        | `ModuleScript`            |
-| `*.csv`        | `LocalizationTable`       |
-| `*.txt`        | `StringValue`             |
-| `*.model.json` | Any                       |
-| `*.rbxm`       | Any                       |
-| `*.rbxmx`      | Any                       |
-| `*.meta.json`  | Modifies another instance |
+| Concept                                     | File Name        |
+| ------------------------------------------- | ---------------- |
+| [Folders](#folders)                         | any directory    |
+| Server [Scripts](#scripts)                  | `*.server.lua`   |
+| Client [Scripts](#scripts)                  | `*.client.lua`   |
+| Module [Scripts](#scripts)                  | `*.lua`          |
+| XML [Models](#models)                       | `*.rbxmx`        |
+| Binary [Models](#models)                    | `*.rbxm`         |
+| [Localization Tables](#localization-tables) | `*.csv`          |
+| [Plain Text](#plain-text)                   | `*.txt`          |
+| [JSON Modules](#json-modules)               | `*.json`         |
+| [JSON Models](#json-models)                 | `*.model.json`   |
+| [Projects](#project)                        | `*.project.json` |
+| [Meta Files](#meta-files)                   | `*.meta.json`    |
 
 ## Limitations
 Not all property types can be synced by Rojo in real-time due to limitations of the Roblox Studio plugin API. In these cases, you can usually generate a place file and open it when you start working on a project.
@@ -25,33 +25,66 @@ Some common cases you might hit are:
 * `MeshPart.MeshId`
 * `HttpService.HttpEnabled`
 
-For a list of all property types that Rojo can reason about, both when live-syncing and when building place files, look at [rbx-dom's type coverage chart](https://github.com/rojo-rbx/rbx-dom#property-type-coverage).
+For a list of all property types that Rojo can reason about, both when live-syncing and when building place files, look at [rbx-dom's type coverage chart](https://github.com/Roblox/rbx-dom#property-type-coverage).
 
-This limitation may be solved by [issue #205](https://github.com/rojo-rbx/rojo/issues/205) in the future.
+This limitation may be solved by [issue #205](https://github.com/Roblox/rojo/issues/205) in the future.
 
 ## Folders
-Any directory on the filesystem will turn into a `Folder` instance unless it contains an 'init' script, described below.
+Any directory on the filesystem will turn into a `Folder` instance with the same name.
+
+It is possible for a directory to contain certain files that change what the directory turns into:
+
+* An `init.lua`, `init.server.lua`, or `init.client.lua` file, described in [Scripts](#scripts).
+* An `init.meta.json` file that defines `className`, described in [Meta Files](#meta-files).
+* A `default.project.json` file, described in [Projects](#projects).
 
 ## Scripts
-The default script type in Rojo projects is `ModuleScript`, since most scripts in well-structued Roblox projects will be modules.
+Rojo transforms any files with the `lua` extension into the various script instances that Roblox has.
 
-If a directory contains a file named `init.server.lua`, `init.client.lua`, or `init.lua`, that folder will be transformed into a `*Script` instance with the contents of the 'init' file. This can be used to create scripts inside of scripts.
+* Any file ending in `.server.lua` will turn into a `Script` instance.
+* Any file ending in `.client.lua` will turn into a `LocalScript` instance.
+* Any other `.lua` file will turn into a `ModuleScript` instance.
+
+Rojo reserves three special script names. These scripts change their parent directory into a script instead of a folder:
+
+* `init.server.lua` will change its parent directory into a `Script` instance.
+* `init.client.lua` will change its parent directory into a `LocalScript` instance.
+* `init.lua` will change its parent directory into a `ModuleScript` instance.
 
 For example, these files:
 
-![Tree of files on disk](images/sync-example-files.svg)
+![Tree of files on disk](../images/example-sync-files.svg)
 {: align="center" }
 
 Will turn into these instances in Roblox:
 
-![Tree of instances in Roblox](images/sync-example-instances.svg)
+![Tree of instances in Roblox](../images/example-sync-instances.svg)
 {: align="center" }
 
-## Localization Tables
-Any CSV files are transformed into `LocalizationTable` instances. Rojo expects these files to follow the same format that Roblox does when importing and exporting localization information.
+Only one "init script" can be present in the same folder.
 
-## Plain Text Files
-Plain text files (`.txt`) files are transformed into `StringValue` instances. This is useful for bringing in text data that can be read by scripts at runtime.
+## Models
+Rojo supports both binary (`.rbxm`) and XML (`.rbxmx`) models generated by Roblox Studio or another tool.
+
+Support for `rbxmx` is very good, while support for `rbxm` is still very early, buggy, and lacking features.
+
+For a rundown of supported types, check out [rbx-dom's type coverage chart](https://github.com/rojo-rbx/rbx-dom#property-type-coverage).
+
+## Localization Tables
+Any file with the `csv` extension is transformed into a `LocalizationTable` instance. Rojo expects these files to follow the same format that Roblox does when importing and exporting localization information.
+
+An example CSV localization table is:
+
+```csv
+Key,Source,Context,Example,es
+Ack,Ack!,,An exclamation of despair,¡Ay!
+```
+
+## Plain Text
+Any file with the `txt` extension is transformed into a `StringValue` instance. This is useful for bringing in text data that can be read by scripts at runtime.
+
+## JSON Modules
+Any file with the `json` extension that is not a [JSON Model](#json-models) or a [Project File](#project-file)
 
 ## JSON Models
 Files ending in `.model.json` can be used to describe simple models. They're designed to be hand-written and are useful for instances like `RemoteEvent`.
@@ -83,23 +116,23 @@ A JSON model describing a folder containing a `Part` and a `RemoteEvent` could b
 
 It would turn into instances in this shape:
 
-![Tree of instances in Roblox](images/sync-example-json-model.svg)
+![Tree of instances in Roblox](../images/example-json-model.svg)
 {: align="center" }
 
 !!! warning
-    Starting in Rojo 0.5.0 (stable), the `Name` field is no longer required. The name of the top-level instance in a JSON model is now based on its file name, and the `Name` field is now ignored.
+    Starting in Rojo 0.5.0, the `Name` field is no longer required. The name of the top-level instance in a JSON model is now based on its file name, and the `Name` field is now ignored.
 
     Rojo will emit a warning if the `Name` field is specified and does not match the file's name.
 
-## Binary and XML Models
-Rojo supports both binary (`.rbxm`) and XML (`.rbxmx`) models generated by Roblox Studio or another tool.
+## Projects
+Starting in Rojo 6.0, project files can be included in other project files. This can be useful for reusing pieces between multiple project files.
 
-Support for the `rbxmx` is very good, while support for `rbxm` is still very early, buggy, and lacking features.
+Projects that are intended to be included inside other projects should describe models, not places.
 
-For a rundown of supported types, check out [rbx-dom's type coverage chart](https://github.com/rojo-rbx/rbx-dom#property-type-coverage).
+If a directory contains a file named `default.project.json`, Rojo will use the contents of the project file instead of anything else in the directory.
 
 ## Meta Files
-New in Rojo 0.5.0-alpha.12 are meta files, named `.meta.json`.
+New in Rojo 0.5 are meta files, named `.meta.json`.
 
 Meta files allow attaching extra Rojo data to models defined in other formats, like Roblox's `rbxm` and `rbxmx` model formats, or even Lua scripts.
 
@@ -154,4 +187,4 @@ If you wanted to represent a tool containing a script and a model for its handle
 }
 ```
 
-Instead of a `Folder` instance, you'll end up with a `Tool` instance with the `Grip` property set!
+Instead of a `Folder` instance, you'll end up with a `Tool` instance with the `Grip` property set.
