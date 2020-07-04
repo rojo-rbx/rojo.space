@@ -1,11 +1,11 @@
 digraph "Sync Files" {
 	graph [
-	    ranksep = "0.7",
-	    nodesep = "0.5",
+		ranksep = "0.7",
+		nodesep = "0.5",
 	];
 	node [
-	    fontname = "monospace",
-	    shape = "record",
+		fontname = "monospace",
+		shape = "record",
 	];
 
 	my_model [label = "MyModel (Script)"]
