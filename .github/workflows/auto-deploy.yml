@@ -22,12 +22,12 @@ jobs:
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.8.x
@@ -44,4 +44,8 @@ jobs:
         run: ./bin/build-site
 
       - name: Deploy
-        run: npx gh-pages -d public
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: public
