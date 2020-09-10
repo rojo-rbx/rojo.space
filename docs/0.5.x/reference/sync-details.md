@@ -27,7 +27,7 @@ Some common cases you might hit are:
 
 For a list of all property types that Rojo can reason about, both when live-syncing and when building place files, look at [rbx-dom's type coverage chart](https://github.com/rojo-rbx/rbx-dom#property-type-coverage).
 
-This limitation may be solved by [issue #205](https://github.com/Roblox/rojo/issues/205) in the future.
+This limitation may be solved by [issue #205](https://github.com/rojo-rbx/rojo/issues/205) in the future.
 
 ## Folders
 Any directory on the filesystem will turn into a `Folder` instance unless it contains an 'init' script, described below.

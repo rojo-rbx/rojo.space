@@ -3,7 +3,7 @@
 ## Summary
 * Tools to port existing games are in progress!
     * [rbxlx-to-rojo](https://github.com/rojo-rbx/rbxlx-to-rojo)
-    * `rojo export` ([issue #208](https://github.com/Roblox/rojo/issues/208))
+    * `rojo export` ([issue #208](https://github.com/rojo-rbx/rojo/issues/208))
 * Can port as much or as little of your game as you like
     * Rojo can manage just a slice of your game!
 * Some Roblox idioms aren't very well supported

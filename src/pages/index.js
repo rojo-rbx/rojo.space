@@ -15,7 +15,7 @@ const Splash = () => (
     <h2 className={ style.SplashSubtitle }>Professional Development Tools in Roblox</h2>
     <div>
       <a className={ style.SplashButton } href="/docs/installation/">Get Started</a>
-      <a className={ style.SecondaryButton } href="https://github.com/Roblox/rojo/releases">Releases</a>
+      <a className={ style.SecondaryButton } href="https://github.com/rojo-rbx/rojo/releases">Releases</a>
     </div>
   </div>
 );
@@ -70,7 +70,7 @@ const Users = () => {
         { userList }
       </div>
       <p className={ style.UsersCta }>
-        Use Rojo? Want your game here? <a href="https://github.com/Roblox/rojo.space/issues">Open an issue!</a>
+        Use Rojo? Want your game here? <a href="https://github.com/rojo-rbx/rojo.space/issues">Open an issue!</a>
       </p>
     </PageBlock>
   );
