@@ -27,12 +27,17 @@
 <li>Default is <code>null</code></li>
 </ul>
 </li>
+<li><code>globIgnorePaths</code>: A list of globs of paths to ignore.<ul>
+<li><strong>Optional</strong></li>
+<li>Default is <code>[]</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="instance-description">Instance Description<a class="headerlink" href="#instance-description" title="Permanent link">&para;</a></h2>
 <p>Instance Descriptions correspond one-to-one with the actual Roblox Instances in the project.</p>
 <ul>
 <li><code>$className</code>: The ClassName of the Instance being described.<ul>
-<li><strong>Optional if <code>$path</code> is specified.</strong></li>
+<li><strong>Optional if <code>$path</code> is specified or if the instance is a Roblox service.</strong></li>
 </ul>
 </li>
 <li><code>$path</code>: The path on the filesystem to pull files from into the project.<ul>
@@ -122,6 +127,7 @@
 <p>This project describes the layout you might use if you were making the next hit simulator game, <em>Sisyphus Simulator</em>:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sisyphus Simulator&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;globIgnorePaths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;**/*.spec.lua&quot;</span><span class="p">],</span>
     <span class="nt">&quot;tree&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;$className&quot;</span><span class="p">:</span> <span class="s2">&quot;DataModel&quot;</span><span class="p">,</span>
 
