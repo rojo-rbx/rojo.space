@@ -19,10 +19,10 @@ If you use Visual Studio Code, you can install [the Rojo VS Code extension](http
 ### With Foreman
 [Foreman](https://github.com/rojo-rbx/foreman) is a toolchain manager that is useful for managing tools like Rojo for Roblox projects.
 
-To install from the latest stable release channel, currently 0.5.x, add an entry to the `[tools]` section of your `foreman.toml`:
+To install from the latest stable release channel, currently 6.x, add an entry to the `[tools]` section of your `foreman.toml`:
 
 ```toml
-rojo = { source = "rojo-rbx/rojo", version = "0.5" }
+rojo = { source = "rojo-rbx/rojo", version = "6.0.0" }
 ```
 
 ### From GitHub
@@ -33,16 +33,16 @@ The Rojo CLI must be run from the command line, like Terminal.app on MacOS or `c
 ### From Crates.io
 It's also possible to install Rojo releases using [Rust](https://www.rust-lang.org/). This will compile Rojo from source and install it on your machine.
 
-To install from the latest stable release channel, currently 0.5.x, use:
+To install from the latest stable release channel, currently 6.x, use:
 
 ```sh
 cargo install rojo
 ```
 
-To install a different version, like the latest 0.4.x release, use:
+To install a different version, like the latest 0.5.x release, use:
 
 ```sh
-cargo install rojo --version ^0.4
+cargo install rojo --version ^0.5
 ```
 
 ## Installing the Plugin
