@@ -13,12 +13,15 @@ Rojo projects are JSON files that have the `.project.json` extension. They have 
 * `servePlaceIds`: A list of place IDs that this project may be live-synced to. This feature can help prevent overwriting the wrong game with source from Rojo.
     * **Optional**
     * Default is `null`
+* `globIgnorePaths`: A list of globs of paths to ignore.
+    * **Optional**
+    * Default is `[]`
 
 ## Instance Description
 Instance Descriptions correspond one-to-one with the actual Roblox Instances in the project.
 
 * `$className`: The ClassName of the Instance being described.
-    * **Optional if `$path` is specified.**
+    * **Optional if `$path` is specified or if the instance is a Roblox service.**
 * `$path`: The path on the filesystem to pull files from into the project.
     * **Optional if `$className` is specified.**
     * Paths are relative to the folder containing the project file.
@@ -110,6 +113,7 @@ This project describes the layout you might use if you were making the next hit 
 ```json
 {
     "name": "Sisyphus Simulator",
+    "globIgnorePaths": ["**/*.spec.lua"],
     "tree": {
         "$className": "DataModel",
 
