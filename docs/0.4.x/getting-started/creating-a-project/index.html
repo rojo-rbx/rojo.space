@@ -8,7 +8,6 @@
 rojo init
 </code></pre></div>
 
-
 <p>Rojo will create an empty project file named <code>rojo.json</code> in the directory.</p>
 <p>The default configuration doesn't do anything. We need to tell Rojo where our code is on the filesystem, and where we want to put it in the Roblox tree.</p>
 <p>To do that, open up <code>rojo.json</code> and add an entry to the <code>partitions</code> table:</p>
@@ -23,7 +22,6 @@ rojo init
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -44,7 +42,6 @@ rojo init
 <p>Once you've added your partition to the project file, you can start the Rojo dev server by running a command in your project's directory:</p>
 <div class="codehilite"><pre><span></span><code>rojo serve
 </code></pre></div>
-
 
 <p>If your project is in the right place, Rojo will let you know that it was found and start an HTTP server that the plugin can connect to.</p>
 <p>In Roblox Studio, open the plugins tab and find Rojo's buttons.</p>

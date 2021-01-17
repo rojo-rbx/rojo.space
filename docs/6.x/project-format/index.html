@@ -54,7 +54,7 @@
 <h2 id="instance-property-value">Instance Property Value<a class="headerlink" href="#instance-property-value" title="Permanent link">&para;</a></h2>
 <p>There are two kinds of property values on instances, <strong>implicit</strong> and <strong>explicit</strong>.</p>
 <p>In the vast majority of cases, you should be able to use <strong>implicit</strong> property values. To use them, just use a value that's the same shape as the type that the property has:</p>
-<div class="codehilite"><pre><span></span><code><span class="s2">&quot;MyPart&quot;</span><span class="err">:</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&quot;MyPart&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;$className&quot;</span><span class="p">:</span> <span class="s2">&quot;Part&quot;</span><span class="p">,</span>
     <span class="nt">&quot;$properties&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;Size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
@@ -64,7 +64,6 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <p><code>Vector3</code> and <code>Color3</code> properties can just be arrays of numbers, as can types like <code>Vector2</code>, <code>CFrame</code>, and more!</p>
 <p>Enums can be set to a string containing the enum variant. Rojo will raise an error if the string isn't a valid variant for the enum.</p>
@@ -87,7 +86,7 @@
 </li>
 </ul>
 <p>Here's the same object, but with explicit properties:</p>
-<div class="codehilite"><pre><span></span><code><span class="s2">&quot;MyPart&quot;</span><span class="err">:</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&quot;MyPart&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;$className&quot;</span><span class="p">:</span> <span class="s2">&quot;Part&quot;</span><span class="p">,</span>
     <span class="nt">&quot;$properties&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;Size&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -110,7 +109,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <h2 id="example-projects">Example Projects<a class="headerlink" href="#example-projects" title="Permanent link">&para;</a></h2>
 <p>This project bundles up everything in the <code>src</code> directory. It'd be suitable for making a plugin or model:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
@@ -120,7 +118,6 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <p>This project describes the layout you might use if you were making the next hit simulator game, <em>Sisyphus Simulator</em>:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>

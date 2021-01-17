@@ -14,29 +14,24 @@
 <span class="nb">cd</span> my-new-project
 </code></pre></div>
 
-
 <p>Inside the folder, initialize a new Rojo project:</p>
 <div class="codehilite"><pre><span></span><code>rojo init
 </code></pre></div>
-
 
 <p>Rojo will make a small project file in your directory, named <code>default.project.json</code>. It matches the "Baseplate" template from Roblox Studio, except that it'll take any files you put in a folder called <code>src</code> and put it into <code>ReplicatedStorage.Source</code>.</p>
 <p>Speaking of files, make sure to create a directory named <code>src</code> in this folder, or Rojo will be upset about missing files!</p>
 <div class="codehilite"><pre><span></span><code>mkdir src
 </code></pre></div>
 
-
 <p>Let's also add a Lua file, <code>hello.lua</code> to the <code>src</code> folder, so that we can make this project our own.</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">echo</span> <span class="s1">&#39;return &quot;Hello, Rojo!&quot;&#39;</span> &gt; src/hello.lua
 </code></pre></div>
-
 
 <h2 id="building-your-place">Building Your Place<a class="headerlink" href="#building-your-place" title="Permanent link">&para;</a></h2>
 <p>Now that we have a project, one thing we can do is build a Roblox place file for our project. This is a great way to get started with a project quickly with no fuss.</p>
 <p>All we have to do is call <code>rojo build</code>:</p>
 <div class="codehilite"><pre><span></span><code>rojo build -o MyNewProject.rbxlx
 </code></pre></div>
-
 
 <p>If you open <code>MyNewProject.rbxlx</code> in Roblox Studio now, you should see a <code>Folder</code> named "Source" containing a <code>ModuleScript</code> under <code>ReplicatedStorage</code>.</p>
 <div class="admonition info">
@@ -50,12 +45,10 @@
 <div class="codehilite"><pre><span></span><code>rojo serve
 </code></pre></div>
 
-
 <p>You should see output like this in your terminal:</p>
 <div class="codehilite"><pre><span></span><code>$ rojo serve
 Rojo server listening on port <span class="m">34872</span>
 </code></pre></div>
-
 
 <p>Switch into Roblox Studio and press the <strong>Connect</strong> button on the Rojo plugin toolbar. A dialog should appear:</p>
 <p align="center" class="feature-image"><img alt="Rojo plugin connection dialog" src="../../images/connection-dialog.png" /></p>
@@ -71,6 +64,5 @@ Rojo server listening on port <span class="m">34872</span>
 <p>Generating and publishing your game is as simple as:</p>
 <div class="codehilite"><pre><span></span><code>rojo upload --asset_id <span class="o">[</span>PLACE ID<span class="o">]</span> --cookie <span class="s2">&quot;[SECURITY COOKIE]&quot;</span>
 </code></pre></div>
-
 
 <p>An example project is available on GitHub that deploys to Roblox.com from GitHub and Travis-CI automatically: <a href="https://github.com/LPGhatguy/roads">https://github.com/LPGhatguy/roads</a></p></article></div></div></main><footer class="md-footer"><div class="md-footer-nav"><nav class="md-footer-nav__inner md-grid"><a href="../../../6.x/sync-details/" title="Sync Details" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev"><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-back md-footer-nav__button"></i></div><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Previous</span>Sync Details</span></div></a><a href="../existing-game/" title="Porting an Existing Game to Rojo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next"><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Next</span>Porting an Existing Game to Rojo</span></div><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i></div></a></nav></div><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright">powered by <a href="https://www.mkdocs.org">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></div></div></div></footer></div><script src="../../../assets/javascripts/application.b260a35d.js"></script><script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script></body></html>
