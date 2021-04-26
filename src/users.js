@@ -46,7 +46,7 @@ export default [
     name: "Free Draw 2",
     url: "https://www.roblox.com/games/1547610457",
     image: fd2,
-    plays: 55447603, // 2020-04-26
+    plays: 55447603, // 2021-04-26
   },
   {
     name: "Eg!",
