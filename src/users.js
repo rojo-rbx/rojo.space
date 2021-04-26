@@ -9,6 +9,7 @@ import rolantis from "./images/users/rolantis.png";
 import tribe from "./images/users/tribe.png";
 import wfyb from "./images/users/wfyb.png";
 import tds from "./images/users/tower-defense-simulator.png";
+import fd2 from "./images/users/free-draw-2.png";
 
 export default [
   {
@@ -40,6 +41,12 @@ export default [
     url: "https://www.roblox.com/games/2986677229",
     image: giant,
     plays: 37317030, // 2020-03-11
+  },
+  {
+    name: "Free Draw 2",
+    url: "https://www.roblox.com/games/1547610457",
+    image: fd2,
+    plays: 55447603, // 2020-04-26
   },
   {
     name: "Eg!",
