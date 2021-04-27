@@ -1,6 +1,7 @@
 import adopt from "./images/users/adopt.png";
 import eg from "./images/users/eg.png";
 import everest from "./images/users/everest.png";
+import fd2 from "./images/users/free-draw-2.png";
 import giant from "./images/users/giant-simulator.png";
 import heroes from "./images/users/heroes.png";
 import jailbreak from "./images/users/jailbreak.png";
@@ -40,6 +41,12 @@ export default [
     url: "https://www.roblox.com/games/2986677229",
     image: giant,
     plays: 37317030, // 2020-03-11
+  },
+  {
+    name: "Free Draw 2",
+    url: "https://www.roblox.com/games/1547610457",
+    image: fd2,
+    plays: 55447603, // 2021-04-26
   },
   {
     name: "Eg!",
