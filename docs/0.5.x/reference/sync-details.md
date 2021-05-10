@@ -33,7 +33,7 @@ This limitation may be solved by [issue #205](https://github.com/rojo-rbx/rojo/i
 Any directory on the filesystem will turn into a `Folder` instance unless it contains an 'init' script, described below.
 
 ## Scripts
-The default script type in Rojo projects is `ModuleScript`, since most scripts in well-structued Roblox projects will be modules.
+The default script type in Rojo projects is `ModuleScript`, since most scripts in well-structured Roblox projects will be modules.
 
 If a directory contains a file named `init.server.lua`, `init.client.lua`, or `init.lua`, that folder will be transformed into a `*Script` instance with the contents of the 'init' file. This can be used to create scripts inside of scripts.
 
