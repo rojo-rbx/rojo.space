@@ -10,7 +10,7 @@ Inside Roblox, it is common to have scripts stashed away in instances like GUI c
 
 Roblox games often also contain several copies of the same script, like old school lava bricks in an obstacle course, or the AI behavior for a zombie.
 
-Most software projects ouside Roblox have a single location, like a folder named `src`, that all code goes into. By moving most of your code into services like `ReplicatedStorage`, `ServerScriptService`, and `StarterPlayer`, it becomes easier to find what you're looking for.
+Most software projects outside Roblox have a single location, like a folder named `src`, that all code goes into. By moving most of your code into services like `ReplicatedStorage`, `ServerScriptService`, and `StarterPlayer`, it becomes easier to find what you're looking for.
 
 Rewriting this code to use modern Roblox features like [CollectionService](https://developer.roblox.com/en-us/api-reference/class/CollectionService) can make it easier to understand, easier to work on, and more friendly to Rojo.
 
