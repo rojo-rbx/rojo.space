@@ -72,6 +72,6 @@ After your connection was successful, press **Sync In** to move code from the fi
 ## Importing an Existing Project
 Rojo will eventually support importing an existing Roblox project onto the filesystem for use with Rojo.
 
-Rojo doesn't currently support converting an existing project or syncing files from Roblox Studio onto the filesystem. In the mean time, you can manually copy your files into the structure that Rojo expects.
+Rojo doesn't currently support converting an existing project or syncing files from Roblox Studio onto the filesystem. In the meantime, you can manually copy your files into the structure that Rojo expects.
 
 Up-to-date information will be available on [issue #5](https://github.com/LPGhatguy/rojo/issues/5) as this is worked on.
