@@ -6,9 +6,12 @@ repo_url: https://github.com/rojo-rbx/rojo.space
 
 theme:
   name: material
+  features:
+    - toc.integrate
+    - navigation.sections
   palette:
-    primary: 'Red'
-    accent: 'Red'
+    primary: 'Pink'
+    accent: 'Pink'
 
 nav:
   - Home: index.md
