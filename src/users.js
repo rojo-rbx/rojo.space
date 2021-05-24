@@ -10,6 +10,7 @@ import rolantis from "./images/users/rolantis.png";
 import tribe from "./images/users/tribe.png";
 import wfyb from "./images/users/wfyb.png";
 import tds from "./images/users/tower-defense-simulator.png";
+import rcs from "./images/users/robeats-community-server.png";
 
 export default [
   {
@@ -77,6 +78,12 @@ export default [
     url: "https://www.roblox.com/games/1891457100",
     image: tribe,
     plays: 4553045, // 2020-03-11
+  },
+  {
+    name: "RoBeats Community Server",
+    url: "https://www.roblox.com/games/4841678118",
+    image: rcs,
+    plays: 4008301, // 2021-05-23
   },
   {
     name: "Heroes' Legacy",
