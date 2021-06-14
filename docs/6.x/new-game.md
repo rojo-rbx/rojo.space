@@ -72,4 +72,14 @@ Generating and publishing your game is as simple as:
 rojo upload --asset_id [PLACE ID] --cookie "[SECURITY COOKIE]"
 ```
 
+### Upload Notes
+
+This API is very temperamental. There are a few common issues:
+
+ 1. The cookie has been invalidated. This can happen if you pressed "Log Out" on the website or if the cookie expired after ~6 months.
+ 1. You are publishing to a universe/game/experience instead of a place. It's important to use the place ID.
+ 1. You're using the wrong account. This happens a lot to me when I switch between accounts in Studio.
+
+I recommend not specifying the upload cookie yourself if possible. On Windows, rojo upload can find your cookie from Roblox Studio for you.
+
 An example project is available on GitHub that deploys to Roblox.com via GitHub Actions automatically: [Desert Bus 2077](https://github.com/Roblox/desert-bus-2077)
