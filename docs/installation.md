@@ -22,7 +22,7 @@ If you use Visual Studio Code, you can install [the Rojo VS Code extension](http
 To install from the latest stable release channel, currently 6.x, add an entry to the `[tools]` section of your `foreman.toml`:
 
 ```toml
-rojo = { source = "rojo-rbx/rojo", version = "6.0.0" }
+rojo = { source = "rojo-rbx/rojo", version = "6.2.0" }
 ```
 
 ### From GitHub
