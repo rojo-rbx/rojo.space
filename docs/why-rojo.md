@@ -43,3 +43,5 @@ Popular tools include:
 * [luacheck](https://github.com/mpeterv/luacheck), another static analyzer, popular outside the Roblox community
 * [ripgrep](https://github.com/BurntSushi/ripgrep), an extremely fast code search tool
 * [Tokei](https://github.com/XAMPPRocky/tokei), a tool for statistics like lines of code
+* [Roact](https://github.com/Roblox/roact), A declarative UI library for Roblox Lua inspired by React
+* [Rodux](https://github.com/Roblox/rodux), A state management library for Roblox Lua inspired by Redux
