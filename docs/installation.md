@@ -12,7 +12,9 @@ Rojo has two halves that need to be installed:
     The plugin will show errors in the Roblox Studio output window if there is a version mismatch.
 
 ## VS Code Extension
-If you use Visual Studio Code, you can install [the Rojo VS Code extension](https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo), which will install both halves of Rojo for you. It even has a nifty UI to sync files and start/stop the Rojo server!
+If you use Visual Studio Code, you can install [the Rojo VS Code extension](https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo), which allows for both halves to work within Visual Studio Code, with a nifty UI to sync files and start/stop the Rojo server!
+
+This option only works within Visual Studio Code and not to the rest of the system. Use the CLI option if you want that behaviour.
 
 ## Installing the CLI
 
