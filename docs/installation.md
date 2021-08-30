@@ -14,7 +14,7 @@ Rojo has two halves that need to be installed:
 ## VS Code Extension
 If you use Visual Studio Code, you can install [the Rojo VS Code extension](https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo), which allows for both halves to work within Visual Studio Code, with a nifty UI to sync files and start/stop the Rojo server!
 
-This option only works within Visual Studio Code and not to the rest of the system. Use the CLI option if you want that behaviour.
+**The VS Code extension does not add `rojo` to your system PATH. In order to use Rojo from the terminal, you'll need to install the CLI separately.**
 
 ## Installing the CLI
 
