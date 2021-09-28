@@ -1,0 +1,27 @@
+{
+  "version-0.5.x/tutorialSidebar": [
+    "version-0.5.x/index",
+    "version-0.5.x/installation",
+    {
+      "type": "category", "label": "Porting in your Games", "items": [
+        "version-0.5.x/existing-game",
+        "version-0.5.x/new-game"
+      ]
+    },
+    {
+      "type": "category", "label": "Specification", "items": [
+        "version-0.5.x/sync-details",
+        "version-0.5.x/project-format",
+        "version-0.5.x/internals/overview"
+      ]
+    },
+    {
+      "type": "category", "label": "Workflows", "items": [
+        "version-0.5.x/workflows",
+        "version-0.5.x/reference/full-vs-partial",
+        "version-0.5.x/rojo-alternatives"
+      ]
+    },
+    "version-0.5.x/help"
+  ]
+}

@@ -1,11 +1,16 @@
 import React from "react";
 
 import { FullWidthPage, PageBlock } from "../components/layout";
-import SEO from "../components/seo";
 import users from "../users";
 
 import logo from "../images/logo-512.png";
 import style from "./index.module.css";
+
+import clsx from 'clsx';
+import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import styles from './index.module.css';
 
 const Splash = () => (
   <div className={ style.Splash }>
@@ -13,9 +18,19 @@ const Splash = () => (
       <img src={ logo } alt="Rojo" />
     </h1>
     <h2 className={ style.SplashSubtitle }>Professional Development Tools in Roblox</h2>
-    <div>
-      <a className={ style.SplashButton } href="/docs/installation/">Get Started</a>
-      <a className={ style.SecondaryButton } href="https://github.com/rojo-rbx/rojo/releases">Releases</a>
+    <div className={styles.buttons}>
+      <Link
+        className="button button--primary button--lg"
+        to="/docs/installation/"
+        style={{ color: 'white' }}
+      >
+        Get Started
+      </Link>
+      <Link
+        className="button button--secondary button--lg"
+        to="https://github.com/rojo-rbx/rojo/releases">
+        Releases
+      </Link>
     </div>
   </div>
 );
@@ -76,14 +91,18 @@ const Users = () => {
   );
 };
 
-const IndexPage = () => (
-  <FullWidthPage>
-    <SEO title="Home" />
-    <Splash />
-    <Features />
-    <Details />
-    <Users />
-  </FullWidthPage>
-);
-
-export default IndexPage;
+export default function Home() {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <Layout
+      title={`Hello from ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />">
+      <main>
+        <Splash />
+        <Features />
+        <Details />
+        <Users />
+      </main>
+    </Layout>
+  );
+}
