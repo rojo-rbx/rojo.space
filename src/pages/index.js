@@ -10,7 +10,6 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
 
 const Splash = () => (
   <div className={ style.Splash }>
@@ -18,11 +17,11 @@ const Splash = () => (
       <img src={ logo } alt="Rojo" />
     </h1>
     <h2 className={ style.SplashSubtitle }>Professional Development Tools in Roblox</h2>
-    <div className={styles.buttons}>
+    <div className={ style.buttons }>
       <Link
         className="button button--primary button--lg"
         to="/docs/installation/"
-        style={{ color: 'white' }}
+        id="installButton"
       >
         Get Started
       </Link>
