@@ -125,7 +125,7 @@ A JSON model describing a folder containing a `Part` and a `RemoteEvent` could b
 
 It would turn into instances in this shape:
 
-![Tree of instances in Roblox](../images/example-json-model.svg)
+![Tree of instances in Roblox](../images/sync-example-json-model.svg)
 {: align="center" }
 
 !!! warning
