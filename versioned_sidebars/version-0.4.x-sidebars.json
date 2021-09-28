@@ -1,0 +1,12 @@
+{
+  "version-0.4.x/tutorialSidebar": [
+    "version-0.4.x/index",
+    "version-0.4.x/why-rojo",
+    "version-0.4.x/installation",
+    {
+      "Getting Started": ["version-0.4.x/getting-started/creating-a-project"]
+    },
+    "version-0.4.x/sync-details",
+    "version-0.4.x/help"
+  ]
+}

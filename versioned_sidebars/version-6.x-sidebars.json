@@ -1,0 +1,25 @@
+{
+  "version-6.x/tutorialSidebar": [
+    "version-6.x/index",
+    "version-6.x/installation",
+    {
+      "type": "category", "label": "Porting in your Games", "items": [
+        "version-6.x/existing-game",
+        "version-6.x/new-game"
+      ]
+    },
+    {
+      "type": "category", "label": "Specification", "items": [
+        "version-6.x/sync-details",
+        "version-6.x/project-format"
+      ]
+    },
+    {
+      "type": "category", "label": "Workflows", "items": [
+        "version-6.x/workflows",
+        "version-6.x/rojo-alternatives"
+      ]
+    },
+    "version-6.x/help"
+  ]
+}
