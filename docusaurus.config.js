@@ -7,10 +7,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   title: 'Rojo',
   tagline: 'Rojo enables Roblox developers to use professional-grade software engineering tools',
   url: 'https://rojo.space',
-  baseUrl: '/rojo.space/',
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  organizationName: 'unix-system', // Usually your GitHub org/user name.
+  organizationName: 'rojo-rbx', // Usually your GitHub org/user name.
   projectName: 'rojo.space', // Usually your repo name.
 
   presets: [
