@@ -21,7 +21,7 @@ const Splash = () => (
     <div className={style.buttons}>
       <Link
         className="button button--primary button--lg"
-        to="/docs/getting-started/installation/"
+        to="/docs/v6/getting-started/installation/"
       >
         Get Started
       </Link>

@@ -1,0 +1,108 @@
+---
+sidebar_position: 1
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Installation
+
+There are two supported ways to install Rojo:
+
+<Tabs groupId="installation-kind">
+<TabItem value="vscode" label="VS Code" default>
+
+If you use Visual Studio Code, you can install [the Rojo VS Code extension][extension], which allows for both halves of Rojo to work within Visual Studio Code, with a nifty UI to sync files and start/stop the Rojo server!
+
+:::info
+The VS Code extension does not add `rojo` to your system PATH. In order to use Rojo from the terminal, you'll need to install the CLI separately.
+:::
+
+[extension]: https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo
+
+</TabItem>
+<TabItem value="cli" label="CLI">
+
+Rojo has two pieces that need to be installed:
+
+- The Server
+- The Roblox Studio plugin
+
+## Installing the Server
+
+<Tabs>
+<TabItem value="foreman" label="With Foreman" default>
+
+[Foreman] is a toolchain manager that is useful for managing tools like Rojo for Roblox projects.
+
+To install from the latest stable release channel of Rojo 6, add an entry to the `[tools]` section of your `foreman.toml`:
+
+```toml
+rojo = { source = "rojo-rbx/rojo", version = "6" }
+```
+
+[Foreman]: https://github.com/rojo-rbx/foreman
+
+</TabItem>
+<TabItem value="github" label="From GitHub">
+
+There are pre-built binaries available for Windows, macOS, and Linux from Rojo's [GitHub Releases page][rojo-releases].
+
+The Rojo CLI must be run from the command line, like `cmd.exe` on Windows or `Terminal.app` on macOS. It's recommended that you put the Rojo CLI executable on your system `PATH` to make this easier.
+
+
+</TabItem>
+<TabItem value="crates" label="From crates.io">
+
+It's also possible to install Rojo releases using [Rust](https://www.rust-lang.org/). This will compile Rojo from source and install it on your machine.
+
+To install Rojo 6, use:
+
+```sh
+cargo install rojo --version ^6
+```
+
+</TabItem>
+</Tabs>
+
+## Installing the Plugin
+
+<Tabs>
+<TabItem value="cli" label="Using the CLI">
+
+Once you've installed the Rojo server, you can use it to install or upgrade the Rojo plugin.
+
+```bash
+rojo plugin install
+```
+
+</TabItem>
+<TabItem value="github" label="From GitHub">
+
+The Rojo plugin is available from Rojo's [GitHub Releases page][rojo-releases].
+
+Download the attached `rbxm` file and put it into your Roblox Studio plugins folder. You can find that folder by pressing **Plugins Folder** from your Plugins toolbar in Roblox Studio:
+
+!['Plugins Folder' button in Roblox Studio](/img/plugins-folder-in-studio.png)
+
+</TabItem>
+<TabItem value="roblox" label="From Roblox.com">
+
+The Rojo plugin can be installed from Roblox.com
+
+Rojo has a separate Roblox.com plugin for each release channel. Make sure you install the correct one!
+
+- [**v6** plugin](https://www.roblox.com/library/4048317704/)
+- [**v0.5** plugin](https://www.roblox.com/library/1997686364/)
+- [**v0.4** plugin](https://www.roblox.com/library/1211549683/)
+
+Press the 'Install' on the plugin page to add it to Roblox Studio.
+
+</TabItem>
+
+</Tabs>
+
+</TabItem>
+</Tabs>
+
+[rojo-releases]: https://github.com/LPGhatguy/rojo/releases

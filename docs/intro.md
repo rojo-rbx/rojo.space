@@ -7,43 +7,64 @@ sidebar_position: 1
 
 Welcome! Rojo is a project management tool designed to get professional resources in the hands of Roblox developers. Here, we'll teach you how to get started with Rojo.
 
+This documentation is a continual work in progress. If you find any issues, please file an issue on [the Rojo website issue tracker](https://github.com/rojo-rbx/rojo.space/issues)!
+
+New to Rojo? Check out [Installation](getting-started/installation.md).
+
 ## Why Rojo?
 
-Rojo gives developers access to an industry-standard toolset by syncing externally-edited project files with Roblox Studio. But what does "industry standard" mean for Roblox developers?
+Adding a tool like Rojo to your Roblox workflow can be daunting, but it comes with some key advantages.
 
-In software-engineering -- whether you're creating a game, or designing a website -- you're generally going to use similar tools for common problems. Both fields need version control, so both might be interested in version control software like Git. A robust set of tools can make up for features that are missing or lacking in Roblox Studio.
+### Tools
 
-Some issues specific to Roblox can be avoided by hosting project files externally, too. In a Studio environment, you'll have to put up with many momentary distractions like auto-saves, crashes, Studio updates, and long loading times for larger projects. Being a cloud-based platform as well, it's impossible to know when a service hiccup will prevent you from working altogether. With Rojo, having offline access to your project through external editors is a boon to your overall productivity.
+There are decades of excellent tools available that operate on files. With Rojo, it's possible to take advantage of any of them!
 
-If you want to leverage professional-grade tools in your Roblox development workflow, here's where to start.
+Popular tools that are tailored towards Roblox or Lua in general:
+
+- [Selene](https://github.com/Kampfkarren/selene), a static analysis tool to help you write better Lua
+- [StyLua](https://github.com/JohnnyMorganz/StyLua), a formatter that helps keep your code in a consistent style
+- [Wally](https://github.com/UpliftGames/wally), a package manager for Roblox projects
+- [Moonwave](https://github.com/UpliftGames/moonwave), a documentation generator for Lua projects
+
+### Rojo at RDC 2019
+
+Nathan Riemer (Kampfkarren) gave a talk at RDC 2019 talking about some of the benefits of using a tool like Rojo.
+
+<iframe
+	style={{margin: "0 auto", maxWidth: "100%"}}
+	width="560"
+	height="315"
+	src="https://www.youtube-nocookie.com/embed/czlvzEyhaBc"
+	frameBorder="0"
+	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+	allowfullscreen={true}></iframe>
 
 ### External Text Editors
 
-With the backing of engineers around the world, Rojo opens the door to some of the best text editors available and their rich plugin ecosystem.
+Rojo opens the door to use the absolute best text editors in the world and their rich plugin ecosystems.
+
+Some very popular editors include [Visual Studio Code](https://code.visualstudio.com) and [Sublime Text](https://www.sublimetext.com).
+
+These advanced text editors have features like multi-cursor editing, go-to symbol, multi-file regex find and replace, bookmarks and much more.
+
+Many Rojo VS Code users also use extensions like:
+
+- [vscode-rbxlua](https://marketplace.visualstudio.com/items?itemName=AmaranthineCodices.vscode-rbxlua)
+- [Roblox Lua Autocompletes](https://marketplace.visualstudio.com/items?itemName=Kampfkarren.roblox-lua-autofills)
+- [TabNine](https://tabnine.com)
 
 ### Version Control
 
-Version control is an essential component of software development. Tracking changes through each iteration of your project prevents you or your team from conducting exhaustive audits as development progresses.
+By building your game (or just the scripts) as individual files on the filesystem, it becomes easy to start using professional-grade version control tools like [Git](https://git-scm.com) and [GitHub](https://github.com).
 
-By building your game in a file structure, using version control becomes easy. Programs like Git or GitHub will allow you to organize your project and leverage collaborative tools such as remote exchanges, issue trackers, project synchronization, and more.
+Hundreds of thousands of companies and individual developers use Git to version their software projects. With Rojo, Roblox developers can take advantage of the best collaboration tool around.
+
+Using a repository hosting service like GitHub or GitLab brings powerful features to Roblox developers like code reviews and issue tracking that professional engineers can't live without.
 
 ### TypeScript
 
-For those familiar with JavaScript, compiling TypeScript through [roblox-ts](https://roblox-ts.github.io) allows you to take advantage of features like arrow functions, object destructuring, or functional programming methods. More importantly, TypeScript offers a subset of features suited for large projects. With static type safety, developers can track changes made to individual types, mitigate errors, and type faster with unparalled autocomplete.
+TypeScript enables static type safety, which helps prevent typos and adds unparalleled autocompletion. It also brings features like arrow functions, object destructuring, functional programming methods, and more!
 
-### Other Tools
+With Rojo, you can use [roblox-ts](https://roblox-ts.github.io) to compile TypeScript to Lua and take advantage of a huge ecosystem of TypeScript tooling.
 
-Plenty of other tools are available through Rojo.
-
-Popular tools include:
-
-- [Selene](https://github.com/Kampfkarren/selene), a static analysis tool to help you write better Lua
-- [luacheck](https://github.com/mpeterv/luacheck), another static analyzer, popular outside the Roblox community
-- [ripgrep](https://github.com/BurntSushi/ripgrep), an extremely fast code search tool
-- [Tokei](https://github.com/XAMPPRocky/tokei), a tool for statistics like lines of code
-
-##
-
-This documentation is a continual work in progress. If you find any issues, please file an issue on [the Rojo website issue tracker](https://github.com/rojo-rbx/rojo.space/issues)!
-
-New to Rojo? Check out [Installation](getting-started/installation.md) or [Why Rojo?](why-rojo.md).
+It's also possible to use other languages that compile to Lua like [MoonScript](https://moonscript.org) and [Haxe](https://haxe.org).

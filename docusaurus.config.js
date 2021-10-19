@@ -26,15 +26,16 @@ const config = {
           editUrl: "https://github.com/rojo-rbx/rojo/edit/master/docs/",
           lastVersion: "current",
           versions: {
-            current: {
-              label: "v7",
-              path: "v7",
-              banner: "unreleased",
-            },
-            // "v6": {
-            //   label: "v6",
-            //   banner: "none",
+            // "current": {
+            //   label: "v7",
+            //   path: "v7",
+            //   banner: "unreleased",
             // },
+            current: {
+              label: "v6",
+              path: "v6",
+              banner: "none",
+            },
             // "v0.5": {
             //   label: "v0.5",
             //   banner: "unmaintained",

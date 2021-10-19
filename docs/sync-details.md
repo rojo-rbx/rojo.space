@@ -127,10 +127,11 @@ It would turn into instances in this shape:
 
 ![Tree of instances in Roblox](/img/6.x/sync-example-json-model.svg)
 
-!!! warning
+:::info
 Starting in Rojo 0.5.0, the `Name` field is no longer required. The name of the top-level instance in a JSON model is now based on its file name, and the `Name` field is now ignored.
 
-    Rojo will emit a warning if the `Name` field is specified and does not match the file's name.
+Rojo will emit a warning if the `Name` field is specified and does not match the file's name.
+:::
 
 ## Projects
 
