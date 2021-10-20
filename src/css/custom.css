@@ -28,15 +28,23 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Force markdown tables to be full-width */
 .markdown table {
   display: table;
   width: 100%;
 }
 
+/* Let the search box breathe */
+.navbar__search {
+  padding-left: 1rem;
+}
+
+/* Allow a little extra bottom margin for buttons in MDX */
 .button--extra-margin {
   margin-bottom: 1em;
 }
 
+/* Fix mermaid's theming */
 .mermaid {
   text-align: center;
 }

@@ -127,7 +127,7 @@ const config = {
     },
   },
 
-  plugins: [],
+  plugins: [require.resolve("docusaurus-lunr-search")],
 };
 
 config.plugins.push([
