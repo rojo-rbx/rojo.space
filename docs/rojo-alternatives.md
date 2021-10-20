@@ -1,5 +1,6 @@
 ---
 title: Rojo Alternatives
+sidebar_position: 1000
 ---
 
 There are a number of existing plugins for Roblox that move code from the filesystem into Roblox.

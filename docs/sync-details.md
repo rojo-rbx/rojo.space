@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Sync Details
 
 This page aims to describe how Rojo turns files on the filesystem into Roblox objects.
@@ -5,7 +9,7 @@ This page aims to describe how Rojo turns files on the filesystem into Roblox ob
 ## Overview
 
 | Concept                                     | File Name        |
-| ------------------------------------------- | ---------------- |
+|:------------------------------------------- |:---------------- |
 | [Folders](#folders)                         | any directory    |
 | Server [Scripts](#scripts)                  | `*.server.lua`   |
 | Client [Scripts](#scripts)                  | `*.client.lua`   |
@@ -25,7 +29,7 @@ Not all property types can be synced by Rojo in real-time due to limitations of 
 
 Some common cases you might hit are:
 
-- Binary data (Terrain, CSG, CollectionService tags)
+- Binary data (Terrain, CSG parts)
 - `MeshPart.MeshId`
 - `HttpService.HttpEnabled`
 
@@ -59,11 +63,25 @@ Rojo reserves three special script names. These scripts change their parent dire
 
 For example, these files:
 
-![Tree of files on disk](/img/6.x/sync-example-files.svg)
+```mermaid
+graph TD;
+  my_model(My Model/)
+  init(init.server.lua)
+  foo(foo.lua)
+
+  my_model --> init
+  my_model --> foo
+```
 
 Will turn into these instances in Roblox:
 
-![Tree of instances in Roblox](/img/6.x/sync-example-instances.svg)
+```mermaid
+graph TD;
+  my_model("My Model (Script)")
+  foo("Foo (Script)")
+
+  my_model --> foo
+```
 
 Only one "init script" can be present in the same folder.
 
@@ -98,11 +116,10 @@ Any file with the `json` extension that is not a [JSON Model](#json-models) or a
 
 Files ending in `.model.json` can be used to describe simple models. They're designed to be hand-written and are useful for instances like `RemoteEvent`.
 
-A JSON model describing a folder containing a `Part` and a `RemoteEvent` could be described as:
+A JSON model describing a folder containing a `Part` and a `RemoteEvent` could be written as a file named `My Cool Model.model.json` with:
 
 ```json
 {
-  "Name": "My Cool Model",
   "ClassName": "Folder",
   "Children": [
     {
@@ -123,15 +140,17 @@ A JSON model describing a folder containing a `Part` and a `RemoteEvent` could b
 }
 ```
 
-It would turn into instances in this shape:
+It would turn into these instances:
 
-![Tree of instances in Roblox](/img/6.x/sync-example-json-model.svg)
+```mermaid
+graph TD;
+  parent("My Cool Model (Folder)")
+  part("RootPart (Part)")
+  remote("SendMoney (RemoteEvent)")
 
-:::info
-Starting in Rojo 0.5.0, the `Name` field is no longer required. The name of the top-level instance in a JSON model is now based on its file name, and the `Name` field is now ignored.
-
-Rojo will emit a warning if the `Name` field is specified and does not match the file's name.
-:::
+  parent --> part
+  parent --> remote
+```
 
 ## Projects
 

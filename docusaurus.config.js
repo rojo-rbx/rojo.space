@@ -45,6 +45,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.json"),
           editUrl: "https://github.com/rojo-rbx/rojo/edit/master/docs/",
           lastVersion: "current",
+          remarkPlugins: [require("mdx-mermaid")],
           versions,
         },
         blog: {

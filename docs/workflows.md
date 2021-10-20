@@ -1,5 +1,6 @@
 ---
 title: Recomended Workflows
+sidebar_position: 6
 ---
 
 This document aims to outline some recommended workflows for using Rojo solo and in teams.
