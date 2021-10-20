@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{hKLK:function(e,l,t){e.exports={BlogTitle:"blog-module--BlogTitle--3wKdN"}},vx99:function(e,l,t){"use strict";t.r(l);var n=t("q1tI"),o=t.n(n),a=t("Bl7J"),i=t("vrFN"),c=t("hKLK"),r=t.n(c);l.default=function(){return o.a.createElement(a.b,null,o.a.createElement(i.a,{title:"Blog"}),o.a.createElement("h1",{className:r.a.BlogTitle},"Blog Coming Eventually!"))}}}]);
-//# sourceMappingURL=component---src-pages-blog-js-6656964a5a5c429d299a.js.map

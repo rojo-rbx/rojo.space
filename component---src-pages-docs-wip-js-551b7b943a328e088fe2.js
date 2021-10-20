@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{ughA:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),c=t("Bl7J"),r=t("vrFN");n.default=function(){return l.a.createElement(c.b,null,l.a.createElement(r.a,{title:"Docs"}),l.a.createElement("h1",null,"Docs"),l.a.createElement("p",null,"Docs page"))}}}]);
-//# sourceMappingURL=component---src-pages-docs-wip-js-551b7b943a328e088fe2.js.map

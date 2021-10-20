@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://rojo.space/blog</id>
+    <title>Rojo Blog</title>
+    <updated>2021-10-19T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://rojo.space/blog"/>
+    <subtitle>Rojo Blog</subtitle>
+    <icon>https://rojo.space/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[New Website]]></title>
+        <id>new-website</id>
+        <link href="https://rojo.space/blog/new-website"/>
+        <updated>2021-10-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to the new Rojo website!]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to the new Rojo website!</p><p>The new Rojo website uses <a href="https://docusaurus.io/">Docusaurus</a>, a static site generator focused on building great documentation websites.</p><p>The bulk of the work on this project was done by <a href="https://github.com/unix-system">unix-system</a>. Send them your thanks the next time you see them!</p>]]></content>
+        <author>
+            <name>Lucien Greathouse</name>
+            <uri>https://github.com/LPGhatguy</uri>
+        </author>
+    </entry>
+</feed>

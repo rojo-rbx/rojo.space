@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Rojo Blog</title>
+        <link>https://rojo.space/blog</link>
+        <description>Rojo Blog</description>
+        <lastBuildDate>Tue, 19 Oct 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[New Website]]></title>
+            <link>https://rojo.space/blog/new-website</link>
+            <guid>new-website</guid>
+            <pubDate>Tue, 19 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to the new Rojo website!]]></description>
+            <content:encoded><![CDATA[<p>Welcome to the new Rojo website!</p><p>The new Rojo website uses <a href="https://docusaurus.io/">Docusaurus</a>, a static site generator focused on building great documentation websites.</p><p>The bulk of the work on this project was done by <a href="https://github.com/unix-system">unix-system</a>. Send them your thanks the next time you see them!</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
