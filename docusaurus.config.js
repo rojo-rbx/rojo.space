@@ -4,6 +4,26 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
+const redirects = require("./redirects.js");
+
+const versions = {
+  // current: {
+  //   label: "v7",
+  //   path: "v7",
+  //   banner: "unreleased",
+  // },
+  current: {
+    label: "v6",
+    path: "v6",
+    banner: "none",
+  },
+  "v0.5": {
+    label: "v0.5",
+    path: "v0.5",
+    banner: "unmaintained",
+  },
+};
+
 const config = {
   title: "Rojo",
   tagline:
@@ -12,43 +32,23 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.png",
   organizationName: "rojo-rbx",
   projectName: "rojo.space",
+  trailingSlash: true,
 
   presets: [
     [
       "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
+          sidebarPath: require.resolve("./sidebars.json"),
           editUrl: "https://github.com/rojo-rbx/rojo/edit/master/docs/",
           lastVersion: "current",
-          versions: {
-            // "current": {
-            //   label: "v7",
-            //   path: "v7",
-            //   banner: "unreleased",
-            // },
-            current: {
-              label: "v6",
-              path: "v6",
-              banner: "none",
-            },
-            // "v0.5": {
-            //   label: "v0.5",
-            //   banner: "unmaintained",
-            // },
-            // "v0.4": {
-            //   label: "v0.4",
-            //   banner: "unmaintained",
-            // },
-          },
+          versions,
         },
         blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
+          showReadingTime: false,
           editUrl: "https://github.com/rojo-rbx/rojo/edit/master/blog/",
         },
         theme: {
@@ -73,6 +73,10 @@ const config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
+          type: "docsVersionDropdown",
+          position: "right",
+        },
+        {
           href: "https://github.com/rojo-rbx/rojo",
           label: "GitHub",
           position: "right",
@@ -87,7 +91,7 @@ const config = {
           items: [
             {
               label: "Tutorial",
-              to: "/docs/intro",
+              to: "/docs",
             },
           ],
         },
@@ -121,6 +125,13 @@ const config = {
       darkTheme: darkCodeTheme,
     },
   },
+
+  plugins: [],
 };
+
+config.plugins.push([
+  "@docusaurus/plugin-client-redirects",
+  redirects(versions.current.path),
+]);
 
 module.exports = config;

@@ -1,15 +1,14 @@
 ---
+title: Introduction
 slug: /
 sidebar_position: 1
 ---
-
-# Introduction
 
 Welcome! Rojo is a project management tool designed to get professional resources in the hands of Roblox developers. Here, we'll teach you how to get started with Rojo.
 
 This documentation is a continual work in progress. If you find any issues, please file an issue on [the Rojo website issue tracker](https://github.com/rojo-rbx/rojo.space/issues)!
 
-New to Rojo? Check out [Installation](getting-started/installation.md).
+New to Rojo? Check out [Installation](getting-started/installation.mdx).
 
 ## Why Rojo?
 
@@ -37,7 +36,7 @@ Nathan Riemer (Kampfkarren) gave a talk at RDC 2019 talking about some of the be
 	src="https://www.youtube-nocookie.com/embed/czlvzEyhaBc"
 	frameBorder="0"
 	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-	allowfullscreen={true}></iframe>
+	allowFullScreen></iframe>
 
 ### External Text Editors
 
