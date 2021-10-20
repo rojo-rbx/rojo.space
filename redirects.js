@@ -16,7 +16,7 @@ module.exports = (current) => ({
     }
 
     if (existing.startsWith("/docs/v0.5/")) {
-      return existing.replace("/docs/v0.5/", "/docs/v0.5.x/")
+      return existing.replace("/docs/v0.5/", "/docs/0.5.x/")
     }
   }
 });
