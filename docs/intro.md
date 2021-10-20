@@ -64,6 +64,6 @@ Using a repository hosting service like GitHub or GitLab brings powerful feature
 
 TypeScript enables static type safety, which helps prevent typos and adds unparalleled autocompletion. It also brings features like arrow functions, object destructuring, functional programming methods, and more!
 
-With Rojo, you can use [roblox-ts](https://roblox-ts.github.io) to compile TypeScript to Lua and take advantage of a huge ecosystem of TypeScript tooling.
+With Rojo, you can use [roblox-ts](https://roblox-ts.com) to compile TypeScript to Lua and take advantage of a huge ecosystem of TypeScript tooling.
 
 It's also possible to use other languages that compile to Lua like [MoonScript](https://moonscript.org) and [Haxe](https://haxe.org).
