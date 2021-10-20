@@ -1,0 +1,67 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #e13835;
+  --ifm-color-primary-lightest: #ec807e;
+  --ifm-color-primary-lighter: #e65c59;
+  --ifm-color-primary-light: #e5504d;
+  --ifm-color-primary-dark: #da2420;
+  --ifm-color-primary-darker: #ce221f;
+  --ifm-color-primary-darkest: #a91c19;
+
+  --ifm-code-font-size: 95%;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Force markdown tables to be full-width */
+.markdown table {
+  display: table;
+  width: 100%;
+}
+
+/* Let the search box breathe */
+.navbar__search {
+  padding-left: 1rem;
+}
+
+/* Allow a little extra bottom margin for buttons in MDX */
+.button--extra-margin {
+  margin-bottom: 1em;
+}
+
+/* Fix mermaid's theming */
+.mermaid {
+  text-align: center;
+}
+
+.mermaid .node .label {
+  color: var(--ifm-color-gray-900) !important;
+}
+
+.mermaid .node rect {
+  fill: var(--ifm-color-secondary) !important;
+  stroke: var(--ifm-color-secondary) !important;
+}
+
+.mermaid .path {
+  stroke: var(--ifm-font-color-base) !important;
+}
+
+.mermaid [id^="arrowhead"] path {
+  fill: var(--ifm-font-color-base) !important;
+}
