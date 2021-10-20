@@ -43,14 +43,14 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.json"),
-          editUrl: "https://github.com/rojo-rbx/rojo.space/edit/master/docs/",
+          editUrl: "https://github.com/rojo-rbx/rojo.space/edit/master/",
           lastVersion: "current",
           remarkPlugins: [require("mdx-mermaid")],
           versions,
         },
         blog: {
           showReadingTime: false,
-          editUrl: "https://github.com/rojo-rbx/rojo.space/edit/master/blog/",
+          editUrl: "https://github.com/rojo-rbx/rojo.space/edit/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
