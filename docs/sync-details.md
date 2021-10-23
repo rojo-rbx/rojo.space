@@ -20,7 +20,7 @@ This page aims to describe how Rojo turns files on the filesystem into Roblox ob
 | [Plain Text](#plain-text)                   | `*.txt`          |
 | [JSON Modules](#json-modules)               | `*.json`         |
 | [JSON Models](#json-models)                 | `*.model.json`   |
-| [Projects](#project)                        | `*.project.json` |
+| [Projects](#projects)                       | `*.project.json` |
 | [Meta Files](#meta-files)                   | `*.meta.json`    |
 
 ## Limitations
