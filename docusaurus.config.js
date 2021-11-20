@@ -6,13 +6,14 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const redirects = require("./redirects.js");
 
+const recommendedVersion = "v6"
 const versions = {
-  // current: {
-  //   label: "v7",
-  //   path: "v7",
-  //   banner: "unreleased",
-  // },
   current: {
+    label: "v7",
+    path: "v7",
+    banner: "unreleased",
+  },
+  "v6": {
     label: "v6",
     path: "v6",
     banner: "none",
@@ -42,7 +43,6 @@ const config = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve("./sidebars.json"),
           editUrl: "https://github.com/rojo-rbx/rojo.space/edit/master/",
           lastVersion: "current",
           remarkPlugins: [require("mdx-mermaid")],
@@ -132,7 +132,7 @@ const config = {
 
 config.plugins.push([
   "@docusaurus/plugin-client-redirects",
-  redirects(versions.current.path),
+  redirects(versions[recommendedVersion].path),
 ]);
 
 module.exports = config;
