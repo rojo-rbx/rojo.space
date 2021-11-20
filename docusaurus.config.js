@@ -6,17 +6,16 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const redirects = require("./redirects.js");
 
-const recommendedVersion = "v6"
 const versions = {
   current: {
-    label: "v7",
-    path: "v7",
-    banner: "unreleased",
-  },
-  "v6": {
     label: "v6",
     path: "v6",
     banner: "none",
+  },
+  "v7": {
+    label: "v7",
+    path: "v7",
+    banner: "unreleased",
   },
   "v0.5": {
     label: "v0.5",
@@ -132,7 +131,7 @@ const config = {
 
 config.plugins.push([
   "@docusaurus/plugin-client-redirects",
-  redirects(versions[recommendedVersion].path),
+  redirects(versions.current.path),
 ]);
 
 module.exports = config;
