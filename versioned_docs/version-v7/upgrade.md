@@ -75,7 +75,6 @@ In Rojo 6, this same model using the **explicit property syntax** would look lik
 This format has changed in Rojo 7. The same model with Rojo 7's explicit property syntax would look like this:
 
 ```json
-```json
 {
 	"name": "cool-skateboard",
 	"tree": {
