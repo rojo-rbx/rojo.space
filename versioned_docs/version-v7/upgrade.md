@@ -30,7 +30,7 @@ Rojo's **implicit syntax** has not changed. In Both Rojo 6 and 7, you can write 
 ```
 
 :::info
-	It's strongly recommended to use the implicit syntax when possible! It's shorter, easier to read, and more future-proof.
+It's strongly recommended to use the implicit syntax when possible! It's shorter, easier to read, and more future-proof.
 :::
 
 Rojo also has a more **explicit syntax** for specifying property values. This syntax should be used only for a couple reasons:
