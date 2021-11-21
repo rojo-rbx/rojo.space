@@ -109,7 +109,9 @@ In Rojo 7, the `Type` and `Value` fields were folded together to reduce the amou
 Since the release of Rojo 6, it has been feasible to use `rbxm` or `rbxmx` files for models instead of typing properties by hand. For more complicated models, this is recommended.
 
 ## Project File Composition Instance Names
-**This feature has not been released in any Rojo 7 prereleases yet.**
+:::warning
+This feature has not been released in any Rojo 7 prereleases yet.
+:::
 
 Rojo discovers `.project.json` files in your tree and reads them to allow you to compose project files together.
 
