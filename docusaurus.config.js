@@ -8,14 +8,14 @@ const redirects = require("./redirects.js");
 
 const versions = {
   current: {
-    label: "v7",
-    path: "v7",
-    banner: "none",
-  },
-  "v6": {
     label: "v6",
     path: "v6",
     banner: "none",
+  },
+  "v7": {
+    label: "v7",
+    path: "v7",
+    banner: "unreleased",
   },
   "v0.5": {
     label: "v0.5",
