@@ -13,7 +13,7 @@
         <link href="https://rojo.space/blog/new-website"/>
         <updated>2021-10-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the new Rojo website!]]></summary>
-        <content type="html"><![CDATA[<p>Welcome to the new Rojo website!</p><p>The new Rojo website uses <a href="https://docusaurus.io/">Docusaurus</a>, a static site generator focused on building great documentation websites.</p><p>The bulk of the work on this project was done by <a href="https://github.com/unix-system">unix-system</a>. Send them your thanks the next time you see them!</p>]]></content>
+        <content type="html"><![CDATA[<p>Welcome to the new Rojo website!</p><p>The new Rojo website uses <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>, a static site generator focused on building great documentation websites.</p><p>The bulk of the work on this project was done by <a href="https://github.com/unix-system" target="_blank" rel="noopener noreferrer">unix-system</a>. Send them your thanks the next time you see them!</p>]]></content>
         <author>
             <name>Lucien Greathouse</name>
             <uri>https://github.com/LPGhatguy</uri>

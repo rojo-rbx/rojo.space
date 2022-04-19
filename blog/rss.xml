@@ -7,13 +7,14 @@
         <lastBuildDate>Tue, 19 Oct 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
         <item>
             <title><![CDATA[New Website]]></title>
             <link>https://rojo.space/blog/new-website</link>
             <guid>new-website</guid>
             <pubDate>Tue, 19 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome to the new Rojo website!]]></description>
-            <content:encoded><![CDATA[<p>Welcome to the new Rojo website!</p><p>The new Rojo website uses <a href="https://docusaurus.io/">Docusaurus</a>, a static site generator focused on building great documentation websites.</p><p>The bulk of the work on this project was done by <a href="https://github.com/unix-system">unix-system</a>. Send them your thanks the next time you see them!</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Welcome to the new Rojo website!</p><p>The new Rojo website uses <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>, a static site generator focused on building great documentation websites.</p><p>The bulk of the work on this project was done by <a href="https://github.com/unix-system" target="_blank" rel="noopener noreferrer">unix-system</a>. Send them your thanks the next time you see them!</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
