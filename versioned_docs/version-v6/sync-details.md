@@ -126,7 +126,10 @@ A JSON model describing a folder containing a `Part` and a `RemoteEvent` could b
       "Name": "RootPart",
       "ClassName": "Part",
       "Properties": {
-        "Size": [4, 4, 4]
+        "Size": {
+          "Type": "Vector3",
+          "Value": [4, 4, 4]
+        }
       }
     },
     {

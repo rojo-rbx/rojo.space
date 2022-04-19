@@ -70,11 +70,11 @@ Some reasons why you might need to use an **explicit** property:
 
 The shape of explicit property values is defined by the [rbx-dom](https://github.com/LPGhatguy/rbx-dom) library, so it uses slightly different conventions than the rest of Rojo.
 
-Each value should be an object where:
+Each value should be an object with the following required fields:
 
-- The key is the type of property to represent
+- `Type`: The type of property to represent.
   - [Supported types can be found here](https://github.com/LPGhatguy/rbx-tree#property-type-coverage).
-- The value is the value of the property.
+- `Value`: The value of the property.
   - The shape of this field depends on which property type is being used. `Vector3` and `Color3` values are both represented as a list of numbers, while `BinaryString` expects a base64-encoded string, for example.
 
 Here's the same object, but with explicit properties:
@@ -84,17 +84,21 @@ Here's the same object, but with explicit properties:
     "$className": "Part",
     "$properties": {
         "Size": {
-            "Vector3": [3, 5, 3]
+            "Type": "Vector3",
+            "Value": [3, 5, 3]
         },
         "Color": {
-            "Color3": [0.5, 0, 0.5]
+            "Type": "Color3",
+            "Value": [0.5, 0, 0.5]
         },
         "Anchored": {
-			"Bool": true
-		},
+            "Type": "Bool",
+            "Value": true
+        },
         "Material": {
-			"Enum": 832
-		}
+            "Type": "Enum",
+            "Value": 832
+        }
     }
 }
 ```
