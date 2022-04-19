@@ -1,7 +1,12 @@
 .Splash {
   padding: 4rem 1rem;
   text-align: center;
-  background-color: #444;
+  background-image: url("../../static/img/splash.png");
+  background-size: cover;
+  background-position: 50%;
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  background-color: #000;
   color: white;
 }
 
@@ -12,16 +17,19 @@
 .SplashTitle > img {
   width: 16rem;
   max-width: 100%;
+  filter: drop-shadow(0px 2px 5px #000);
 }
 
 .buttons > * {
   padding: 0.5rem 1.6rem;
   margin: 0.4rem;
+  color: white;
 }
 
 .SplashSubtitle {
   font-size: 2rem;
   padding-bottom: 2.5rem;
+  text-shadow: 0px 2px 5px #000;
 }
 
 .Features {
