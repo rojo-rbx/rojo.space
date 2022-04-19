@@ -1,7 +1,7 @@
 .Splash {
   padding: 4rem 1rem;
   text-align: center;
-  background-image: url("../../static/img/splash.png"); /* radial-gradient(circle, black 10%, #e13835 120%); */
+  background-image: url("../../static/img/splash.png");
   background-size: cover;
   background-position: 50%;
   background-blend-mode: lighten;
