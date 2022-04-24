@@ -1,8 +1,7 @@
 ---
+title: Project Format
 sidebar_position: 4
 ---
-
-# Project Format
 
 ## Project File
 
@@ -73,7 +72,7 @@ The shape of explicit property values is defined by the [rbx-dom](https://github
 Each value should be an object where:
 
 - The key is the type of property to represent
-  - [Supported types can be found here](https://github.com/LPGhatguy/rbx-tree#property-type-coverage).
+  - [Supported types can be found here](../properties).
 - The value is the value of the property.
   - The shape of this field depends on which property type is being used. `Vector3` and `Color3` values are both represented as a list of numbers, while `BinaryString` expects a base64-encoded string, for example.
 
