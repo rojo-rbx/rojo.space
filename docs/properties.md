@@ -11,8 +11,8 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 
 | Property Type           | Example Property                | Build | Live Sync | Project Files |
 |:------------------------|:--------------------------------|:--:|:--:|:--:|
-| Axes                    | `ArcHandles.Axes`               | ✔ | ✔ | ❌ |
-| BinaryString            | `Terrain.MaterialColors`        | ✔ | ❌ | ❌ |
+| Axes                    | `ArcHandles.Axes`               | ✔ | ✔ | ✔ |
+| BinaryString            | `Terrain.MaterialColors`        | ✔ | ❌ | ✔ |
 | Bool                    | `Part.Anchored`                 | ✔ | ✔ | ✔ |
 | BrickColor              | `Part.BrickColor`               | ✔ | ✔ | ✔ |
 | CFrame                  | `Camera.CFrame`                 | ✔ | ✔ | ✔ |
@@ -31,7 +31,7 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 | OptionalCoordinateFrame | `Model.WorldPivotData`          | ✔ | ❌ | ✔ |
 | PhysicalProperties      | `Part.CustomPhysicalProperties` | ✔ | ✔ | ✔ |
 | ProtectedString         | `ModuleScript.Source`           | ✔ | ✔ | ✔ |
-| Ray                     | `RayValue.Value`                | ✔ | ✔ | ❌ |
+| Ray                     | `RayValue.Value`                | ✔ | ✔ | ✔ |
 | Rect                    | `ImageButton.SliceCenter`       | ✔ | ✔ | ✔ |
 | Ref                     | `Model.PrimaryPart`             | ✔ | ✔ | ❌ |
 | Region3                 | N/A                             | ✔ | ✔ | ❌ |
