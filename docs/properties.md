@@ -142,7 +142,7 @@ For both implicit and explicit values, the format is a list of R, G and B compon
 			0.6392156862745098,
 			0.6352941176470588,
 			0.6470588235294118
-		]
+		],
 		"ExplicitExample": {
 			"Color3": [
 				0.6392156862745098,
