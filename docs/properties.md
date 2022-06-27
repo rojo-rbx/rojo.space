@@ -49,32 +49,19 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 | QFont                                               | `Studio.Font`                   | ❌ | ❌ | ❌ |
 
 ## Properties in Project Files
-The type of each property has an **implicit** and **explicit** format. The [Project format page](../project-format#instance-property-value) decribes these formats in more detail.
-
-For example, the Anchored property can be defined implicitly as a boolean:
-
-```json
-"Anchored": false
-```
-
-Or explicitly as an object with a field, where the key is the name of the type, and the value is the property value:
-
-```json
-"Anchored": {
-	"Bool": false
-}
-```
-
-
-Each following section describes the format of the value for a type.
+Many types have an **implicit** and **explicit** format. The [Project format page](../project-format#instance-property-value) decribes these formats in more detail.
 
 ### Axes
 The Axes type cannot be specified implicitly. For explicit values, the format is a list of strings, each of which may be either "X", "Y", or "Z". Each string sets the corresponding component.
 
 ```json
-["X", "Y", "Z"]
-["X", "Z"]
-[]
+{
+	"$properties": {
+		"ExplicitExample1": {"Axes": ["X", "Y", "Z"]},
+		"ExplicitExample2": {"Axes": ["X", "Z"]},
+		"ExplicitExample3": {"Axes": []}
+	}
+}
 ```
 
 
@@ -82,40 +69,66 @@ The Axes type cannot be specified implicitly. For explicit values, the format is
 The BinaryString type cannot be specified implicitly. For explicit values, the format is a base64-encoded string.
 
 ```json
-"SGVsbG8sIHdvcmxkIQ=="
+{
+	"$properties": {
+		"ExplicitExample": {"BinaryString": "SGVsbG8sIHdvcmxkIQ=="}
+	}
+}
 ```
 
 ### Bool
 For both implicit and explicit values, the format is a boolean value.
 
 ```json
-true
-false
+{
+	"$properties": {
+		"ImplicitExample": true,
+		"ExplicitExample": {"Bool": false}
+	}
+}
 ```
 
 ### BrickColor
 The BrickColor type cannot be specified implicitly. For explicit values, the format is an integer representing the [Number](https://developer.roblox.com/en-us/articles/BrickColor-Codes) of a BrickColor.
 
 ```json
-194
+{
+	"$properties": {
+		"ExplicitExample": {"BrickColor": 194}
+	}
+}
 ```
 
 ### CFrame
 For implicit values, the format is a flat list of components.
 ```json
-[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0]
+{
+	"$properties": {
+		"ImplicitExample": [
+			1.0, 2.0, 3.0,
+			4.0, 5.0, 6.0,
+			7.0, 8.0, 9.0,
+			10.0, 11.0, 12.0
+		]
+	}
+}
 ```
-
 
 For explicit values, the format is an object with position and orientation fields.
 ```json
 {
-	"position": [1.0, 2.0, 3.0],
-	"orientation": [
-		[4.0, 5.0, 6.0],
-		[7.0, 8.0, 9.0],
-		[10.0, 11.0, 12.0]
-	]
+	"$properties": {
+		"ExplicitExample": {
+			"CFrame": {
+				"position": [1.0, 2.0, 3.0],
+				"orientation": [
+					[4.0, 5.0, 6.0],
+					[7.0, 8.0, 9.0],
+					[10.0, 11.0, 12.0]
+				]
+			}
+		}
+	}
 }
 ```
 
@@ -123,14 +136,35 @@ For explicit values, the format is an object with position and orientation field
 For both implicit and explicit values, the format is a list of R, G and B components, respectively. Each component is a float in the range [0, 1].
 
 ```json
-[0.6392156862745098, 0.6352941176470588, 0.6470588235294118]
+{
+	"$properties": {
+		"ImplicitExample": [
+			0.6392156862745098,
+			0.6352941176470588,
+			0.6470588235294118
+		]
+		"ExplicitExample": {
+			"Color3": [
+				0.6392156862745098,
+				0.6352941176470588,
+				0.6470588235294118
+			]
+		}
+	}
+}
 ```
 
 ### Color3uint8
 The Color3uint8 type cannot be specified implicitly. For explicit values, the format is a list of R, G and B components, respectively. Each component is an integer in the range [0, 255].
 
 ```json
-[163, 162, 165]
+{
+	"$properties": {
+		"ExplicitExample": {
+			"Color3": [163, 162, 165]
+		}
+	}
+}
 ```
 
 ### ColorSequence
@@ -138,16 +172,22 @@ The Color3uint8 type cannot be specified implicitly. For explicit values, the fo
 
 ```json
 {
-	"keypoints": [
-		{
-			"time": 0.0,
-			"color": [1.0, 1.0, 0.5]
-		},
-		{
-			"time": 1.0,
-			"color": [0.0, 0.0, 0.0]
+	"$properties": {
+		"ExplicitExample": {
+			"ColorSequence": {
+				"keypoints": [
+					{
+						"time": 0.0,
+						"color": [1.0, 1.0, 0.5]
+					},
+					{
+						"time": 1.0,
+						"color": [0.0, 0.0, 0.0]
+					}
+				]
+			}
 		}
-	]
+	}
 }
 ```
 
@@ -155,7 +195,12 @@ The Color3uint8 type cannot be specified implicitly. For explicit values, the fo
 For both implicit and explicit values, the format is a string.
 
 ```json
-"rbxassetid://12345"
+{
+	"$properties": {
+		"ImplicitExample": "rbxassetid://12345",
+		"ExplicitExample": {"Content": "rbxassetid://12345"}
+	}
+}
 ```
 
 ### Enum
@@ -187,43 +232,71 @@ For explicit values, the format is an integer corresponding to the value of the 
 The Faces type cannot be specified implicitly. For explicit values, the format is a list of strings, each of which may be either "Right", "Top", "Back", "Left", "Bottom", or "Front". Each string sets the corresponding component.
 
 ```json
-["Right", "Top", "Back", "Left", "Bottom", "Front"]
-["Right", "Top", "Front"]
-[]
+{
+	"$properties": {
+		"ExplicitExample1": {"Axes": ["Right", "Top", "Back", "Left", "Bottom", "Front"]},
+		"ExplicitExample2": {"Axes": ["Right", "Top", "Front"]},
+		"ExplicitExample3": {"Axes": []}
+	}
+}
 ```
 
 ### Float32
 For both implicit and explicit values, the format is a float.
 
 ```json
-15.0
+{
+	"$properties": {
+		"ImplicitExample": 15.0,
+		"ExplicitExample": {"Float32": 15.0}
+	}
+}
 ```
 
 ### Float64
 For both implicit and explicit values, the format is a float.
 
 ```json
-15123.0
+{
+	"$properties": {
+		"ImplicitExample": 15123.0,
+		"ExplicitExample": {"Float64": 15123.0}
+	}
+}
 ```
 
 ### Int32
 For both implicit and explicit values, the format is an integer.
 
 ```json
-6014
+{
+	"$properties": {
+		"ImplicitExample": 6014,
+		"ExplicitExample": {"Int32": 6014}
+	}
+}
 ```
 ### Int64
 For both implicit and explicit values, the format is an integer.
 
 ```json
-23491023
+{
+	"$properties": {
+		"ImplicitExample": 23491023,
+		"ExplicitExample": {"Int64": 23491023}
+	}
+}
 ```
 
 ### NumberRange
 The NumberRange type cannot be specified implicitly. For explicit values, the format is a list of Min and Max components, respectively. Each component is a float.
 
 ```json
-[-36.0, 94.0]
+{
+	"$properties": {
+		"ExplicitExample": {"NumberRange": [-36.0, 94.0]}
+	}
+}
 ```
 
 ### NumberSequence
@@ -231,18 +304,24 @@ The NumberSequence type cannot be specified implicitly. For explicit values, the
 
 ```json
 {
-	"keypoints": [
-		{
-			"time": 0.0,
-			"value": 5.0,
-			"envelope": 2.0
-		},
-		{
-			"time": 1.0,
-			"value": 22.0,
-			"envelope": 0.0
+	"$properties": {
+		"ExplicitExample": {
+			"NumberSequence": {
+				"keypoints": [
+					{
+						"time": 0.0,
+						"value": 5.0,
+						"envelope": 2.0
+					},
+					{
+						"time": 1.0,
+						"value": 22.0,
+						"envelope": 0.0
+					}
+				]
+			}
 		}
-	]
+	}
 }
 ```
 
@@ -255,18 +334,28 @@ The PhysicalProperties type cannot be specified implicitly. For explicit values,
 The constant string "Default", which represents the default PhysicalProperties value.
 
 ```json
-"Default"
+{
+	"$properties": {
+		"ExplicitExample": {"PhysicalProperties": "Default"}
+	}
+}
 ```
 
 An object with fields corresponding to each component.
 
 ```json
 {
-	"density": 0.5,
-	"friction": 1.0,
-	"elasticity": 0.0,
-	"frictionWeight": 50.0,
-	"elasticityWeight": 25.0
+	"$properties": {
+		"ExplicitExample": {
+			"PhysicalProperties": {
+				"density": 0.5,
+				"friction": 1.0,
+				"elasticity": 0.0,
+				"frictionWeight": 50.0,
+				"elasticityWeight": 25.0
+			}
+		}
+	}
 }
 ```
 
@@ -274,7 +363,12 @@ An object with fields corresponding to each component.
 For both implicit and explicit values, the format is a string.
 
 ```json
-"print('Hello world!')"
+{
+	"$properties": {
+		"ImplicitExample": "print('Hello world!')",
+		"ExplicitExample": {"ProtectedString": "print('Hello world!')"}
+	}
+}
 ```
 
 ### Ray
@@ -284,36 +378,46 @@ An object with origin and direction fields. Each component is a [Vector3](#vecto
 
 ```json
 {
-	"origin": [
-		1.0,
-		2.0,
-		3.0
-	],
-	"direction": [
-		4.0,
-		5.0,
-		6.0
-	]
+	"$properties": {
+		"ExplicitExample": {
+			"Ray": {
+				"origin": [1.0, 2.0, 3.0],
+				"direction": [4.0, 5.0, 6.0]
+			}
+		}
+	}
 }
 ```
 
 A list of Origin and Direction components, respectively. Each component is a [Vector3](#vector3).
 
 ```json
-[
-	[1.0, 2.0, 3.0],
-	[4.0, 5.0, 6.0]
-]
+{
+	"$properties": {
+		"ExplicitExample": {
+			"Ray": [
+				[1.0, 2.0, 3.0],
+				[4.0, 5.0, 6.0]
+			]
+		}
+	}
+}
 ```
 
 ### Rect
 The Rect type cannot be specified implicitly. For explicit values, the format is a list of Min and Max components, respectively. Each component is a [Vector2](#vector2).
 
 ```json
-[
-	[0.0, 5.0],
-	[10.0, 15.0]
-]
+{
+	"$properties": {
+		"ExplicitExample": {
+			"Rect": [
+				[0.0, 5.0],
+				[10.0, 15.0]
+			]
+		}
+	}
+}
 ```
 
 ### Ref
@@ -332,58 +436,92 @@ Not implemented.
 For both implicit and explicit values, the format is a string.
 
 ```json
-"Hello, world!"
+{
+	"$properties": {
+		"ImplicitExample": "Hello, world!",
+		"ExplicitExample": {"String": "Hello, world!"}
+	}
+}
 ```
 
 ### Tags
 For both implicit and explicit values, the format is a list of strings, where each string is a tag.
 
 ```json
-[
-	"foo",
-	"con'fusion?!",
-	"bar"
-]
+{
+	"$properties": {
+		"ImplicitExample": ["foo", "con'fusion?!", "bar"],
+		"ExplicitExample": {"Tags": ["foo", "con'fusion?!", "bar"]}
+	}
+}
 ```
 
 ### UDim
 The UDim type cannot be specified implicitly. For explicit values, the format is a list of Scale and Offset components, respectively. Scale is a float, and Offset is an integer.
 
 ```json
-[1.0, 32]
+{
+	"$properties": {
+		"ExplicitExample": {"UDim": [1.0, 32]}
+	}
+}
 ```
 
 ### UDim2
 The UDim2 type cannot be specified implicitly. For explicit values, the format is a list of X and Y components, respectively. Each component is a [UDim](#udim).
 
 ```json
-[[-1.0, 100], [1.0, -100]]
+{
+	"$properties": {
+		"ExplicitExample": {"UDim2": [[-1.0, 100], [1.0, -100]]}
+	}
+}
 ```
 
 ### Vector2
 For both implicit and explicit values, the format is a list of X and Y components, respectively. Each component is a float.
 
 ```json
-[-50.0, 50.0]
+{
+	"$properties": {
+		"ImplicitExample": [-50.0, 50.0],
+		"ExplicitExample": {"Vector2": [-50.0, 50.0]}
+	}
+}
 ```
 
 ### Vector2int16
 For both implicit and explicit values, the format is a list of X and Y components, respectively. Each component is an integer.
 
 ```json
-[-300, 300]
+{
+	"$properties": {
+		"ImplicitExample": [-300, 300],
+		"ExplicitExample": {"Vector2int16": [-300, 300]}
+	}
+}
 ```
 
 ### Vector3
 For both implicit and explicit values, the format is a list of X, Y, and Z components, respectively. Each component is an float.
 
 ```json
-[-300.0, 0.0, 1500.0]
+{
+	"$properties": {
+		"ImplicitExample": [-300.0, 0.0, 1500.0],
+		"ExplicitExample": {"Vector3": [-300.0, 0.0, 1500.0]}
+	}
+}
 ```
 
 ### Vector3int16
 For both implicit and explicit values, the format is a list of X, Y, and Z components, respectively. Each component is an integer.
 
 ```json
-[60, 37, -450]
+{
+	"$properties": {
+		"ImplicitExample": [60, 37, -450],
+		"ExplicitExample": {"Vector3int16": [60, 37, -450]}
+	}
+}
 ```
