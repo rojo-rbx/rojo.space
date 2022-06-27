@@ -38,6 +38,7 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 | [Region3int16](#region3int16)                       | `Terrain.MaxExtents`            | ✔ | ✔ | ❌ |
 | [SharedString](#sharedstring)                       | N/A                             | ✔ | ✔ | ❌ |
 | [String](#string)                                   | `Instance.Name`                 | ✔ | ✔ | ✔ |
+| [Tags](#tags)                                       | `Instance.Tags`                 | ✔ | ✔ | ✔ |
 | [UDim](#udim)                                       | `UIListLayout.Padding`          | ✔ | ✔ | ✔ |
 | [UDim2](#udim2)                                     | `Frame.Size`                    | ✔ | ✔ | ✔ |
 | [Vector2](#vector2)                                 | `ImageLabel.ImageRectSize`      | ✔ | ✔ | ✔ |
@@ -311,6 +312,17 @@ A string.
 
 ```json
 "Hello, world!"
+```
+
+### Tags
+A list of strings, where each string is a tag.
+
+```json
+[
+	"foo",
+	"con'fusion?!",
+	"bar"
+]
 ```
 
 ### UDim
