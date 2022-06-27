@@ -49,7 +49,9 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 | QFont                                               | `Studio.Font`                   | ❌ | ❌ | ❌ |
 
 ## Properties in Project Files
-The type of each property has an **implicit** and **explicit** format. For example, the Anchored property can be defined implicitly as a boolean:
+The type of each property has an **implicit** and **explicit** format. The [Project format page](../project-format#instance-property-value) decribes these formats in more detail.
+
+For example, the Anchored property can be defined implicitly as a boolean:
 
 ```json
 "Anchored": false
@@ -63,12 +65,11 @@ Or explicitly as an object with a field, where the key is the name of the type, 
 }
 ```
 
-The [Project format page](../project-format#instance-property-value) has more information.
 
 Each following section describes the format of the value for a type.
 
 ### Axes
-A list of strings, each of which may be either "X", "Y", or "Z". Each string sets the corresponding component.
+The Axes type cannot be specified implicitly. For explicit values, the format is a list of strings, each of which may be either "X", "Y", or "Z". Each string sets the corresponding component.
 
 ```json
 ["X", "Y", "Z"]
@@ -76,15 +77,16 @@ A list of strings, each of which may be either "X", "Y", or "Z". Each string set
 []
 ```
 
+
 ### BinaryString
-A base64-encoded string.
+The BinaryString type cannot be specified implicitly. For explicit values, the format is a base64-encoded string.
 
 ```json
 "SGVsbG8sIHdvcmxkIQ=="
 ```
 
 ### Bool
-A boolean value.
+For both implicit and explicit values, the format is a boolean value.
 
 ```json
 true
@@ -92,16 +94,20 @@ false
 ```
 
 ### BrickColor
-An integer representing the [Number](https://developer.roblox.com/en-us/articles/BrickColor-Codes) of a BrickColor.
+The BrickColor type cannot be specified implicitly. For explicit values, the format is an integer representing the [Number](https://developer.roblox.com/en-us/articles/BrickColor-Codes) of a BrickColor.
 
 ```json
 194
 ```
 
 ### CFrame
-May have one of several formats.
+For implicit values, the format is a flat list of components.
+```json
+[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0]
+```
 
-An object with position and orientation fields.
+
+For explicit values, the format is an object with position and orientation fields.
 ```json
 {
 	"position": [1.0, 2.0, 3.0],
@@ -113,27 +119,22 @@ An object with position and orientation fields.
 }
 ```
 
-A flat list of components.
-```json
-[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0]
-```
-
 ### Color3
-A list of R, G and B components, respectively. Each component is a float in the range [0, 1].
+For both implicit and explicit values, the format is a list of R, G and B components, respectively. Each component is a float in the range [0, 1].
 
 ```json
 [0.6392156862745098, 0.6352941176470588, 0.6470588235294118]
 ```
 
 ### Color3uint8
-A list of R, G and B components, respectively. Each component is an integer in the range [0, 255].
+The Color3uint8 type cannot be specified implicitly. For explicit values, the format is a list of R, G and B components, respectively. Each component is an integer in the range [0, 255].
 
 ```json
 [163, 162, 165]
 ```
 
 ### ColorSequence
-An object with a keypoints field, which is an array of ColorSequenceKeypoints. Each ColorSequenceKeypoint is an object with time and color fields. The color field is a [Color3](#color3).
+The Color3uint8 type cannot be specified implicitly. For explicit values, the format is an object with a keypoints field, which is an array of ColorSequenceKeypoints. Each ColorSequenceKeypoint is an object with time and color fields. The color field is a [Color3](#color3).
 
 ```json
 {
@@ -151,21 +152,39 @@ An object with a keypoints field, which is an array of ColorSequenceKeypoints. E
 ```
 
 ### Content
-A string.
+For both implicit and explicit values, the format is a string.
 
 ```json
 "rbxassetid://12345"
 ```
 
 ### Enum
-An integer representing the value of an EnumItem.
+For implicit values, the format is a string corresponding to the name of the enum item. For example:
 
 ```json
-1234
+{
+	"$className": "SurfaceLight",
+	"$properties": {
+		"Face": "Front"
+	}
+}
+```
+
+For explicit values, the format is an integer corresponding to the value of the enum item. For example:
+
+```json
+{
+	"$className": "SurfaceLight",
+	"$properties": {
+		"Face": {
+			"Enum": 5
+		}
+	}
+}
 ```
 
 ### Faces
-A list of strings, each of which may be either "Right", "Top", "Back", "Left", "Bottom", or "Front". Each string sets the corresponding component.
+The Faces type cannot be specified implicitly. For explicit values, the format is a list of strings, each of which may be either "Right", "Top", "Back", "Left", "Bottom", or "Front". Each string sets the corresponding component.
 
 ```json
 ["Right", "Top", "Back", "Left", "Bottom", "Front"]
@@ -174,41 +193,41 @@ A list of strings, each of which may be either "Right", "Top", "Back", "Left", "
 ```
 
 ### Float32
-A float.
+For both implicit and explicit values, the format is a float.
 
 ```json
 15.0
 ```
 
 ### Float64
-A float.
+For both implicit and explicit values, the format is a float.
 
 ```json
 15123.0
 ```
 
 ### Int32
-An integer.
+For both implicit and explicit values, the format is an integer.
 
 ```json
 6014
 ```
 ### Int64
-An integer.
+For both implicit and explicit values, the format is an integer.
 
 ```json
 23491023
 ```
 
 ### NumberRange
-A list of Min and Max components, respectively. Each component is a float.
+The NumberRange type cannot be specified implicitly. For explicit values, the format is a list of Min and Max components, respectively. Each component is a float.
 
 ```json
 [-36.0, 94.0]
 ```
 
 ### NumberSequence
-An object with a keypoints field, which is an array of NumberSequenceKeypoints. Each ColorSequenceKeypoint is an object with time, value, and envelope fields.
+The NumberSequence type cannot be specified implicitly. For explicit values, the format is an object with a keypoints field, which is an array of NumberSequenceKeypoints. Each ColorSequenceKeypoint is an object with time, value, and envelope fields.
 
 ```json
 {
@@ -231,6 +250,8 @@ An object with a keypoints field, which is an array of NumberSequenceKeypoints. 
 TODO
 
 ### PhysicalProperties
+The PhysicalProperties type cannot be specified implicitly. For explicit values, there are two formats.
+
 The constant string "Default", which represents the default PhysicalProperties value.
 
 ```json
@@ -250,14 +271,14 @@ An object with fields corresponding to each component.
 ```
 
 ### ProtectedString
-A string.
+For both implicit and explicit values, the format is a string.
 
 ```json
 "print('Hello world!')"
 ```
 
 ### Ray
-May have one of several formats.
+The Ray type cannot be specified implicitly. For explicit values, there are several possible formats.
 
 An object with origin and direction fields. Each component is a [Vector3](#vector3).
 
@@ -286,7 +307,7 @@ A list of Origin and Direction components, respectively. Each component is a [Ve
 ```
 
 ### Rect
-A list of Min and Max components, respectively. Each component is a [Vector2](#vector2).
+The Rect type cannot be specified implicitly. For explicit values, the format is a list of Min and Max components, respectively. Each component is a [Vector2](#vector2).
 
 ```json
 [
@@ -308,14 +329,14 @@ Not implemented.
 Not implemented.
 
 ### String
-A string.
+For both implicit and explicit values, the format is a string.
 
 ```json
 "Hello, world!"
 ```
 
 ### Tags
-A list of strings, where each string is a tag.
+For both implicit and explicit values, the format is a list of strings, where each string is a tag.
 
 ```json
 [
@@ -326,42 +347,42 @@ A list of strings, where each string is a tag.
 ```
 
 ### UDim
-A list of Scale and Offset components, respectively. Scale is a float, and Offset is an integer.
+The UDim type cannot be specified implicitly. For explicit values, the format is a list of Scale and Offset components, respectively. Scale is a float, and Offset is an integer.
 
 ```json
 [1.0, 32]
 ```
 
 ### UDim2
-A list of X and Y components, respectively. Each component is a [UDim](#udim).
+The UDim2 type cannot be specified implicitly. For explicit values, the format is a list of X and Y components, respectively. Each component is a [UDim](#udim).
 
 ```json
 [[-1.0, 100], [1.0, -100]]
 ```
 
 ### Vector2
-A list of X and Y components, respectively. Each component is a float.
+For both implicit and explicit values, the format is a list of X and Y components, respectively. Each component is a float.
 
 ```json
 [-50.0, 50.0]
 ```
 
 ### Vector2int16
-A list of X and Y components, respectively. Each component is an integer.
+For both implicit and explicit values, the format is a list of X and Y components, respectively. Each component is an integer.
 
 ```json
 [-300, 300]
 ```
 
 ### Vector3
-A list of X, Y, and Z components, respectively. Each component is an float.
+For both implicit and explicit values, the format is a list of X, Y, and Z components, respectively. Each component is an float.
 
 ```json
 [-300.0, 0.0, 1500.0]
 ```
 
 ### Vector3int16
-A list of X, Y, and Z components, respectively. Each component is an integer.
+For both implicit and explicit values, the format is a list of X, Y, and Z components, respectively. Each component is an integer.
 
 ```json
 [60, 37, -450]
