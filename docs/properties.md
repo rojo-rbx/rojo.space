@@ -9,43 +9,43 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 
 ## Property Type Support
 
-| Property Type           | Example Property                | Build | Live Sync | Project Files |
-|:------------------------|:--------------------------------|:--:|:--:|:--:|
-| Axes                    | `ArcHandles.Axes`               | ✔ | ✔ | ✔ |
-| BinaryString            | `Terrain.MaterialColors`        | ✔ | ❌ | ✔ |
-| Bool                    | `Part.Anchored`                 | ✔ | ✔ | ✔ |
-| BrickColor              | `Part.BrickColor`               | ✔ | ✔ | ✔ |
-| CFrame                  | `Camera.CFrame`                 | ✔ | ✔ | ✔ |
-| Color3                  | `Lighting.Ambient`              | ✔ | ✔ | ✔ |
-| Color3uint8             | `Part.BrickColor`               | ✔ | ✔ | ✔ |
-| ColorSequence           | `Beam.Color`                    | ✔ | ✔ | ✔ |
-| Content                 | `Decal.Texture`                 | ✔ | ✔ | ✔ |
-| Enum                    | `Part.Shape`                    | ✔ | ✔ | ✔ |
-| Faces                   | `Handles.Faces`                 | ✔ | ✔ | ✔ |
-| Float32                 | `Players.RespawnTime`           | ✔ | ✔ | ✔ |
-| Float64                 | `Sound.PlaybackLoudness`        | ✔ | ✔ | ✔ |
-| Int32                   | `Frame.ZIndex`                  | ✔ | ✔ | ✔ |
-| Int64                   | `Player.UserId`                 | ✔ | ✔ | ✔ |
-| NumberRange             | `ParticleEmitter.Lifetime`      | ✔ | ✔ | ✔ |
-| NumberSequence          | `Beam.Transparency`             | ✔ | ✔ | ✔ |
-| OptionalCoordinateFrame | `Model.WorldPivotData`          | ✔ | ❌ | ✔ |
-| PhysicalProperties      | `Part.CustomPhysicalProperties` | ✔ | ✔ | ✔ |
-| ProtectedString         | `ModuleScript.Source`           | ✔ | ✔ | ✔ |
-| Ray                     | `RayValue.Value`                | ✔ | ✔ | ✔ |
-| Rect                    | `ImageButton.SliceCenter`       | ✔ | ✔ | ✔ |
-| Ref                     | `Model.PrimaryPart`             | ✔ | ✔ | ❌ |
-| Region3                 | N/A                             | ✔ | ✔ | ❌ |
-| Region3int16            | `Terrain.MaxExtents`            | ✔ | ✔ | ❌ |
-| SharedString            | N/A                             | ✔ | ✔ | ❌ |
-| String                  | `Instance.Name`                 | ✔ | ✔ | ✔ |
-| UDim                    | `UIListLayout.Padding`          | ✔ | ✔ | ✔ |
-| UDim2                   | `Frame.Size`                    | ✔ | ✔ | ✔ |
-| Vector2                 | `ImageLabel.ImageRectSize`      | ✔ | ✔ | ✔ |
-| Vector2int16            | N/A                             | ✔ | ✔ | ✔ |
-| Vector3                 | `Part.Size`                     | ✔ | ✔ | ✔ |
-| Vector3int16            | `TerrainRegion.ExtentsMax`      | ✔ | ✔ | ✔ |
-| QDir                    | `Studio.Auto-Save Path`         | ❌ | ❌ | ❌ |
-| QFont                   | `Studio.Font`                   | ❌ | ❌ | ❌ |
+| Property Type                                       | Example Property                | Build | Live Sync | Project Files |
+|:----------------------------------------------------|:--------------------------------|:--:|:--:|:--:|
+| [Axes](#axes)                                       | `ArcHandles.Axes`               | ✔ | ✔ | ✔ |
+| [BinaryString](#binarystring)                       | `Terrain.MaterialColors`        | ✔ | ❌ | ✔ |
+| [Bool](#bool)                                       | `Part.Anchored`                 | ✔ | ✔ | ✔ |
+| [BrickColor](#brickcolor)                           | `Part.BrickColor`               | ✔ | ✔ | ✔ |
+| [CFrame](#cframe)                                   | `Camera.CFrame`                 | ✔ | ✔ | ✔ |
+| [Color3](#color3)                                   | `Lighting.Ambient`              | ✔ | ✔ | ✔ |
+| [Color3uint8](#color3uint8)                         | `Part.BrickColor`               | ✔ | ✔ | ✔ |
+| [ColorSequence](#colorsequence)                     | `Beam.Color`                    | ✔ | ✔ | ✔ |
+| [Content](#content)                                 | `Decal.Texture`                 | ✔ | ✔ | ✔ |
+| [Enum](#enum)                                       | `Part.Shape`                    | ✔ | ✔ | ✔ |
+| [Faces](#faces)                                     | `Handles.Faces`                 | ✔ | ✔ | ✔ |
+| [Float32](#float32)                                 | `Players.RespawnTime`           | ✔ | ✔ | ✔ |
+| [Float64](#float64)                                 | `Sound.PlaybackLoudness`        | ✔ | ✔ | ✔ |
+| [Int32](#int32)                                     | `Frame.ZIndex`                  | ✔ | ✔ | ✔ |
+| [Int64](#int64)                                     | `Player.UserId`                 | ✔ | ✔ | ✔ |
+| [NumberRange](#numberrange)                         | `ParticleEmitter.Lifetime`      | ✔ | ✔ | ✔ |
+| [NumberSequence](#numbersequence)                   | `Beam.Transparency`             | ✔ | ✔ | ✔ |
+| [OptionalCoordinateFrame](#optionalcoordinateframe) | `Model.WorldPivotData`          | ✔ | ❌ | ✔ |
+| [PhysicalProperties](#physicalproperties)           | `Part.CustomPhysicalProperties` | ✔ | ✔ | ✔ |
+| [ProtectedString](#protectedstring)                 | `ModuleScript.Source`           | ✔ | ✔ | ✔ |
+| [Ray](#ray)                                         | `RayValue.Value`                | ✔ | ✔ | ✔ |
+| [Rect](#rect)                                       | `ImageButton.SliceCenter`       | ✔ | ✔ | ✔ |
+| [Ref](#ref)                                         | `Model.PrimaryPart`             | ✔ | ✔ | ❌ |
+| [Region3](#region3)                                 | N/A                             | ✔ | ✔ | ❌ |
+| [Region3int16](#region3int16)                       | `Terrain.MaxExtents`            | ✔ | ✔ | ❌ |
+| [SharedString](#sharedstring)                       | N/A                             | ✔ | ✔ | ❌ |
+| [String](#string)                                   | `Instance.Name`                 | ✔ | ✔ | ✔ |
+| [UDim](#udim)                                       | `UIListLayout.Padding`          | ✔ | ✔ | ✔ |
+| [UDim2](#udim2)                                     | `Frame.Size`                    | ✔ | ✔ | ✔ |
+| [Vector2](#vector2)                                 | `ImageLabel.ImageRectSize`      | ✔ | ✔ | ✔ |
+| [Vector2int16](#vector2int16)                       | N/A                             | ✔ | ✔ | ✔ |
+| [Vector3](#vector3)                                 | `Part.Size`                     | ✔ | ✔ | ✔ |
+| [Vector3int16](#vector3int16)                       | `TerrainRegion.ExtentsMax`      | ✔ | ✔ | ✔ |
+| QDir                                                | `Studio.Auto-Save Path`         | ❌ | ❌ | ❌ |
+| QFont                                               | `Studio.Font`                   | ❌ | ❌ | ❌ |
 
 ## Properties in Project Files
 The type of each property has an **implicit** and **explicit** format. For example, the Anchored property can be defined implicitly as a boolean:
