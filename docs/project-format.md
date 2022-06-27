@@ -40,63 +40,53 @@ All other fields in an Instance Description are turned into instances whose name
 
 ## Instance Property Value
 
-There are two kinds of property values on instances, **implicit** and **explicit**.
+There are two kinds of property values on instances, **implicit** and **explicit**. An implicit value uses Rojo's knowledge of Roblox's API to infer the correct type, while an explicit value specifies the type directly.
 
-In the vast majority of cases, you should be able to use **implicit** property values. To use them, just use a value that's the same shape as the type that the property has:
+When a value is specified implicitly, Rojo uses the class name and property name to validate the value. That is, the format of an implicit value must be correct for the type corresponding to the class and property. For example, the `Anchored` property of the `Part` class is known by Rojo to be of the [Bool](../properties#bool) type, so the implicit value must be a boolean:
 
 ```json
-"MyPart": {
+{
     "$className": "Part",
     "$properties": {
-        "Size": [3, 5, 3],
-        "Color": [0.5, 0, 0.5],
         "Anchored": true,
-        "Material": "Granite"
     }
 }
 ```
 
-`Vector3` and `Color3` properties can just be arrays of numbers, as can types like `Vector2`, `CFrame`, and more!
+Conversely, an explicit value specifies the type of the value directly. An explicit value is an object with one field, where:
 
-Enums can be set to a string containing the enum variant. Rojo will raise an error if the string isn't a valid variant for the enum.
+- The key of the field is the [type](../properties.md#property-type-support) of property to represent.
+- The value of the field is the value of the property, in the format of the specified type.
 
-There are some cases where this syntax for assigning properties _doesn't_ work. In these cases, Rojo requires you to use the **explicit** property syntax.
-
-Some reasons why you might need to use an **explicit** property:
-
-- Using exotic property types like `BinaryString`
-- Using properties added to Roblox recently that Rojo doesn't know about yet
-
-The shape of explicit property values is defined by the [rbx-dom](https://github.com/LPGhatguy/rbx-dom) library, so it uses slightly different conventions than the rest of Rojo.
-
-Each value should be an object where:
-
-- The key is the type of property to represent
-  - [Supported types can be found here](../properties).
-- The value is the value of the property.
-  - The shape of this field depends on which property type is being used. `Vector3` and `Color3` values are both represented as a list of numbers, while `BinaryString` expects a base64-encoded string, for example.
-
-Here's the same object, but with explicit properties:
+For example, the `Anchored` property specified explicitly:
 
 ```json
-"MyPart": {
+{
     "$className": "Part",
     "$properties": {
-        "Size": {
-            "Vector3": [3, 5, 3]
-        },
-        "Color": {
-            "Color3": [0.5, 0, 0.5]
-        },
         "Anchored": {
-			"Bool": true
-		},
-        "Material": {
-			"Enum": 832
-		}
+        	"Bool": true
+        },
     }
 }
 ```
+
+For explicit values, Rojo _does not_ validate the type against Roblox's API. For example, the type of the `Anchored` property could be overridden to be a string instead:
+
+```json
+{
+    "$className": "Part",
+    "$properties": {
+        "Anchored": {
+        	"String": "Hello, world!"
+        },
+    }
+}
+```
+
+Explicit values are necessary for properties that Rojo does not know about. This includes properties that have been recently added to Roblox's API, and certain internal properties that aren't described by Roblox's API at all.
+
+The [Properties](../properties.md) page describes the formats of each type in detail.
 
 ## Example Projects
 
