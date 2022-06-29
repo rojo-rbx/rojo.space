@@ -161,14 +161,14 @@ The Color3uint8 type cannot be specified implicitly. For explicit values, the fo
 {
 	"$properties": {
 		"ExplicitExample": {
-			"Color3": [163, 162, 165]
+			"Color3uint8": [163, 162, 165]
 		}
 	}
 }
 ```
 
 ### ColorSequence
-The Color3uint8 type cannot be specified implicitly. For explicit values, the format is an object with a keypoints field, which is an array of ColorSequenceKeypoints. Each ColorSequenceKeypoint is an object with time and color fields. The color field is a [Color3](#color3).
+The ColorSequence type cannot be specified implicitly. For explicit values, the format is an object with a keypoints field, which is an array of ColorSequenceKeypoints. Each ColorSequenceKeypoint is an object with time and color fields. The color field is a [Color3](#color3).
 
 ```json
 {
@@ -234,15 +234,15 @@ The Faces type cannot be specified implicitly. For explicit values, the format i
 ```json
 {
 	"$properties": {
-		"ExplicitExample1": {"Axes": ["Right", "Top", "Back", "Left", "Bottom", "Front"]},
-		"ExplicitExample2": {"Axes": ["Right", "Top", "Front"]},
-		"ExplicitExample3": {"Axes": []}
+		"ExplicitExample1": {"Faces": ["Right", "Top", "Back", "Left", "Bottom", "Front"]},
+		"ExplicitExample2": {"Faces": ["Right", "Top", "Front"]},
+		"ExplicitExample3": {"Faces": []}
 	}
 }
 ```
 
 ### Float32
-For both implicit and explicit values, the format is a float.
+For both implicit and explicit values, the format is a number.
 
 ```json
 {
@@ -254,7 +254,7 @@ For both implicit and explicit values, the format is a float.
 ```
 
 ### Float64
-For both implicit and explicit values, the format is a float.
+For both implicit and explicit values, the format is a number.
 
 ```json
 {
