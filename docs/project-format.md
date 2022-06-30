@@ -55,7 +55,7 @@ When a value is specified implicitly, Rojo uses the class name and property name
 
 Conversely, an explicit value specifies the type of the value directly. An explicit value is an object with one field, where:
 
-- The key of the field is the [type](../properties.md#property-type-support) of property to represent.
+- The key of the field is the [type](../properties#property-type-support) of property to represent.
 - The value of the field is the value of the property, in the format of the specified type.
 
 For example, the `Anchored` property specified explicitly:
@@ -86,7 +86,7 @@ For explicit values, Rojo _does not_ validate the type against Roblox's API. For
 
 Explicit values are necessary for properties that Rojo does not know about. This includes properties that have been recently added to Roblox's API, and certain internal properties that aren't described by Roblox's API at all.
 
-The [Properties](../properties.md) page describes the formats of each type in detail.
+The [Properties](../properties) page describes the formats of each type in detail.
 
 ## Example Projects
 
