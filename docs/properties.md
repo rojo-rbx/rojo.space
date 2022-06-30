@@ -11,6 +11,7 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 
 | Property Type                                       | Example Property                | Build | Live Sync | Project Files |
 |:----------------------------------------------------|:--------------------------------|:--:|:--:|:--:|
+| [Attributes](#attributes)                           | `Instance.AttributesSerialized` | ✔ | ✔ | ✔ |
 | [Axes](#axes)                                       | `ArcHandles.Axes`               | ✔ | ✔ | ✔ |
 | [BinaryString](#binarystring)                       | `Terrain.MaterialColors`        | ✔ | ❌ | ✔ |
 | [Bool](#bool)                                       | `Part.Anchored`                 | ✔ | ✔ | ✔ |
@@ -50,6 +51,39 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 
 ## Properties in Project Files
 Many types have an **implicit** and **explicit** format. The [Project format page](../project-format#instance-property-value) decribes these formats in more detail.
+
+### Attributes
+For both implicit and explicit values, the format is an object where each field represents an attribute, where the key is the name of the attribute, and the value must be an explicit value.
+
+```json
+{
+	"$properties": {
+		"ImplicitExample": {
+			"Foo": {"Bool": true},
+			"Bar": {"Vector3": [1.0, 2.0, 3.0]},
+		},
+		"ExplicitExample": {
+			"Attributes": {
+				"Foo": {"Bool": true},
+				"Bar": {"Vector3": [1.0, 2.0, 3.0]},
+			}
+		}
+	}
+}
+```
+
+The following types are supported for attribute values:
+
+- [Bool](#bool)
+- [BrickColor](#brickcolor)
+- [Color3](#color3)
+- [Float64](#float64)
+- [Rect](#rect)
+- [String](#string)
+- [UDim](#udim)
+- [UDim2](#udim2)
+- [Vector2](#vector2)
+- [Vector3](#vector3)
 
 ### Axes
 The Axes type cannot be specified implicitly. For explicit values, the format is a list of strings, each of which may be either "X", "Y", or "Z". Each string sets the corresponding component.
