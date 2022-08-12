@@ -17,6 +17,15 @@ Rojo projects are JSON files that have the `.project.json` extension. They have 
 - `servePlaceIds`: A list of place IDs that this project may be live-synced to. This feature can help prevent overwriting the wrong game with source from Rojo.
   - **Optional**
   - Default is `null`
+- `placeId`: Sets the current place's place ID when connecting to the Rojo server from Roblox Studio.
+  - **Optional**
+  - Default is `null`
+- `gameId`: Sets the current place's game ID when connecting to the Rojo server from Roblox Studio.
+  - **Optional**
+  - Default is `null`
+- `serveAddress`: If specified, this address will be used in place of the default address, as long as --address is unprovided.
+  - **Optional**
+  - Default is `null`
 - `globIgnorePaths`: A list of globs of paths to ignore.
   - **Optional**
   - Default is `[]`
