@@ -19,10 +19,7 @@ const Splash = () => (
       Professional Development Tools in Roblox
     </h2>
     <div className={style.buttons}>
-      <Link
-        className="button button--primary button--lg"
-        to="/docs/v7"
-      >
+      <Link className="button button--primary button--lg" to="/docs/v7">
         Get Started
       </Link>
       <Link
@@ -30,6 +27,12 @@ const Splash = () => (
         to="https://github.com/rojo-rbx/rojo/releases"
       >
         Releases
+      </Link>
+      <Link
+        className="button button--primary button--lg"
+        to="https://www.patreon.com/lpghatguy"
+      >
+        Patreon
       </Link>
     </div>
   </div>
