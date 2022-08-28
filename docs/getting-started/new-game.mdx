@@ -17,11 +17,16 @@ Open a new empty folder in VS Code. Your editor should look like this:
 
 ![empty VS Code project](/img/vscode/empty-project.png)
 
-Open your VS Code Command Palette (`ctrl+shift+P` on Windows, `cmd+shift+P` on macOS) and type `rojo init`. Run the command that pops up:
+Open your VS Code Command Palette (`ctrl+shift+P` on Windows, `cmd+shift+P` on macOS) and type `Rojo: Open Menu`. Run the command that pops up:
 
 ![rojo init command](/img/vscode/init-command.png)
 
+Select `Create one now` from menu to initialize Rojo project
+
+![rojo initialize from menu](/img/vscode/menu-init.png)
+
 Once it succeeds, you should see a bunch of new files:
+
 
 ![complete rojo project](/img/vscode/init-output.png)
 
@@ -48,9 +53,13 @@ Now that we have a project, one thing we can do is build a Roblox place file for
 <Tabs groupId="installation-kind">
 <TabItem value="vscode" label="VS Code" default>
 
-Open your VS Code Command Palette and type `rojo build`. You'll be prompted to select a project, choose the default one.
+Open your VS Code Command Palette (`ctrl+shift+P` on Windows, `cmd+shift+P` on macOS) and type `Rojo: Open Menu`. Run the command that pops up:
 
-![rojo build command](/img/vscode/build-command.png)
+![rojo init command](/img/vscode/init-command.png)
+
+Click the `Build project` button.
+
+![rojo build from menu](/img/vscode/build-command.png)
 
 </TabItem>
 <TabItem value="cli" label="CLI">
@@ -68,9 +77,9 @@ To generate a binary place file instead, use `build.rbxl`. Note that support for
 </TabItem>
 </Tabs>
 
-Rojo will create a file named `build.rbxlx` that contains your new game!
+Rojo will create a file named `ProjectName.rbxlx` that contains your new game!
 
-If you open `build.rbxlx` in Roblox Studio now, you should see a baseplate, as well as code in services like `ReplicatedStorage`.
+If you open `ProjectName.rbxlx` in Roblox Studio now, you should see a baseplate, as well as code in services like `ReplicatedStorage`.
 
 ## Live-Syncing into Studio
 
@@ -83,7 +92,11 @@ To expose your project to the plugin, you'll need to start the **live sync serve
 <Tabs groupId="installation-kind">
 <TabItem value="vscode" label="VS Code" default>
 
-Open your VS Code Command Palette, type `rojo serve`, and choose the extension's command.
+Open your VS Code Command Palette (`ctrl+shift+P` on Windows, `cmd+shift+P` on macOS) and type `Rojo: Open Menu`. Run the command that pops up:
+
+![rojo init command](/img/vscode/init-command.png)
+
+Click the project button from Projects in this workspace section
 
 ![rojo serve command](/img/vscode/serve-command.png)
 
