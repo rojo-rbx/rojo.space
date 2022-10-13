@@ -1,5 +1,5 @@
 ---
-title: Recomended Workflows
+title: Recommended Workflows
 sidebar_position: 6
 ---
 
