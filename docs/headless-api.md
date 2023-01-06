@@ -18,9 +18,24 @@ Plugins and command bar all share the same environment, which allows us to expos
 ```Lua
 Rojo:RequestAccess(apis: {string}): {[string]: boolean}
 ```
-In order to use any of these headless APIs, you must first explicitly request them. Users will be prompted to allow/deny each API your plugin aims to use, and it will return a dictionary of the APIs to a boolean of whether it was granted or not. This must be the first thing your plugin calls when using this headless API feature. This keeps our users secure and protected from malicious plugins.
+In order to use any of the Rojo APIs, you must first explicitly request them with this function. Users will be prompted to allow/deny each API, (this function will yield until the user responds) and then the function will return a dictionary where the keys are the requested APIs and the values are booleans which represent the access status (whether or not access was granted).
 
-The only exceptions to this are `Rojo.Version` and `Rojo.ProtocolVersion`, since those are useful in checking compatibility before anything else is done.
+**This must be the first function your plugin calls when using the Rojo API. This keeps our users secure and protected from malicious plugins.** The only exceptions to this are `Rojo.Version` and `Rojo.ProtocolVersion`, since those are useful in checking compatibility before anything else is done.
+
+Example Plugin:
+```Lua
+local granted = Rojo:RequestAccess({ "Connected", "ConnectAsync" })
+--[[
+granted = {
+	Connected = true, -- User granted access
+	ConnectAsync = false, -- User denied access
+}
+--]]
+```
+
+![image](https://user-images.githubusercontent.com/40185666/210909337-3caf5af4-0829-447c-9781-da3996c71284.png)
+
+
 
 ```Lua
 Rojo:ConnectAsync(host: string?, port: string?): void
