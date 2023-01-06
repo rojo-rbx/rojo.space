@@ -9,7 +9,7 @@ The Rojo Studio plugin exposes a headless API into `_G`, which is very valuable 
 ```Lua
 local Rojo = _G.Rojo
 ```
-Plugins and command bar all share the same _G which allows us to put our interface in. Using the key `"Rojo"` is easy to remember and follows branding.
+Plugins and command bar all share the same `_G` which allows us to put our interface in. Using the key `"Rojo"` is easy to remember and follows branding.
 
 ### API Documentation
 
