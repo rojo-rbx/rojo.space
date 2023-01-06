@@ -107,4 +107,4 @@ When `Rojo.Connected` is `true`, this contains the project name of the connected
 ```Lua
 Rojo.Changed: RbxScriptSignal (changedProperty: string, newValue: any?, oldValue: any?)
 ```
-Fires when a property changes with the name of the changed property and the values.
+Fires when any property changes. Passes the name of the changed property and its new and old values.
