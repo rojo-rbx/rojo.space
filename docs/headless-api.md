@@ -60,7 +60,10 @@ Sets the value of the given setting.
 ```Lua
 Rojo:Notify(msg: string, timeout: number?): void
 ```
-Sends a Rojo notification. Will indicate on it that it comes from a third party plugin.
+Sends a Rojo notification that indicates it comes from a third-party plugin.
+
+![image](https://user-images.githubusercontent.com/40185666/210910275-c8e5e754-0769-4b39-acfe-04342b25c96d.png)
+
 
 ```Lua
 Rojo:GetHostAndPort(): (string, string)
