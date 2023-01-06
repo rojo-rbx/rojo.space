@@ -95,12 +95,12 @@ Whether Rojo is currently connected to a serve session.
 ```Lua
 Rojo.Address: string?
 ```
-When `Rojo.Connected` is `true`, this is set to the address of the connected session.
+When `Rojo.Connected` is `true`, this contains the address of the connected session.
 
 ```Lua
 Rojo.ProjectName: string?
 ```
-When `Rojo.Connected` is `true`, this is set to the project name of the connected session.
+When `Rojo.Connected` is `true`, this contains the project name of the connected session.
 
 **Events:**
 
