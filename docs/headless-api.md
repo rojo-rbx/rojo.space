@@ -5,15 +5,15 @@ sidebar_position: 7
 
 The Rojo Studio plugin exposes a headless API into `_G`, which is very valuable to the Rojo ecosystem. This allows you to make companion plugins that interact with Rojo!
 
-### Accessing the API
+## Accessing the API
 ```Lua
 local Rojo = _G.Rojo
 ```
 Plugins and command bar all share the same environment, which allows us to expose the API through `_G`. Using the key `"Rojo"` is easy to remember and follows branding.
 
-### API Documentation
+## API Documentation
 
-**Functions:**
+### Functions
 
 ```Lua
 Rojo:RequestAccess(apis: {string}): {[string]: boolean}
@@ -75,7 +75,7 @@ Rojo:CreateApiContext(baseUrl: string): ApiContext
 ```
 Returns a new ApiContext using the given baseUrl.
 
-**Properties:** *(All read-only)*
+### Properties *(All read-only)*
 
 ```Lua
 Rojo.Version: {number}
@@ -102,7 +102,7 @@ Rojo.ProjectName: string?
 ```
 When `Rojo.Connected` is `true`, this contains the project name of the connected session.
 
-**Events:**
+### Events
 
 ```Lua
 Rojo.Changed: RbxScriptSignal (changedProperty: string, newValue: any?, oldValue: any?)
