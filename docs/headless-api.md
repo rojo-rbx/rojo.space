@@ -55,7 +55,7 @@ Returns the value of the given setting.
 ```Lua
 Rojo:SetSetting(setting: string, value: any): void
 ```
-Sets the value of the given setting to the given value.
+Sets the value of the given setting.
 
 ```Lua
 Rojo:Notify(msg: string, timeout: number?): void
