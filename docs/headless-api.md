@@ -40,7 +40,7 @@ granted = {
 ```Lua
 Rojo:ConnectAsync(host: string?, port: string?): void
 ```
-Attempts to connect Rojo to the given host & port. Same behavior as the user clicking the Connect button (sync locking, etc, all behave the same).
+Attempts to connect Rojo to the given host and port. Same behavior as the user clicking the Connect button (sync locking, etc., all behave the same).
 
 ```Lua
 Rojo:DisconnectAsync(): void
