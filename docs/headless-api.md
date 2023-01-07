@@ -6,10 +6,27 @@ sidebar_position: 7
 The Rojo Studio plugin exposes a headless API into `_G`, which is very valuable to the Rojo ecosystem. This allows you to make companion plugins that interact with Rojo!
 
 ## Accessing the API
+
+Plugins and command bar all share the same environment, which allows us to expose the API through `_G`. Using the key `"Rojo"` is easy to remember and follows branding.
+
 ```Lua
 local Rojo = _G.Rojo
 ```
-Plugins and command bar all share the same environment, which allows us to expose the API through `_G`. Using the key `"Rojo"` is easy to remember and follows branding.
+
+However, plugins load in random order which means that your plugin might load before Rojo does. Therefore, the safe way to access is:
+
+```Lua
+local function GetRojo()
+	local api = _G.Rojo
+	while not api do
+		task.wait()
+		api = _G.Rojo
+	end
+	return api
+end
+
+local Rojo = GetRojo()
+```
 
 ## API Documentation
 
