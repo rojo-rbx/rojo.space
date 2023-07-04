@@ -75,11 +75,11 @@ Rojo:SetSetting(setting: string, value: any): void
 Sets the value of the given setting.
 
 ```Lua
-Rojo:Notify(msg: string, timeout: number?): void
+function Rojo:Notify(msg: string, timeout: number?, actions: { [string]: {text: string, style: string, layoutOrder: number, onClick: (any) -> ()} }?): () -> ()
 ```
-Sends a Rojo notification that indicates it comes from a third-party plugin.
+Sends a Rojo notification that indicates it comes from a third-party plugin. Returns a function that dismisses the notification.
 
-![image](https://user-images.githubusercontent.com/40185666/210910275-c8e5e754-0769-4b39-acfe-04342b25c96d.png)
+![image](https://github.com/boatbomber/rojo.space/assets/40185666/c3f31715-dcdd-4c9d-b947-8dceee606b61)
 
 
 ```Lua
