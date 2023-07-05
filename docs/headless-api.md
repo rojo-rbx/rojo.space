@@ -33,15 +33,15 @@ local Rojo = GetRojo()
 ### Functions
 
 ```Lua
-Rojo:RequestAccess(apis: {string}): {[string]: boolean}
+Rojo:RequestAccess(plugin: Plugin, apis: {string}): {[string]: boolean}
 ```
-In order to use any of the Rojo APIs, you must first explicitly request them with this function. Users will be prompted to allow/deny each API, (this function will yield until the user responds) and then the function will return a dictionary where the keys are the requested APIs and the values are booleans which represent the access status (whether or not access was granted).
+In order to use any of the Rojo APIs, you must first explicitly request them with this function. Users will be prompted to allow/deny each API, (this function will yield until the user responds) and then the function will return a dictionary where the keys are the requested APIs and the values are booleans which represent the access status (whether or not access was granted). The first argument must be your `plugin` object for security and reliability purposes, and the second argument is a list of APIs you're requesting access to.
 
 **In order to keep our users safe from malicious plugins, RequestAccess must be the first function your plugin calls when using the Rojo API.** Attempting to use an API without requesting it beforehand will throw an error. The only exceptions to this are `Rojo.Version` and `Rojo.ProtocolVersion`, since those are useful in checking compatibility before anything else is done.
 
 Example Plugin:
 ```Lua
-local granted = Rojo:RequestAccess({ "Connected", "ConnectAsync" })
+local granted = Rojo:RequestAccess(plugin, { "Connected", "ConnectAsync" })
 --[[
 granted = {
 	Connected = true, -- User granted access
