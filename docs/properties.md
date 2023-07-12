@@ -25,6 +25,7 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 | [Faces](#faces)                                     | `Handles.Faces`                 | ✔ | ✔ | ✔ |
 | [Float32](#float32)                                 | `Players.RespawnTime`           | ✔ | ✔ | ✔ |
 | [Float64](#float64)                                 | `Sound.PlaybackLoudness`        | ✔ | ✔ | ✔ |
+| [Font](#font)                                       | `TextLabel.FontFace`        	| ✔ | ✔ | ✔ |
 | [Int32](#int32)                                     | `Frame.ZIndex`                  | ✔ | ✔ | ✔ |
 | [Int64](#int64)                                     | `Player.UserId`                 | ✔ | ✔ | ✔ |
 | [NumberRange](#numberrange)                         | `ParticleEmitter.Lifetime`      | ✔ | ✔ | ✔ |
@@ -302,6 +303,35 @@ For both implicit and explicit values, the format is a number.
 		"ExplicitExample": {"Float64": 15123.0}
 	}
 }
+```
+
+### Font
+The Font type cannot be specified implicitly. For explicit values, there are several possible formats.
+
+An object with family, weight and style fields. Each component is a string.
+
+```json
+    "$properties": {
+        "ExplicitExample": {
+            "family": "rbxasset://fonts/families/LegacyArial.json",
+            "weight": "Regular",
+			"style": "Normal"
+        }
+    }
+```
+
+A Font object with family, weight, and style fields. Each component is a string.
+
+```json
+    "$properties": {
+        "ExplicitExample": {
+            "Font": {
+                "family": "rbxasset://fonts/families/LegacyArial.json",
+                "weight": "Regular",
+				"style": "Normal"
+            }
+        }
+    }
 ```
 
 ### Int32
