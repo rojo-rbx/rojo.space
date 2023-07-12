@@ -306,32 +306,25 @@ For both implicit and explicit values, the format is a number.
 ```
 
 ### Font
-The Font type cannot be specified implicitly. For explicit values, there are several possible formats.
-
-An object with family, weight and style fields. Each component is a string.
+For both implicit and explicit values, the format is an object with family, weight, and style fields. Each component is a string.
 
 ```json
-    "$properties": {
-        "ExplicitExample": {
-            "family": "rbxasset://fonts/families/LegacyArial.json",
-            "weight": "Regular",
+{
+	"$properties": {
+		"ImplicitExample": {
+			"family": "rbxasset://fonts/families/LegacyArial.json",
+			"weight": "Regular",
 			"style": "Normal"
-        }
-    }
-```
-
-A Font object with family, weight, and style fields. Each component is a string.
-
-```json
-    "$properties": {
-        "ExplicitExample": {
-            "Font": {
-                "family": "rbxasset://fonts/families/LegacyArial.json",
-                "weight": "Regular",
+		},
+		"ExplicitExample": {
+			"Font": {
+				"family": "rbxasset://fonts/families/LegacyArial.json",
+				"weight": "Regular",
 				"style": "Normal"
-            }
-        }
-    }
+			}
+		}
+	}
+}
 ```
 
 ### Int32
