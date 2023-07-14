@@ -112,6 +112,12 @@ Any file with the `txt` extension is transformed into a `StringValue` instance. 
 
 Any file with the `json` extension that is not a [JSON Model](#json-models) or a [Project File](#project-file)
 
+## TOML Modules
+
+Any file with the `toml` extension will be synced as a `ModuleScript` that returns a table representing the same structure as the TOML file. Due to the easy to read and edit format of TOML, it can be convenient to use them as config files.
+
+There is a single limitation for TOML syncing: `DateTime` values are converted into `string` values and not the corresponding data type. This is due to the conflicting formats used between them. This is not something most people should have to worry about, but it's still something to be aware of.
+
 ## JSON Models
 
 Files ending in `.model.json` can be used to describe simple models. They're designed to be hand-written and are useful for instances like `RemoteEvent`.
