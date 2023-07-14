@@ -18,7 +18,7 @@
     "@docusaurus/plugin-client-redirects": "^2.4.1",
     "@docusaurus/preset-classic": "^2.4.1",
     "@mdx-js/react": "^1.6.21",
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^8.0.1",
     "docusaurus-lunr-search": "^2.1.14",
     "file-loader": "^6.2.0",
     "mdx-mermaid": "^1.1.0",
