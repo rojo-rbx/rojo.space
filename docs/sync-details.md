@@ -19,6 +19,7 @@ This page aims to describe how Rojo turns files on the filesystem into Roblox ob
 | [Localization Tables](#localization-tables) | `*.csv`          |
 | [Plain Text](#plain-text)                   | `*.txt`          |
 | [JSON Modules](#json-modules)               | `*.json`         |
+| [TOML Modules](#toml-modules)               | `*.toml`         |
 | [JSON Models](#json-models)                 | `*.model.json`   |
 | [Projects](#projects)                       | `*.project.json` |
 | [Meta Files](#meta-files)                   | `*.meta.json`    |
@@ -110,11 +111,37 @@ Any file with the `txt` extension is transformed into a `StringValue` instance. 
 
 ## JSON Modules
 
-Any file with the `json` extension that is not a [JSON Model](#json-models) or a [Project File](#project-file)
+Any file with the `json` extension that is not a [JSON Model](#json-models) or a [Project File](#project-file) will be synced as a `ModuleScript` that returns a table representing the same structure as the JSON file. That is, the following JSON:
+
+```json
+{
+  "Hello": "world!",
+  "bool": true,
+  "array": [1, 2, 3],
+  "object": {
+    "key 1": 1337,
+    "key 2": []
+  }
+}
+```
+
+Would become a `ModuleScript` with the following `Source`:
+```lua
+return {
+	Hello = "world!",
+	array = {1, 2, 3},
+	bool = true,
+	object = {
+		["key 1"] = 1337,
+		["key 2"] = {},
+	},
+}
+```
+
 
 ## TOML Modules
 
-Any file with the `toml` extension will be synced as a `ModuleScript` that returns a table representing the same structure as the TOML file. Due to the easy to read and edit format of TOML, it can be convenient to use them as config files.
+Any file with the `toml` extension will be synced as a `ModuleScript` that returns a table representing the same structure as the TOML file. Due to the easy to read and edit format of TOML, it can be convenient to use them as config files. For a better idea of what synced `toml` files look like, see [JSON Modules](#json-modules).
 
 There is a single limitation for TOML syncing: `DateTime` values are converted into `string` values and not the corresponding data type. This is due to the conflicting formats used between them. This is not something most people should have to worry about, but it's still something to be aware of.
 
