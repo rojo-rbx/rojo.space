@@ -9,7 +9,7 @@
     <icon>https://rojo.space/img/favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[New Website]]></title>
-        <id>new-website</id>
+        <id>https://rojo.space/blog/new-website</id>
         <link href="https://rojo.space/blog/new-website"/>
         <updated>2021-10-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the new Rojo website!]]></summary>
