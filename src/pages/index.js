@@ -28,12 +28,6 @@ const Splash = () => (
       >
         Releases
       </Link>
-      <Link
-        className="button button--primary button--lg"
-        to="https://www.patreon.com/lpghatguy"
-      >
-        Patreon
-      </Link>
     </div>
   </div>
 );
