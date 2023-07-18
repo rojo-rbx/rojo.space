@@ -32,24 +32,19 @@ Rojo has two pieces that need to be installed:
 ## Installing the Server
 
 <Tabs>
-<TabItem value="foreman" label="With Foreman" default>
+<TabItem value="aftman" label="With Aftman" default>
 
-[Foreman] is a toolchain manager that is useful for managing tools like Rojo for Roblox projects.
+[Aftman] is a toolchain manager that is useful for managing tools like Rojo for Roblox projects. To install it, follow these [directions][aftman-installation-directions].
 
-To install from the latest stable release channel of Rojo 6, add an entry to the `[tools]` section of your `foreman.toml`:
+To install the latest release of Rojo, run the following commands:
 
-```toml
-[tools]
-rojo = { source = "rojo-rbx/rojo", version = "7" }
+```bash
+aftman add rojo-rbx/rojo
+aftman install
 ```
 
-After adding the entry above, run the command below so Foreman can download and install Rojo.
-
-```
-foreman install
-```
-
-[Foreman]: https://github.com/rojo-rbx/foreman
+[Aftman]: https://github.com/LPGhatguy/aftman
+[aftman-installation-directions]: https://github.com/LPGhatguy/aftman#installation
 
 </TabItem>
 <TabItem value="github" label="From GitHub">
