@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrojo_space=self.webpackChunkrojo_space||[]).push([[2535],{45641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"New Website","permalink":"/blog/new-website"}]}')}}]);
