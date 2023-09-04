@@ -7,7 +7,7 @@ The Rojo Studio plugin exposes a headless API into `game.Rojo`, which is very va
 
 ## Accessing the API
 
-Plugins and command bar all share the same environment, which allows us to expose the API through a ModuleScript located at `game.Rojo`. Using the name `"Rojo"` is easy to remember and follows branding. Once you've required Rojo, the API will be located at `Rojo.API`. For example:
+Plugins and command bar all share the same module cache, which allows us to expose the API through a ModuleScript located at `game.Rojo`. Using the name `"Rojo"` is easy to remember and follows branding. Once you've required Rojo, the API will be located at `Rojo.API`. For example:
 
 ```Lua
 local Rojo = require(game.Rojo)
