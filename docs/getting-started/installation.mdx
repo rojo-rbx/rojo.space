@@ -32,7 +32,25 @@ Rojo has two pieces that need to be installed:
 ## Installing the Server
 
 <Tabs>
-<TabItem value="aftman" label="With Aftman" default>
+<TabItem value="winget" label="With winget" default>
+
+[Winget] is the windows package manager. It comes pre-installed in the latest versions of Windows 10 and Windows 11.
+
+If you dont have it installed, you can install it from the [Microsoft Store]
+
+> Note: The winget client requires Windows 10 1809 (build 17763) or later at this time. If you are running Windows 10 1803 or earlier, you will need to update your Windows 10 installation before you can install winget.
+
+To install the latest release of Rojo, run the following commands:
+
+```powershell
+winget install rojo
+```
+
+[Winget]: https://github.com/microsoft/winget-cli
+[Microsoft Store]: https://apps.microsoft.com/detail/9NBLGGH4NNS1
+</TabItem>
+
+<TabItem value="aftman" label="With Aftman">
 
 [Aftman] is a toolchain manager that is useful for managing tools like Rojo for Roblox projects. To install it, follow these [instructions][aftman-installation-instructions].
 
