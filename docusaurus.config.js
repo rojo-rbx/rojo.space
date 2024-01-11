@@ -12,7 +12,7 @@ const versions = {
     path: "v7",
     banner: "none",
   },
-  "v6": {
+  v6: {
     label: "v6",
     path: "v6",
     banner: "unmaintained",
@@ -127,7 +127,14 @@ const config = {
     },
   },
 
-  plugins: [require.resolve("docusaurus-lunr-search")],
+  plugins: [
+    [
+      require.resolve("docusaurus-lunr-search"),
+      {
+        includeRoutes: ["/docs/v7/**"],
+      },
+    ],
+  ],
 };
 
 config.plugins.push([
