@@ -138,6 +138,9 @@ A JSON model describing a folder containing a `Part` and a `RemoteEvent` could b
 
 It would turn into these instances:
 
+* A `Part` named RootPart with size `(4, 4, 4)`.
+* A `RemoteEvent` named SendMoney.
+
 ```mermaid
 graph TD;
   parent("My Cool Model (Folder)")
