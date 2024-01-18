@@ -8,13 +8,6 @@ There are a number of existing plugins for Roblox that move code from the filesy
 Besides Rojo, you might consider:
 
 - [rbxmk by Anaminus](https://github.com/anaminus/rbxmk)
-- [Rofresh by Osyris](https://github.com/osyrisrblx/rofresh)
-- [RbxRefresh by Osyris](https://github.com/osyrisrblx/RbxRefresh)
-- [Studio Bridge by Vocksel](https://github.com/vocksel/studio-bridge)
-- [Elixir by Vocksel](https://github.com/vocksel/elixir)
-- [RbxSync by evaera](https://github.com/evaera/RbxSync)
-- [CodeSync by MemoryPenguin](https://github.com/MemoryPenguin/CodeSync)
-- [rbx-exteditor by MemoryPenguin](https://github.com/MemoryPenguin/rbx-exteditor)
 
 So why did I build Rojo?
 
