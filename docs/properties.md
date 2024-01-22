@@ -79,9 +79,11 @@ The following types are supported for attribute values:
 
 - [Bool](#bool)
 - [BrickColor](#brickcolor)
+- [CFrame](#cframe)
 - [Color3](#color3)
 - [ColorSequence](#colorsequence)
 - [Float64](#float64)
+- [Font](#font)
 - [NumberRange](#numberrange)
 - [NumberSequence](#numbersequence)
 - [Rect](#rect)
