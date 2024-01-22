@@ -36,7 +36,11 @@ const config = {
   organizationName: "rojo-rbx",
   projectName: "rojo.space",
   trailingSlash: true,
-
+  markdown: {
+    format: "detect",
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   presets: [
     [
       "@docusaurus/preset-classic",
