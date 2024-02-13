@@ -26,24 +26,30 @@ print(Rojo.API.Version)
 ### Functions
 
 ```Lua
-Rojo.API:RequestAccess(plugin: Plugin, apis: {string}): {[string]: boolean}
+Rojo.API:RequestAccess(plugin: Plugin, apis: {string}): boolean
 ```
-In order to use any of the Rojo APIs, you must first explicitly request them with this function. Users will be prompted to allow/deny each API, (this function will yield until the user responds) and then the function will return a dictionary where the keys are the requested APIs and the values are booleans which represent the access status (whether or not access was granted). The first argument must be your `plugin` object for security and reliability purposes, and the second argument is a list of APIs you're requesting access to.
+In order to use any of the Rojo APIs, you must first explicitly request them with this function. Users will be prompted to allow/deny access to the headless API, (this function will yield until the user responds) and then the function will return a boolean which represents whether or not access was granted.
 
-**In order to keep our users safe from malicious plugins, RequestAccess must be the first function your plugin calls when using the Rojo API.** Attempting to use an API without requesting it beforehand will throw an error. The only exceptions to this are `Rojo.API.Version` and `Rojo.API.ProtocolVersion`, since those are useful in checking compatibility before anything else is done.
+The first argument must be your `plugin` object for security and reliability purposes, and the second argument is a list of API members you're requesting access to.
 
-Example Plugin:
+**In order to keep our users safe from malicious plugins, RequestAccess must be the first function your plugin calls when using the Rojo API.** Attempting to use an API without requesting it beforehand will throw an error. The only exceptions to this are `Rojo.API.Version` and `Rojo.API.ProtocolVersion`, since those are useful in checking compatibility before any work is done.
+
+Example Usage:
 ```Lua
-local granted = Rojo.API:RequestAccess(plugin, { "Connected", "ConnectAsync" })
---[[
-granted = {
-	Connected = true, -- User granted access
-	ConnectAsync = false, -- User denied access
-}
---]]
+local granted = Rojo.API:RequestAccess(plugin, {
+	"ProjectName",
+	"Address",
+	"Connected",
+	"Changed",
+	"CreateApiContext",
+	"DisconnectAsync",
+	"Notify",
+	"ConnectAsync",
+	"GetHostAndPort",
+})
 ```
 
-![image](https://user-images.githubusercontent.com/40185666/210909337-3caf5af4-0829-447c-9781-da3996c71284.png)
+![requestPrompt](https://github.com/boatbomber/rojo.space/assets/40185666/ef9d0bcd-e39a-46ee-aec6-656c85699d5e)
 
 
 
@@ -68,7 +74,7 @@ Rojo.API:SetSetting(setting: string, value: any): void
 Sets the value of the given setting.
 
 ```Lua
-function Rojo.API:Notify(msg: string, timeout: number?, actions: { [string]: {text: string, style: string, layoutOrder: number, onClick: (any) -> ()} }?): () -> ()
+Rojo.API:Notify(msg: string, timeout: number?, actions: { [string]: {text: string, style: string, layoutOrder: number, onClick: () -> ()} }?): () -> ()
 ```
 Sends a Rojo notification that indicates it comes from a third-party plugin. Returns a function that dismisses the notification.
 
@@ -78,12 +84,12 @@ Sends a Rojo notification that indicates it comes from a third-party plugin. Ret
 ```Lua
 Rojo.API:GetHostAndPort(): (string, string)
 ```
-Returns the user's chosen host and port.
+Returns the user's chosen host and port, even if not actively connected to it.
 
 ```Lua
 Rojo.API:CreateApiContext(baseUrl: string): ApiContext
 ```
-Returns a new ApiContext using the given baseUrl.
+Returns a new ApiContext using the given baseUrl. Useful for complex use cases that directly interface with Rojo endpoints.
 
 ### Properties *(All read-only)*
 
@@ -117,4 +123,4 @@ When `Rojo.API.Connected` is `true`, this contains the project name of the conne
 ```Lua
 Rojo.API.Changed: RbxScriptSignal (changedProperty: string, newValue: any?, oldValue: any?)
 ```
-Fires when any property changes. Passes the name of the changed property and its new and old values.
+Fires when a property of the headless API changes. Passes the name of the changed property and its new and old values.
