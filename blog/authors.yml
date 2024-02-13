@@ -1,5 +1,10 @@
 lpg:
   name: Lucien Greathouse
-  title: Primary Maintainer of Rojo
+  title: Original Author of Rojo
   url: https://github.com/LPGhatguy
   image_url: https://github.com/LPGhatguy.png
+Dekkonot:
+  name: Dekkonot
+  title: Rojo Maintainer
+  url: https://github.com/Dekkonot
+  image_url: https://github.com/Dekkonot.png

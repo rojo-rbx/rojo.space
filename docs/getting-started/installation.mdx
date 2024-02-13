@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+title: Installation
 ---
 
 import Tabs from "@theme/Tabs";
@@ -32,24 +33,19 @@ Rojo has two pieces that need to be installed:
 ## Installing the Server
 
 <Tabs>
-<TabItem value="foreman" label="With Foreman" default>
+<TabItem value="aftman" label="With Aftman" default>
 
-[Foreman] is a toolchain manager that is useful for managing tools like Rojo for Roblox projects.
+[Aftman] is a toolchain manager that is useful for managing tools like Rojo for Roblox projects. To install it, follow these [instructions][aftman-installation-instructions].
 
-To install from the latest stable release channel of Rojo 6, add an entry to the `[tools]` section of your `foreman.toml`:
+To install the latest release of Rojo, run the following commands:
 
-```toml
-[tools]
-rojo = { source = "rojo-rbx/rojo", version = "7" }
+```bash
+aftman add rojo-rbx/rojo
+aftman install
 ```
 
-After adding the entry above, run the command below so Foreman can download and install Rojo.
-
-```
-foreman install
-```
-
-[Foreman]: https://github.com/rojo-rbx/foreman
+[Aftman]: https://github.com/LPGhatguy/aftman
+[aftman-installation-instructions]: https://github.com/LPGhatguy/aftman#installation
 
 </TabItem>
 <TabItem value="github" label="From GitHub">
@@ -109,12 +105,8 @@ The Rojo plugin can be installed from Roblox.com.
 
 <Link
   className="button button--primary button--extra-margin"
-  to="https://www.roblox.com/library/6415005344/Rojo-7"
+  to="https://www.roblox.com/library/13916111004/Rojo"
 >Rojo 7 Plugin on Roblox.com</Link>
-
-:::info
-Rojo has a separate plugin for each major version. Make sure you install the correct one!
-:::
 
 Press the 'Install' button on the plugin page to add it to Roblox Studio.
 

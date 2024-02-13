@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const lightCodeTheme = require("prism-react-renderer").themes.github;
+const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
 const redirects = require("./redirects.js");
 
@@ -12,7 +12,7 @@ const versions = {
     path: "v7",
     banner: "none",
   },
-  "v6": {
+  v6: {
     label: "v6",
     path: "v6",
     banner: "unmaintained",
@@ -36,7 +36,11 @@ const config = {
   organizationName: "rojo-rbx",
   projectName: "rojo.space",
   trailingSlash: true,
-
+  markdown: {
+    format: "detect",
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -91,7 +95,7 @@ const config = {
           items: [
             {
               label: "Tutorial",
-              to: "/docs",
+              to: "/docs/v7",
             },
           ],
         },
@@ -123,10 +127,18 @@ const config = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
+      additionalLanguages: ["json"],
     },
   },
 
-  plugins: [require.resolve("docusaurus-lunr-search")],
+  plugins: [
+    [
+      require.resolve("docusaurus-lunr-search"),
+      {
+        includeRoutes: ["/docs/v7/**"],
+      },
+    ],
+  ],
 };
 
 config.plugins.push([
