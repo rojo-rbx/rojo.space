@@ -91,6 +91,11 @@ Rojo.API:CreateApiContext(baseUrl: string): ApiContext
 ```
 Returns a new ApiContext using the given baseUrl. Useful for complex use cases that directly interface with Rojo endpoints.
 
+```Lua
+Rojo.API:Test(...)
+```
+Prints the given arguments to the console. Useful during development for testing purposes.
+
 ### Properties *(All read-only)*
 
 ```Lua
