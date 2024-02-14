@@ -69,11 +69,6 @@ Rojo.API:GetSetting(setting: string): any
 Returns the value of the given setting.
 
 ```Lua
-Rojo.API:SetSetting(setting: string, value: any): void
-```
-Sets the value of the given setting.
-
-```Lua
 Rojo.API:Notify(msg: string, timeout: number?, actions: { [string]: {text: string, style: string, layoutOrder: number, onClick: () -> ()} }?): () -> ()
 ```
 Sends a Rojo notification that indicates it comes from a third-party plugin. Returns a function that dismisses the notification.
