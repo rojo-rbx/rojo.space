@@ -23,9 +23,9 @@ Rewriting this code to use modern Roblox features like [CollectionService](https
 
 There are ongoing efforts to make porting an existing game to Rojo more automatic. Currently, the most developed tool for this is [rbxlx-to-rojo](https://github.com/rojo-rbx/rbxlx-to-rojo).
 
-## [Remodel](https://github.com/Roblox/remodel)
+## [Lune](https://github.com/lune-org/lune)
 
-Another option for porting an existing game is to use [Remodel](https://github.com/Roblox/remodel), which allows deep customization and would be suitable for porting a large, complex game.
+Another option for porting an existing game is to use [Lune](https://github.com/lune-org/lune), which allows deep customization and would be suitable for porting a large, complex game.
 
 ## Migrating Away from Rojo
 
