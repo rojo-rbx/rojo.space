@@ -13,7 +13,7 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 |:----------------------------------------------------|:--------------------------------|:--:|:--:|:--:|
 | [Attributes](#attributes)                           | `Instance.Attributes`           | ✔ | ✔ | ✔ |
 | [Axes](#axes)                                       | `ArcHandles.Axes`               | ✔ | ✔ | ✔ |
-| [BinaryString](#binarystring)                       | `Terrain.MaterialColors`        | ✔ | ❌ | ✔ |
+| [BinaryString](#binarystring)                       | `BinaryStringValue.Value`       | ✔ | ❌ | ✔ |
 | [Bool](#bool)                                       | `Part.Anchored`                 | ✔ | ✔ | ✔ |
 | [BrickColor](#brickcolor)                           | `Part.BrickColor`               | ✔ | ✔ | ✔ |
 | [CFrame](#cframe)                                   | `Camera.CFrame`                 | ✔ | ✔ | ✔ |
@@ -28,6 +28,7 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 | [Font](#font)                                       | `TextLabel.FontFace`        	| ✔ | ✔ | ✔ |
 | [Int32](#int32)                                     | `Frame.ZIndex`                  | ✔ | ✔ | ✔ |
 | [Int64](#int64)                                     | `Player.UserId`                 | ✔ | ✔ | ✔ |
+| [MaterialColors](#materialcolors)					  | `Terrain.MaterialColors`        | ✔ | ✔ | ✔ |
 | [NumberRange](#numberrange)                         | `ParticleEmitter.Lifetime`      | ✔ | ✔ | ✔ |
 | [NumberSequence](#numbersequence)                   | `Beam.Transparency`             | ✔ | ✔ | ✔ |
 | [OptionalCoordinateFrame](#optionalcoordinateframe) | `Model.WorldPivotData`          | ✔ | ❌ | ✔ |
@@ -351,6 +352,31 @@ For both implicit and explicit values, the format is an integer.
 	}
 }
 ```
+
+### MaterialColors
+
+For both implicit and explicit values, the type is an object that looks like this:
+
+```json
+{
+	"$properties": {
+		"MaterialColors": {
+			"Grass": [10, 20, 30],
+			"Asphalt": [40, 50, 60],
+			"LeafyGrass": [255, 155, 55]
+		},
+		"MaterialColors": {
+			"MaterialColors": {
+				"Grass": [10, 20, 30],
+				"Asphalt": [40, 50, 60],
+				"LeafyGrass": [255, 155, 55]
+			}
+		}
+	}
+}
+```
+
+The key-value pairs within the object should be [Material](https://create.roblox.com/docs/reference/engine/enums/Material) enum items mapped to 3-item arrays representing the RGB of the specified color. This format does not support decimals values. Only the values you wish to change the defaults of need to be specified.
 
 ### NumberRange
 The NumberRange type cannot be specified implicitly. For explicit values, the format is a list of Min and Max components, respectively. Each component is a float.
