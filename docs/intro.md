@@ -18,7 +18,7 @@ Adding a tool like Rojo to your Roblox workflow can be daunting, but it comes wi
 
 There are decades of excellent tools available that operate on files. With Rojo, it's possible to take advantage of any of them!
 
-Popular tools that are tailored towards Roblox or Lua in general:
+Popular tools that are tailored towards Roblox or Luau in general:
 
 - [Selene](https://github.com/Kampfkarren/selene), a static analysis tool to help you write better Lua
 - [StyLua](https://github.com/JohnnyMorganz/StyLua), a formatter that helps keep your code in a consistent style
@@ -46,11 +46,14 @@ Some very popular editors include [Visual Studio Code](https://code.visualstudio
 
 These advanced text editors have features like multi-cursor editing, go-to symbol, multi-file regex find and replace, bookmarks and much more.
 
-Many Rojo VS Code users also use extensions like:
+Rojo users that use Visual Studio Code often use the following extensions:
 
-- [vscode-rbxlua](https://marketplace.visualstudio.com/items?itemName=AmaranthineCodices.vscode-rbxlua)
-- [Roblox Lua Autocompletes](https://marketplace.visualstudio.com/items?itemName=Kampfkarren.roblox-lua-autofills)
-- [TabNine](https://tabnine.com)
+- [luau-lsp](https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp) - An [LSP][lsp] implementation for Luau, Roblox's scripting language.
+- [StyLua](https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua) - A VSCode companion for Stylua, which is linked above
+- [Selene](https://marketplace.visualstudio.com/items?itemName=Kampfkarren.selene-vscode) - A VScode companion for Selene, which is linked above. Note that this often overlaps with luau-lsp's analysis.
+- [roblox-ui](https://marketplace.visualstudio.com/items?itemName=filiptibell.roblox-ui) - A visualizer for Rojo projects that makes navigating and adding to them easier.
+
+[lsp]: https://microsoft.github.io/language-server-protocol/
 
 ### Version Control
 
@@ -64,6 +67,6 @@ Using a repository hosting service like GitHub or GitLab brings powerful feature
 
 TypeScript enables static type safety, which helps prevent typos and adds unparalleled autocompletion. It also brings features like arrow functions, object destructuring, functional programming methods, and more!
 
-With Rojo, you can use [roblox-ts](https://roblox-ts.com) to compile TypeScript to Lua and take advantage of a huge ecosystem of TypeScript tooling.
+With Rojo, you can use [roblox-ts](https://roblox-ts.com) to compile TypeScript to Luau and take advantage of a huge ecosystem of TypeScript tooling. This project is not strictly speaking related to Rojo, but it is very cool and many people prefer to use it over writing Luau.
 
-It's also possible to use other languages that compile to Lua like [MoonScript](https://moonscript.org) and [Haxe](https://haxe.org).
+It's also possible to use other languages that compile to Lua like [MoonScript](https://moonscript.org) and [Haxe](https://haxe.org). However, there's very little development in the way of tooling for these languages, so be warned: here be dragons.
