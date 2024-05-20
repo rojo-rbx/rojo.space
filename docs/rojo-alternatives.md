@@ -3,9 +3,9 @@ title: Rojo Alternatives
 sidebar_position: 1000
 ---
 
-When Rojo was first produced, there existed several competing standards for getting external code and models into Roblox. This page initially stood as an explanation of why Rojo was made and linked to several other options.
+When Rojo was first produced, there were several competing standards for getting external code and models into Roblox. This page initially stood as an explanation of why Rojo was made and linked to several other options.
 
-In the intervening years though, the number of alternatives has dramatically reduced. With one exception, all of the tools that *were* on this page have been deprecated or are otherwise unmaintained. Rojo is the de-facto standard for syncing tools and has few serious alternatives. However, they are explored on this page nonetheless.
+In the intervening years, the number of alternatives has dramatically reduced. All but one of the tools that *were* on this page have been deprecated or are otherwise unmaintained. Rojo is the de-facto standard for Roblox file syncing and has few serious alternatives. Nonetheless, the remaining alternatives are documented and presented here to provide a full picture.
 
 Keep in mind that none of the tools listed on this page are maintained or audited by Rojo's maintainers so your mileage may vary. Additionally, not every tool listed here replaces *all* of Rojo's functionality.
 
@@ -21,4 +21,4 @@ The obvious question to ask is 'why would I use something else?' and it has an e
 
 However, Rojo is limited in scope and design: it doesn't allow complex scripting like Lune or rbxmk do, and it has different restrictions on its design than Argon and Lync. You should look into whether you need or want any of the features those tools have to offer and make the judgement call on your own.
 
-That said, there is special attention for Lune and rbxmk. A common workflow is to build a Rojo project into a `rbxl` or `rbxm` and then perform post-processing on the file using one of those tools, as they allow things that Rojo does not by virtue of including Lua runtimes. You don't need them, but if you have a need, it'll make itself obvious.
+That said, there is special attention for Lune and rbxmk. A common workflow is to build a Rojo project into a `rbxl` or `rbxm` file and then perform post-processing using one of these tools, as their Luau runtimes enable workflows that Rojo alone does not. Most workflows don't need these, but if you have a need it'll make itself obvious.
