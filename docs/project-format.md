@@ -29,6 +29,9 @@ Rojo projects are JSON files that have the `.project.json` extension. They have 
 - `globIgnorePaths`: A list of globs of paths to ignore.
   - **Optional**
   - Default is `[]`
+- `emitLegacyScripts`: A boolean specifying whether Rojo should use both `Script` and `LocalScript` Instances instead of just `Script` Instances with their [`RunContext`](https://create.roblox.com/docs/reference/engine/classes/BaseScript#RunContext) set.
+  - **Optional**
+  - Default is `true`
 
 ## Instance Description
 
