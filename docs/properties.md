@@ -360,12 +360,12 @@ For both implicit and explicit values, the type is an object that looks like thi
 ```json
 {
 	"$properties": {
-		"MaterialColors": {
+		"ImplicitExample": {
 			"Grass": [10, 20, 30],
 			"Asphalt": [40, 50, 60],
 			"LeafyGrass": [255, 155, 55]
 		},
-		"MaterialColors": {
+		"ExplicitExample": {
 			"MaterialColors": {
 				"Grass": [10, 20, 30],
 				"Asphalt": [40, 50, 60],
@@ -376,7 +376,7 @@ For both implicit and explicit values, the type is an object that looks like thi
 }
 ```
 
-The key-value pairs within the object should be [Material](https://create.roblox.com/docs/reference/engine/enums/Material) enum items mapped to 3-item arrays representing the RGB of the specified color. This format does not support decimals values. Only the values you wish to change the defaults of need to be specified.
+The key-value pairs within the object should be [Material](https://create.roblox.com/docs/reference/engine/enums/Material) enum items mapped to arrays of 3 integers representing the RGB of the specified color. Only the values you wish to change the defaults of need to be specified.
 
 ### NumberRange
 The NumberRange type cannot be specified implicitly. For explicit values, the format is a list of Min and Max components, respectively. Each component is a float.
