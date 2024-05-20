@@ -13,7 +13,6 @@ Keep in mind that none of the tools listed on this page are maintained or audite
 - [rbxmk by Anaminus](https://github.com/anaminus/rbxmk)
 - [Argon by DervexDev](https://github.com/argon-rbx/argon)
 - [Lync by Iron Stag Games](https://github.com/Iron-Stag-Games/Lync)
-- Roblox's own official file syncing! As of writing (May 15, 2024) it is not released but it will be an option eventually.
 
 ## Why Not Rojo?
 
