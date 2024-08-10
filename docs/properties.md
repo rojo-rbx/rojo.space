@@ -11,6 +11,7 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 
 | Property Type                                       | Example Property                | Build | Live Sync | Project Files |
 |:----------------------------------------------------|:--------------------------------|:--:|:--:|:--:|
+| [Attributes](#attributes)                           | `Instance.Attributes`           | ✔ | ✔ | ✔ |
 | [Axes](#axes)                                       | `ArcHandles.Axes`               | ✔ | ✔ | ✔ |
 | [BinaryString](#binarystring)                       | `BinaryStringValue.Value`       | ✔ | ❌ | ✔ |
 | [Bool](#bool)                                       | `Part.Anchored`                 | ✔ | ✔ | ✔ |
