@@ -11,7 +11,6 @@ Rojo supports most Roblox properties. This page documents all of the properties 
 
 | Property Type                                       | Example Property                | Build | Live Sync | Project Files |
 |:----------------------------------------------------|:--------------------------------|:--:|:--:|:--:|
-| [Attributes](#attributes)                           | `Instance.Attributes`           | ✔ | ✔ | ✔ |
 | [Axes](#axes)                                       | `ArcHandles.Axes`               | ✔ | ✔ | ✔ |
 | [BinaryString](#binarystring)                       | `BinaryStringValue.Value`       | ✔ | ❌ | ✔ |
 | [Bool](#bool)                                       | `Part.Anchored`                 | ✔ | ✔ | ✔ |
@@ -57,21 +56,13 @@ Many types have an **implicit** and **explicit** format. The [Project format pag
 ### Attributes
 Rojo defines the "Attributes" property on any instance to have the Attributes type, allowing it to be specified implicitly.
 
-For both implicit and explicit values, the format is an object where each field represents an attribute, where the key is the name of the attribute, and the value must be an explicit value.
+For both implicit and explicit values, the format is an object where each field represents an attribute, where the key is the name of the attribute, and the value is its value.
 
 ```json
 {
-	"$properties": {
-		"Attributes": {
-			"Foo": {"Bool": true},
-			"Bar": {"Vector3": [1.0, 2.0, 3.0]},
-		},
-		"AttributesSerialized": {
-			"Attributes": {
-				"Foo": {"Bool": true},
-				"Bar": {"Vector3": [1.0, 2.0, 3.0]},
-			}
-		}
+	"$attributes": {
+		"Foo": {"Bool": true},
+		"Bar": {"Vector3": [1.0, 2.0, 3.0]},
 	}
 }
 ```
