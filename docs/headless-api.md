@@ -73,8 +73,7 @@ Rojo.API:Notify(msg: string, timeout: number?, actions: { [string]: {text: strin
 ```
 Sends a Rojo notification that indicates it comes from a third-party plugin. Returns a function that dismisses the notification.
 
-![image](https://github.com/boatbomber/rojo.space/assets/40185666/c3f31715-dcdd-4c9d-b947-8dceee606b61)
-
+![exampleNotif](https://github.com/user-attachments/assets/ebae8c2f-ab9b-4088-8479-068d036a4243)
 
 ```Lua
 Rojo.API:GetHostAndPort(): (string, string)
