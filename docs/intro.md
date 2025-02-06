@@ -27,7 +27,7 @@ Popular tools that are tailored towards Roblox or Luau in general:
 
 ### Rojo at RDC 2019
 
-Nathan Riemer (Kampfkarren) gave a talk at RDC 2019 talking about some of the benefits of using a tool like Rojo.
+Pepper Riemer (Kampfkarren) gave a talk at RDC 2019 talking about some of the benefits of using a tool like Rojo.
 
 <iframe
 	style={{margin: "0 auto", maxWidth: "100%"}}
