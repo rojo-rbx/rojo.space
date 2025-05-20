@@ -18,7 +18,7 @@ Adding a tool like Rojo to your Roblox workflow can be daunting, but it comes wi
 
 There are decades of excellent tools available that operate on files. With Rojo, it's possible to take advantage of any of them!
 
-Popular tools that are tailored towards Roblox or Luau in general:
+Popular tools that are tailored towards Roblox or Lua in general:
 
 - [Selene](https://github.com/Kampfkarren/selene), a static analysis tool to help you write better Lua
 - [StyLua](https://github.com/JohnnyMorganz/StyLua), a formatter that helps keep your code in a consistent style
