@@ -1,0 +1,17 @@
+{
+  "name": "HelloPlugin",
+  "servePort": 34872,
+  "tree": {
+    "$className": "DataModel",
+
+    "StudioPlugins": {                // узел, куда Rojo поместит наш плагин
+      "$className": "Folder",
+      "HelloPlugin": {
+        "$path": "src"                // всё содержимое src/ окажется внутри плагина
+      }
+    }
+
+    /* при желании добавляйте остальные сервисы
+       (ReplicatedStorage, ServerScriptService и т. д.) */
+  }
+}
