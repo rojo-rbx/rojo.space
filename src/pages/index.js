@@ -1,7 +1,6 @@
 import React from "react";
 
 import { FullWidthPage, PageBlock } from "../components/layout";
-import users from "../users";
 
 import logo from "../../static/img/logo.png";
 import style from "./index.module.css";
@@ -69,33 +68,6 @@ const Details = () => (
   </PageBlock>
 );
 
-const User = ({ user: { url, image, name } }) => (
-  <a href={url} className={style.User}>
-    <img src={image} alt={name} title={name} />
-  </a>
-);
-
-const Users = () => {
-  const userList = users
-    .filter((user) => user.image != null)
-    .map((user, index) => <User key={index} user={user} />);
-
-  return (
-    <PageBlock className={style.Users}>
-      <h1 className={style.UsersTitle}>
-        Powering the <b>Top Games</b> on Roblox
-      </h1>
-      <div className={style.UserWall}>{userList}</div>
-      <p className={style.UsersCta}>
-        Use Rojo? Want your game here?{" "}
-        <a href="https://github.com/rojo-rbx/rojo.space/issues">
-          Open an issue!
-        </a>
-      </p>
-    </PageBlock>
-  );
-};
-
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -107,7 +79,6 @@ export default function Home() {
         <Splash />
         <Features />
         <Details />
-        <Users />
       </main>
     </Layout>
   );
