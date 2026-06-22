@@ -30,9 +30,9 @@ export default [
     image: "/img/users/giant-simulator.png",
   },
   {
-    name: "Free Draw 2",
+    name: "Free Draw",
     url: "https://www.roblox.com/games/1547610457",
-    image: "/img/users/free-draw-2.png",
+    image: "/img/users/free-draw.svg",
   },
   {
     name: "Eg!",
