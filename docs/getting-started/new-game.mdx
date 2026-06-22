@@ -89,6 +89,12 @@ In Roblox Studio, make sure the Rojo plugin is installed. If you need it, check 
 
 To expose your project to the plugin, you'll need to start the **live sync server**.
 
+:::warning
+By default, Rojo clears any unknown instances in a location it syncs to. This means that any instance that is not a part of your Rojo project will automatically be destroyed.
+To disable this, add `$ignoreUnknownInstances` to either the project file or a `.meta.json` for the location you're syncing to.
+To learn more, check out [Sync Details](sync-details.md).
+:::
+
 <Tabs groupId="installation-kind">
 <TabItem value="vscode" label="VS Code" default>
 
