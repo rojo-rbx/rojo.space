@@ -19,13 +19,15 @@ Most software projects outside Roblox have a single location, like a folder name
 
 Rewriting this code to use modern Roblox features like [CollectionService](https://developer.roblox.com/en-us/api-reference/class/CollectionService) can make it easier to understand, easier to work on, and more friendly to Rojo.
 
-## [rbxlx-to-rojo](https://github.com/rojo-rbx/rbxlx-to-rojo)
-
-There are ongoing efforts to make porting an existing game to Rojo more automatic. Currently, the most developed tool for this is [rbxlx-to-rojo](https://github.com/rojo-rbx/rbxlx-to-rojo).
-
 ## [Lune](https://github.com/lune-org/lune)
 
-Another option for porting an existing game is to use [Lune](https://github.com/lune-org/lune), which allows deep customization and would be suitable for porting a large, complex game.
+There are ongoing efforts to make porting an existing `rbxl` game to Rojo more automatic. Currently, the most developed tool for manipulating place files directly is [Lune](https://github.com/lune-org/lune), which allows deep customization and is suitable for porting large, complex games.
+
+For quick migration, you can download and run the [Roblox-to-Rojo-via-Lune](https://github.com/Windows81/Roblox-to-Rojo-via-Lune/raw/refs/heads/main/.lune/roblox-to-rojo.lua) script using Lune.
+
+## [rbxlx-to-rojo](https://github.com/rojo-rbx/rbxlx-to-rojo)
+
+Another option for porting an existing game is to use [rbxlx-to-rojo](https://github.com/rojo-rbx/rbxlx-to-rojo). Although `rbxm` files are supported, non-script objects will be ignored.
 
 ## Migrating Away from Rojo
 
