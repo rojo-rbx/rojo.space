@@ -12,9 +12,9 @@ This page aims to describe how Rojo turns files on the filesystem into Roblox ob
 | Concept                                     | File Name        |
 |:------------------------------------------- |:---------------- |
 | [Folders](#folders)                         | any directory    |
-| Server [Scripts](#scripts)                  | `*.server.lua`   |
-| Client [Scripts](#scripts)                  | `*.client.lua`   |
-| Module [Scripts](#scripts)                  | `*.lua`          |
+| Server [Scripts](#scripts)                  | `*.server.luau`  |
+| Client [Scripts](#scripts)                  | `*.client.luau`  |
+| Module [Scripts](#scripts)                  | `*.luau`         |
 | XML [Models](#models)                       | `*.rbxmx`        |
 | Binary [Models](#models)                    | `*.rbxm`         |
 | [Localization Tables](#localization-tables) | `*.csv`          |
@@ -45,7 +45,7 @@ Any directory on the filesystem will turn into a `Folder` instance with the same
 
 It is possible for a directory to contain certain files that change what the directory turns into:
 
-- An `init.lua`, `init.server.lua`, or `init.client.lua` file, described in [Scripts](#scripts).
+- An `init.luau`, `init.server.luau`, or `init.client.luau` file, described in [Scripts](#scripts).
 - An `init.meta.json` file that defines `className`, described in [Meta Files](#meta-files).
 - A `default.project.json` file, described in [Projects](#projects).
 
@@ -53,23 +53,23 @@ It is possible for a directory to contain certain files that change what the dir
 
 Rojo transforms any files with the `lua` extension into the various script instances that Roblox has.
 
-- Any file ending in `.server.lua` will turn into a `Script` instance.
-- Any file ending in `.client.lua` will turn into a `LocalScript` instance.
-- Any other `.lua` file will turn into a `ModuleScript` instance.
+- Any file ending in `.server.luau` will turn into a `Script` instance.
+- Any file ending in `.client.luau` will turn into a `LocalScript` instance.
+- Any other `.luau` file will turn into a `ModuleScript` instance.
 
 Rojo reserves three special script names. These scripts change their parent directory into a script instead of a folder:
 
-- `init.server.lua` will change its parent directory into a `Script` instance.
-- `init.client.lua` will change its parent directory into a `LocalScript` instance.
-- `init.lua` will change its parent directory into a `ModuleScript` instance.
+- `init.server.luau` will change its parent directory into a `Script` instance.
+- `init.client.luau` will change its parent directory into a `LocalScript` instance.
+- `init.luau` will change its parent directory into a `ModuleScript` instance.
 
 For example, these files:
 
 ```mermaid
 graph TD;
   my_model(My Model/)
-  init(init.server.lua)
-  foo(foo.lua)
+  init(init.server.luau)
+  foo(foo.luau)
 
   my_model --> init
   my_model --> foo
@@ -136,7 +136,6 @@ return {
 	},
 }
 ```
-
 
 ## TOML Modules
 
@@ -221,7 +220,8 @@ If your project has `hello.txt` and there are instances underneath it that you w
 
 Meta files can be used to set properties on `Script` instances, like `Disabled`.
 
-If your project has `foo.server.lua` and you want to make sure it would be disabled, you could create a `foo.meta.json` next to it with:
+If your project has `foo.server.luau` and you want to make sure it would be disabled, 
+you could create a `foo.meta.json` next to it with:
 
 ```json
 {
