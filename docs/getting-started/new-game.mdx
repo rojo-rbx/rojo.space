@@ -1,3 +1,30 @@
+local part = script.Parent
+
+-- Change this number for each treadmill
+local multiplier = 1
+
+local Players = game:GetService("Players")
+
+part.Touched:Connect(function(hit)
+	local character = hit.Parent
+	local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+
+	if humanoid then
+		local player = Players:GetPlayerFromCharacter(character)
+
+		if player then
+			local leaderstats = player:FindFirstChild("leaderstats")
+
+			if leaderstats then
+				local speed = leaderstats:FindFirstChild("Speed")
+
+				if speed then
+					speed.Value += multiplier
+				end
+			end
+		end
+	end
+end)
 ---
 sidebar_position: 2
 title: Creating a New Game
