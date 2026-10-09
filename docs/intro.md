@@ -1,4 +1,8 @@
----
+Realistic, controllable e-bikes with proper wheels and suspension.
+Police AI that navigates roads, pursues riders, and coordinates roadblocks.
+A complete Vegas Strip with recognisable casino-inspired landmarks and enterable dealerships.
+A proper dealership menu showing bike previews, prices, stats, and upgrades.
+A polished mobile interface and multiplayer race system.---
 title: Introduction
 slug: /
 sidebar_position: 1
